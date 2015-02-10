@@ -1,0 +1,360 @@
+/* ============================================================
+Main Content - Splash
+============================================================= */
+#splashTitle {
+    text-align: center;
+    margin-top: 12%;
+    font-weight: normal; 
+    font-size: 1.45vw;
+}
+
+#containerSplash {
+    position: relative;
+    max-height: 100%;
+}
+
+#contentSplash {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#contentSplash img {
+    max-width: 100%;
+}
+
+/* ============================================================
+Main Content - SectionTitle 
+============================================================= */
+.sectionTitle {
+    text-align: left;
+    margin-top: 3%;
+    margin-bottom: 2%;
+    margin-left: 0.8%;
+    font-size: 1.3vw;
+    font-weight: normal;
+}
+/* make it so shows name as header then description of current page(ie. photography) in smaller font and italics below*/
+
+/* ============================================================
+Main Content - Architecture
+============================================================= */
+#archBody {
+    background-image: url("../img/arch/bg/sem1.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-positon: center center;
+}
+
+.contentWrapper {
+    position: absolute;
+    border-top: 2px solid #2E2B2B;
+    border-bottom: 2px solid #2E2B2B;
+    height: 100%;
+    width: 100%;
+}
+
+#contentArchitecture {
+    position: absolute;
+    width: 50%;
+    height: 90%;
+    top: 5%;
+    left: 25%;
+    overflow: hidden;
+}
+
+#contentArchitecture .box {
+    display: inline-block;
+    width: 30vh;
+    height: 20.1vh;
+    margin: 10% 5% 0% 10%;
+    background-color: white;
+    border: 2px solid black;
+}
+
+/* ============================================================
+Main Content - Photography
+============================================================= */
+#contentPhotography {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid #2E2B2B;
+    border-bottom: 2px solid #2E2B2B;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.imageZoom {
+    position: absolute;
+    width: 60%;
+    height: 96%;
+    top: 2%;
+    left: 20%;
+    border: 2px solid black;
+    z-index: 9999;
+}
+
+#contentContainer {
+    position: absolute;
+    height: 105%;
+    left: 5%;
+    width: 90%;
+}
+
+#contentContainer .box {
+    box-shadow: 0.3rem 0rem 1.2rem 0.2rem black;
+    display: inline-block;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 10%;
+    width: 60vh;
+    height: 40.2vh;
+}
+
+.scrollButton {
+    position: fixed;
+    display: none;
+    top: 45%;
+    background: transparent;
+    border: none;
+    font-size: 0;
+}
+
+.scrollButton p {
+    color: #FC374A;
+    text-shadow: 0.2rem 0.3rem black;
+}
+
+.scrollRight {
+    z-index: 999;
+    right: 2%;
+    font-size: 3vw;
+}
+
+.scrollLeft {
+    z-index: 999;
+    left: 2%;
+    font-size: 3vw;
+}
+
+/* ============================================================
+Main Content - About
+============================================================= */
+#contentAbout {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid #2E2B2B;
+    border-bottom: 2px solid #2E2B2B;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+#contentAbout img {
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    width: 50%;
+}
+
+/* ============================================================
+Menu - Main
+============================================================= */
+.mainMenu {
+    position: relative;
+    text-align: center;
+    font-size: 0;
+}
+
+.mainMenu li {
+    display: inline-block;
+    font-size: 1vw;
+    margin-top: 2%;;
+    margin-right: 4%;
+    margin-left: 3%;
+    text-align: center;
+}
+
+.mainMenu li:hover {
+    text-shadow: 0.4px 0.6px grey;
+}
+
+/* ============================================================
+Menu - SectionMenu
+============================================================= */
+.sectionMenu {
+    position: absolute;
+    z-index: 999;
+}
+
+.sectionMenu ul {
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+}
+
+.sectionMenu ul li {
+    display: block;
+    position: relative;
+    float:left;
+    font-size: 0.8vw;
+    padding-top: 1%;
+    padding-left: 1%;
+}
+
+.sectionMenu li ul {
+    display: none;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.sectionMenu li ul li {
+    font-size: 0.6vw;
+}
+
+.sectionMenu ul li a {
+    display:block;
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 5px 5px 5px 5px;
+}
+
+.sectionMenu ul li a:hover {
+    background: #FC374A;
+}
+
+.sectionMenu li:hover ul {
+    display: block;
+    position: relative;
+}
+
+.sectionMenu li:hover li {
+    float: none;
+}
+
+.sectionMenu li:hover a {
+}
+
+.sectionMenu li:hover: li a:hover {
+    background: #95A9B1;
+}
+
+/* ============================================================
+Menu - SectionNav 
+============================================================= */
+.bottomNav {
+    position: relative;
+    text-align: center;
+    font-size: 0;
+}
+
+.bottomNav li {
+    display: inline-block;
+    font-size: 1vw;
+    margin-top: 2%;;
+    margin-right: 4%;
+    text-align: center;
+}
+
+.bottomNav li:hover {
+    text-shadow: 0.4px 0.6px grey;
+}
+/* ============================================================
+Menu - About
+============================================================= */
+#aboutMenuNav {
+    position: relative;
+    text-align: center;
+    font-size: 0;
+}
+
+#aboutMenuNav li {
+    display: inline-block;
+    font-size: 1.2vw;
+    margin-top: 2%;;
+    margin-right: 5%;
+    text-align: center;
+}
+
+#aboutMenuNav li:hover {
+    text-shadow: 0.4px 0.4px grey;
+}
+
+/* ============================================================
+TranslateButtons
+============================================================= */
+#translate {
+    text-align: right;
+    font-size: 0;
+}
+
+#translate li {
+    overflow: hidden;
+    display: inline-block;
+    font-size: 1vw;
+    margin-right: 1.4%;
+    margin-top: 1.4%;
+}
+
+/* ============================================================
+Credits
+============================================================= */
+.da {
+    position: fixed;
+    bottom: 1%;
+    left: 46.8%;
+    text-align: center;
+    font-size: 0.8vw;
+}
+
+.me {
+    position: fixed;
+    bottom: 1%;
+    right: 1%;
+    text-align: right;
+    font-size: 0.45vw;
+}
+/* ============================================================
+PageControl
+============================================================= */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black; 
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+#container {
+    position: relative;
+    height: 75%;
+    overflow: auto;
+    /* background-color: rgba(2,2,2,0.2);set this in js so only activated after clicking a link*/
+}
+
+html, body {
+    height: 100%;
+    font-family: 'PT Sans', sans-serif;
+    /*background-image: url("../img/mainwallpaper.jpg");
+}
+
+/* ============================================================
+MediaQuery
+============================================================= */
+
+@media (min-width: 800px) and (max-width: 1150px) {
+
+    #splashTitle {
+        text-align: center;
+        margin-top: 45%;
+        font-weight: normal; 
+        font-size: 0.45vw;
+    }
+}
