@@ -5,7 +5,7 @@ Main Content - Splash
     text-align: center;
     font-weight: normal; 
     font-size: 1.8vw;
-    margin-top: 9%;
+    margin-top: 8%;
     margin-bottom: 2%;
 }
 
@@ -251,39 +251,18 @@ Menu - SectionNav
     position: relative;
     text-align: center;
     font-size: 0;
-    margin-bottom: 2%;
+    margin-top: 2%;
 }
 
 .bottomNav li {
     display: inline-block;
     font-size: 1vw;
-    margin-top: 2%;;
-    margin-right: 4%;
+    margin-right: 3%;
     text-align: center;
 }
 
 .bottomNav li:hover {
     text-shadow: 0.4px 0.6px grey;
-}
-/* ============================================================
-Menu - About
-============================================================= */
-#aboutMenuNav {
-    position: relative;
-    text-align: center;
-    font-size: 0;
-}
-
-#aboutMenuNav li {
-    display: inline-block;
-    font-size: 1.2vw;
-    margin-top: 2%;;
-    margin-right: 5%;
-    text-align: center;
-}
-
-#aboutMenuNav li:hover {
-    text-shadow: 0.4px 0.4px grey;
 }
 
 /* ============================================================
@@ -305,20 +284,20 @@ TranslateButtons
 /* ============================================================
 Credits
 ============================================================= */
+
+
 .da {
     position: absolute;
-    bottom: 1%;
-    left: 46.8%;
-    text-align: center;
-    font-size: 0.8vw;
+    left: 46.6%;
+    font-size: 0.65vw;
+    bottom: 0;
 }
 
 .me {
     position: absolute;
-    bottom: 1%;
     right: 1%;
-    text-align: right;
     font-size: 0.45vw;
+    bottom: 0;
 }
 /* ============================================================
 PageControl
@@ -333,9 +312,6 @@ PageControl
     margin: 0;
     padding: 0;
     border: 0;
-    vertical-align: top;
-    line-height: 0;
-    font-size: 0;
 }
 
 #container {
@@ -356,52 +332,4 @@ MediaQuery
 @media (min-width: 800px) and (max-width: 1150px) {
     .mainMenu {
     }
-}
-
-/* ============================================================
-Reset
-============================================================= */
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-margin: 0;
-padding: 0;
-border: 0;
-font-size: 100%;
-font: inherit;
-vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-display: block;
-}
-body {
-line-height: 1;
-}
-ol, ul {
-list-style: none;
-}
-blockquote, q {
-quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-content: '';
-content: none;
-}
-table {
-border-collapse: collapse;
-border-spacing: 0;
 }
