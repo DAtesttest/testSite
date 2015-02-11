@@ -338,7 +338,6 @@ PageControl
     position: relative;
     height: 75%;
     overflow: auto;
-    /* background-color: rgba(2,2,2,0.2);set this in js so only activated after clicking a link*/
 }
 
 html, body {
