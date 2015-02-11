@@ -186,7 +186,7 @@ Menu - SectionMenu
 ============================================================= */
 .sectionMenu {
     position: absolute;
-    z-index: 999;
+    z-index: 9999;
 }
 
 .sectionMenu ul {
@@ -208,6 +208,7 @@ Menu - SectionMenu
 
 .sectionMenu li ul {
     display: none;
+    color: red;
     background-color: rgba(0,0,0,0.2);
 }
 

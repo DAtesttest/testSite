@@ -186,7 +186,7 @@ Menu - SectionMenu
 ============================================================= */
 .sectionMenu {
     position: absolute;
-    z-index: 999;
+    z-index: 9999;
 }
 
 .sectionMenu ul {
@@ -221,6 +221,7 @@ Menu - SectionMenu
     white-space: nowrap;
     overflow: hidden;
     padding: 5px 5px 5px 5px;
+    color: red;
 }
 
 .sectionMenu ul li a:hover {
@@ -342,7 +343,7 @@ PageControl
 
 html, body {
     height: 100%;
-    /*font-family: 'PT Sans', sans-serif;*/
+    font-family: 'PT Sans', sans-serif;
     /*background-image: url("../img/mainwallpaper.jpg");
 }
 
