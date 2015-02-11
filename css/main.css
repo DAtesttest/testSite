@@ -411,4 +411,5 @@ border-spacing: 0;
 
 * {
     -webkit-appearance: none;
+    webkit-font-smoothing: antialiased;
 }
