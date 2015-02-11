@@ -208,7 +208,6 @@ Menu - SectionMenu
 
 .sectionMenu li ul {
     display: none;
-    color: red;
     background-color: rgba(0,0,0,0.2);
 }
 
@@ -222,6 +221,7 @@ Menu - SectionMenu
     white-space: nowrap;
     overflow: hidden;
     padding: 5px 5px 5px 5px;
+    color: red;
 }
 
 .sectionMenu ul li a:hover {
@@ -407,4 +407,8 @@ content: none;
 table {
 border-collapse: collapse;
 border-spacing: 0;
+}
+
+* {
+    -webkit-appearance: none;
 }
