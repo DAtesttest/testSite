@@ -41,7 +41,6 @@ Main Content - Architecture
 ============================================================= */
 #archBody {
     background-image: url("../img/arch/bg/sem1.jpg");
-    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-positon: center center;
