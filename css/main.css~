@@ -240,7 +240,7 @@ Menu - SectionMenu
 .sectionMenu li:hover a {
 }
 
-.sectionMenu li:hover: li a:hover {
+.sectionMenu li:hover li a:hover {
     background: #95A9B1;
 }
 
@@ -344,7 +344,6 @@ PageControl
 html, body {
     height: 100%;
     font-family: 'PT Sans', sans-serif;
-    /*background-image: url("../img/mainwallpaper.jpg");
 }
 
 /* ============================================================
@@ -407,8 +406,4 @@ content: none;
 table {
 border-collapse: collapse;
 border-spacing: 0;
-}
-
-* {
-    -webkit-appearance: none;
 }
