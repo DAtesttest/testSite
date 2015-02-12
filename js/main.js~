@@ -50,7 +50,6 @@ photoNewYorkPreview.name = "photoNewYorkPreview";
 var x = document.getElementById("photoBody");
 
 //make this so it only loads 5 images at a time
-//make it so hover near arrows scrolls slowly, say 200% instead of 400%
 try {
     if (x.id === "photoBody") {
         $('.scrollButton').css("display", "initial");
