@@ -55,14 +55,14 @@ try {
     if (x.id === "photoBody") {
         $('.scrollButton').css("display", "initial");
         for(i = 0; i < targetArray.length; i ++) {
-                x = targetArray[i];
-                for(r = 0; r < x.length; r ++) {
-                    if(x[r].indexOf("preview") > -1) {
+            x = targetArray[i];
+            for(r = 0; r < x.length; r ++) {
+                if(x[r].indexOf("preview") > -1) {
                     assignBoxImages(x[r]);
-                    }
                 }
             }
         }
+    }
 } catch (e) {}
 
 $(optionTarget).on("click", function() {
@@ -110,15 +110,15 @@ function chooseImages(whatId){
     }
 }
 
-//load the image flipper at initial page, cycle through semesters 
+//load the image flipper at initial page, cycle through semesters
 //highlight the menu at what semester it is at
 //have zoom effect to go from semester to projects
 //have zoom effect when mouse over next in line
 
 function setBG(target) {
     if (target.substring(0, 3) == "sem") {
-    var bgTarget = 'url(' + './img/arch/bg/' + target + '.jpg)';
-    document.getElementById("archBody").style.backgroundImage = bgTarget;
+        var bgTarget = 'url(' + './img/arch/bg/' + target + '.jpg)';
+        document.getElementById("archBody").style.backgroundImage = bgTarget;
     } else {
         return;
     }
