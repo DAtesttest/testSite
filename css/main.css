@@ -28,21 +28,29 @@ Main Content - Splash
 /* ============================================================
 Main Content - SectionTitle
 ============================================================= */
+
 .sectionTitle {
     text-align: left;
-    margin-top: 3%;
-    margin-bottom: 2%;
+    width: 50%;
     margin-left: 0.8%;
-    font-size: 1.3vw;
+    font-size: 1.4vw;
     font-weight: normal;
 }
+
 /* make it so shows name as header then description of current page(ie. photography) in smaller font and italics below*/
 
 /* ============================================================
 Main Content - Architecture
 ============================================================= */
+
+.fade {
+    background-color: rgba(255,255,255,0.48);
+    width: 100%;
+    height: 100%;
+}
+
 #archBody {
-    background-image: url("../img/arch/bg/sem1.jpg");
+    background-image: url("../img/PictureByGallery/Amsterdam/cantelever.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -60,24 +68,49 @@ Main Content - Architecture
 #contentArchitecture {
     position: absolute;
     width: 50%;
-    height: 90%;
-    top: 5%;
-    left: 25%;
+    height: 100%;
+    top: 15%;
+    left: 27%;
     overflow: hidden;
 }
 
 #contentArchitecture .box {
     display: inline-block;
-    width: 30vh;
-    height: 20.1vh;
-    margin: 10% 5% 0% 10%;
+    width: 12em;
+    height: 11em;
+    margin-right: 4%;
+    margin-bottom: 4%;
     background-color: white;
-    border: 2px solid black;
+    box-shadow: 0 10px 6px -6px black;
+}
+
+#contentArchitecture .box2 {
+    box-shadow: 0.3rem 0rem 1.2rem 0.2rem black;
+    display: inline-block;
+    margin-left: 5%;
+    margin-bottom: 100%;
+    margin-right: 2%;
+    width: 60vh;
+    height: 40.2vh;
+    box-shadow: 0 10px 6px -6px black;
 }
 
 /* ============================================================
 Main Content - Photography
 ============================================================= */
+
+.initial {
+    background-image: url("../img/arch/bg/sem1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+.zoom {
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
 #contentPhotography {
     position: absolute;
     width: 100%;
@@ -106,11 +139,11 @@ Main Content - Photography
 }
 
 #contentContainer .box {
-    box-shadow: 0.3rem 0rem 1.2rem 0.2rem black;
+    box-shadow: 0 10px 6px -6px black;
     display: inline-block;
     margin-left: 2%;
     margin-right: 2%;
-    margin-top: 8.5%;
+    margin-top: 13%;
     width: 60vh;
     height: 40.2vh;
 }
@@ -155,6 +188,21 @@ Main Content - Photography
     100% {opacity: 1;}
 }
 
+.social {
+    position: absolute;
+    right: 3%;
+    top: 2%;
+    font-size: 41px;
+}
+
+.social2 {
+    position: absolute;
+    width: 2.1%;
+    right: 7%;
+    top: 1.7%;
+    font-size: 41px;
+}
+
 /* ============================================================
 Main Content - About
 ============================================================= */
@@ -193,12 +241,12 @@ Main Content - About
     padding: 1.2%;
     color: white;
     position: absolute;
-    bottom: 5%;
+    top: 18%;
     width: 27%;
     left: 7.5%;
     font-weight: normal;
     font-size: 0.71vw;
-    box-shadow: 0.3rem 0rem 1.2rem 0.2rem black;
+    box-shadow: 0 10px 6px -6px black;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -211,9 +259,9 @@ Main Content - About
 #contentAbout img {
     position: absolute;
     width: 30%;
-    top: 6%;
-    left: 6%;
-    box-shadow: 0.3rem 0rem 1.2rem 0.2rem black;
+    top: 10%;
+    right: 7.5%;
+    box-shadow: 0 10px 6px -6px black;
 }
 
 #contactInfo {
@@ -222,9 +270,9 @@ Main Content - About
     font-size: 0.85vw;
     color: white;
     padding: 1%;
-    top: 25%;
-    right: 7%;
-    box-shadow: 0.3rem 0rem 1.2rem 0.2rem black;
+    bottom: 10%;
+    left: 42%;
+    box-shadow: 0 10px 6px -6px black;
 }
 
 
@@ -255,6 +303,8 @@ Menu - SectionMenu
 .sectionMenu {
     position: absolute;
     z-index: 9999;
+    top: 3.5%;
+    left: 37%;;
 }
 
 .sectionMenu ul {
@@ -270,8 +320,7 @@ Menu - SectionMenu
     position: relative;
     float:left;
     font-size: 0.9vw;
-    padding-top: 1%;
-    padding-left: 1%;
+    margin-left: 2%;
 }
 
 .sectionMenu li ul {
@@ -320,7 +369,8 @@ Menu - SectionNav
     position: relative;
     text-align: center;
     font-size: 0;
-    margin-top: 2%;
+    margin-top: 1%;
+    font-weight: normal;
 }
 
 .bottomNav li {
@@ -357,15 +407,15 @@ Credits
 
 .da {
     position: absolute;
-    left: 46.6%;
-    font-size: 0.65vw;
+    left: 1%;
+    font-size: 0.6vw;
     bottom: 0;
 }
 
 .me {
     position: absolute;
     right: 1%;
-    font-size: 0.45vw;
+    font-size: 0.4vw;
     bottom: 0;
 }
 /* ============================================================
@@ -385,7 +435,7 @@ PageControl
 
 #container {
     position: relative;
-    height: 75%;
+    height: 85%;
     overflow: auto;
 }
 
