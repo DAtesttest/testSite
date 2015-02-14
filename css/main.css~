@@ -44,20 +44,19 @@ Main Content - Architecture
 ============================================================= */
 
 .fade {
-    background-color: rgba(255,255,255,0.48);
     width: 100%;
     height: 100%;
 }
 
 #archBody {
+}
+
+#contentArchitecture {
     background-image: url("../img/PictureByGallery/Amsterdam/cantelever.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
-}
-
-#contentArchitecture {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -73,7 +72,7 @@ Main Content - Architecture
 .projects {
     position: absolute;
     top: 15%;
-    left: 3%;
+    left: 2%;
 }
 
 .projects li {
@@ -96,7 +95,6 @@ Main Content - Architecture
 .contentContainer.architecture .box2 {
     display: inline-block;
     width: 100%;
-    margin-left: 5%;
     box-shadow: 0 10px 6px -6px black;
 }
 
@@ -104,13 +102,6 @@ Main Content - Architecture
 Main Content - Photography
 ============================================================= */
 
-.initial {
-    background-image: url("../img/arch/bg/sem1.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
-}
 
 .zoom {
     background-color: rgba(0, 0, 0, 0.85);
@@ -124,6 +115,11 @@ Main Content - Photography
     border-bottom: 2px solid #2E2B2B;
     overflow: hidden;
     white-space: nowrap;
+    background-image: url("../img/arch/bg/sem1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
 }
 
 .imageZoom {
@@ -138,17 +134,16 @@ Main Content - Photography
 
 .contentContainer {
     position: absolute;
-    height: 105%;
-    left: 4%;
-    width: 90%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.1);
 }
 
 .contentContainer .box {
     box-shadow: 0 10px 6px -6px black;
     display: inline-block;
-    margin-left: 2%;
-    margin-right: 2%;
-    margin-top: 13%;
+    margin-left: 5%;
+    margin-top: 10%;
     width: 60vh;
     height: 40.2vh;
 }
@@ -160,6 +155,7 @@ Main Content - Photography
     background: transparent;
     border: none;
     font-size: 0;
+    background-color: rgba(0,0,0,0.2);
 }
 
 .scrollButton p {
@@ -196,26 +192,23 @@ Main Content - Photography
 /* ============================================================
 Main Content - About
 ============================================================= */
-#aboutMe {
+#contentAbout {
+    position: absolute;
     background-image: url("../img/aboutMeBG.jpg");
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid #2E2B2B;
+    border-bottom: 2px solid #2E2B2B;
+    overflow: hidden;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
 }
-
-#contentAbout {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    border-top: 2px solid #2E2B2B;
-    border-bottom: 2px solid #2E2B2B;
-    margin: 0 auto;
-    overflow: auto;
-    animation: fadeIn 2s;
-    -webkit-animation: fadeIn 2s;
+.fadeIn {
+    animation: fadeIn 1s;
+    -webkit-animation: fadeIn 1s;
 }
-
 @-webkit-keyframes fadeIn {
     0% {opacity: 0.55;}
     100% {opacity: 1;}
@@ -227,40 +220,33 @@ Main Content - About
 }
 
 #aboutText {
+    position: absolute;
     background-color: rgba(0, 0, 0, 0.88);
     padding: 1.2%;
     color: white;
     position: absolute;
-    top: 18%;
-    width: 27%;
-    left: 7.5%;
-    font-weight: normal;
+    top: 32%;
+    width: 30%;
+    left: 5.5%;
     font-size: 0.71vw;
     box-shadow: 0 10px 6px -6px black;
-    font-family: 'Open Sans', sans-serif;
-}
-
-#aboutText span {
-    font-weight: bold;
-    font-size: 1.1vw;
-    color: white;
 }
 
 #contentAbout img {
     position: absolute;
     width: 30%;
-    top: 10%;
-    right: 7.5%;
+    top: 25%;
+    right: 5.5%;
     box-shadow: 0 10px 6px -6px black;
 }
 
 #contactInfo {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.88);
-    font-size: 0.85vw;
+    font-size: 0.7vw;
     color: white;
     padding: 1%;
-    bottom: 10%;
+    top: 40%;
     left: 42%;
     box-shadow: 0 10px 6px -6px black;
 }
@@ -293,8 +279,8 @@ Menu - SectionMenu
 .sectionMenu {
     position: absolute;
     z-index: 9999;
-    top: 3.5%;
-    left: 36%;
+    left: 37%;
+    top: -3.3%;
 }
 
 .sectionMenu ul {
@@ -310,7 +296,6 @@ Menu - SectionMenu
     position: relative;
     float:left;
     font-size: 0.9vw;
-    margin-left: 2%;
 }
 
 .sectionMenu li ul {
@@ -327,8 +312,8 @@ Menu - SectionMenu
     text-decoration: none;
     white-space: nowrap;
     overflow: hidden;
-    padding: 5px 5px 5px 5px;
-    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px 25px 5px 25px;
+    background-color: rgba(0,0,0,0.8);
     color: white;
 }
 
@@ -428,11 +413,15 @@ PageControl
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     text-decoration: none;
-    color: black;
+    color: white;
     overflow: hidden;
     margin: 0;
     padding: 0;
     border: 0;
+}
+
+h1 {
+    font-family: 'PT Sans', sans-serif;
 }
 
 #container {
@@ -443,7 +432,8 @@ PageControl
 
 html, body {
     height: 100%;
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgba(0,0,0,0.8);
 }
 
 /* ============================================================
