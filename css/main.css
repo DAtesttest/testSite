@@ -57,41 +57,36 @@ Main Content - Architecture
     background-position: center center;
 }
 
-.contentWrapper {
-    position: absolute;
-    border-top: 2px solid #2E2B2B;
-    border-bottom: 2px solid #2E2B2B;
-    height: 100%;
-    width: 100%;
-}
-
 #contentArchitecture {
     position: absolute;
-    width: 50%;
+    width: 100%;
     height: 100%;
-    top: 15%;
-    left: 27%;
+    border-top: 2px solid #2E2B2B;
+    border-bottom: 2px solid #2E2B2B;
     overflow: hidden;
 }
 
-#contentArchitecture .box {
-    display: inline-block;
-    width: 12em;
-    height: 11em;
-    margin-right: 4%;
-    margin-bottom: 4%;
-    background-color: white;
+.afterClick {
+    white-space: nowrap;
+}
+.contentContainer.architecture {
+    position: absolute;
+    left: 20%;
+    width: 60%;
+    top: 10%;
+}
+
+.contentContainer.architecture .box {
+    margin: 2%;
+    width: 21%;
+    height: 20%;
     box-shadow: 0 10px 6px -6px black;
 }
 
-#contentArchitecture .box2 {
-    box-shadow: 0.3rem 0rem 1.2rem 0.2rem black;
+.contentContainer.architecture .box2 {
     display: inline-block;
+    width: 100%;
     margin-left: 5%;
-    margin-bottom: 100%;
-    margin-right: 2%;
-    width: 60vh;
-    height: 40.2vh;
     box-shadow: 0 10px 6px -6px black;
 }
 
@@ -131,14 +126,14 @@ Main Content - Photography
     z-index: 9999;
 }
 
-#contentContainer {
+.contentContainer {
     position: absolute;
     height: 105%;
     left: 4%;
     width: 90%;
 }
 
-#contentContainer .box {
+.contentContainer .box {
     box-shadow: 0 10px 6px -6px black;
     display: inline-block;
     margin-left: 2%;
@@ -289,7 +284,7 @@ Menu - SectionMenu
     position: absolute;
     z-index: 9999;
     top: 3.5%;
-    left: 37%;;
+    left: 36%;
 }
 
 .sectionMenu ul {

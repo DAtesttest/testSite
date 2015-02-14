@@ -27,7 +27,6 @@ var photoNewYork = ['./img/PictureByGallery/NewYork/IMG_9020.jpg', './img/Pictur
 
 //Background Array
 var archBG = ['./img/arch/bg/sem1.jpg','./img/arch/bg/sem2.jpg', './img/arch/bg/pavilion.sem3', './img/arch/bg/sem4',];
-var photoBG = ['./img/PictureByGallery/Amsterdam/cantelever.jpg'];
 
 var targetArray = [sem1, sem1Preview, sem2Preview, sem3Preview, sem4Preview, photoAmsterdamPreview, photoAmsterdam, photoBelgiumPreview, photoBelgium, photoBerlinPreview, photoBerlin, photoBoliviaPreview, photoBolivia, photoFrancePreview, photoFrance, photoNewYorkPreview, photoNewYork];
 var nameArray = [sem1.name, sem1Preview.name, sem2Preview.name, sem3Preview.name, sem4Preview.name, photoAmsterdam, photoBelgium, photoBerlin, photoBolivia, photoFrance, photoNewYork];
@@ -101,7 +100,7 @@ $(optionTarget).on("click", function() {
 });
 
 function chooseImages(whatId){
-    $('#contentContainer').animate( {
+    $('.contentContainer').animate( {
         scrollLeft: "0%"
     }, "fast");
 
@@ -114,6 +113,8 @@ function chooseImages(whatId){
     for(i = 0; i < target.length; i++ ) {
         whichOne = target[i];
         if(target[i].indexOf("full") > -1) {
+            $('.scrollButton').css("display", "initial");
+            $(".contentContainer").addClass("afterClick");
             assignBoxImagesFull(whichOne);
         } else {
             assignBoxImages(whichOne);
@@ -122,13 +123,13 @@ function chooseImages(whatId){
 }
 
 $('.scrollRight').on("click", function() {
-    $('#contentContainer').animate( {
+    $('.contentContainer').animate( {
         scrollLeft: "+=500%"
     }, "fast");
 });
 
 $('.scrollLeft').on("click", function() {
-    $('#contentContainer').animate( {
+    $('.contentContainer').animate( {
         scrollLeft: "-=500%"
     }, "fast");
 });

@@ -101,7 +101,7 @@ $(optionTarget).on("click", function() {
 });
 
 function chooseImages(whatId){
-    $('#contentContainer').animate( {
+    $('.contentContainer').animate( {
         scrollLeft: "0%"
     }, "fast");
 
@@ -114,6 +114,8 @@ function chooseImages(whatId){
     for(i = 0; i < target.length; i++ ) {
         whichOne = target[i];
         if(target[i].indexOf("full") > -1) {
+            $('.scrollButton').css("display", "initial");
+            $(".contentContainer").addClass("afterClick");
             assignBoxImagesFull(whichOne);
         } else {
             assignBoxImages(whichOne);
@@ -122,13 +124,13 @@ function chooseImages(whatId){
 }
 
 $('.scrollRight').on("click", function() {
-    $('#contentContainer').animate( {
+    $('.contentContainer').animate( {
         scrollLeft: "+=500%"
     }, "fast");
 });
 
 $('.scrollLeft').on("click", function() {
-    $('#contentContainer').animate( {
+    $('.contentContainer').animate( {
         scrollLeft: "-=500%"
     }, "fast");
 });
@@ -152,7 +154,6 @@ function setBG(target) {
 }
 
 function assignBoxImagesFull(whichOne) {
-    console.log("dog");
     var targetFill = document.createElement("img");
 
     targetFill.setAttribute("class", "box2");
@@ -162,7 +163,6 @@ function assignBoxImagesFull(whichOne) {
 }
 
 function assignBoxImages(whichOne) {
-    console.log("cat");
     var targetFill = document.createElement("img");
 
     targetFill.setAttribute("class", "box");
