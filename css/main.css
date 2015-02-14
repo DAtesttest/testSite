@@ -83,6 +83,7 @@ Main Content - Architecture
 
 .projects li {
     margin-bottom: 4%;
+    text-shadow: black 0.1em 0.1em 0.1em;
 }
 .contentContainer.architecture {
     position: absolute;
@@ -353,7 +354,6 @@ Menu - SectionNav
     font-size: 0;
     margin-top: 1.2%;
     font-weight: normal;
-    text-shadow: black 0.1em 0.1em 0.1em;
 }
 
 .bottomNav li {
