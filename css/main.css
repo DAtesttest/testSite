@@ -69,6 +69,16 @@ Main Content - Architecture
 .afterClick {
     white-space: nowrap;
 }
+
+.projects {
+    position: absolute;
+    top: 15%;
+    left: 2%;
+}
+
+.projects li {
+    margin-bottom: 4%;
+}
 .contentContainer.architecture {
     position: absolute;
     left: 20%;
