@@ -6,6 +6,9 @@ var sem3Preview = ['./img/arch/sem3/readingroom.jpg', './img/arch/sem3/houseaddi
 var sem4Preview = ['./img/arch/sem4/winterplaza.jpg'];
 //Architecture Picture Arrays
 var sem1 = ['./img/arch/sem1/full/skeleton.jpg', './img/arch/sem1/full/sundail.jpg', './img/arch/sem1/full/pinhole.jpg'];
+var sem2 = ['./img/arch/sem1/full/skeleton.jpg', './img/arch/sem1/full/sundail.jpg', './img/arch/sem1/full/pinhole.jpg'];
+var sem3 = ['./img/arch/sem1/full/skeleton.jpg', './img/arch/sem1/full/sundail.jpg', './img/arch/sem1/full/pinhole.jpg'];
+var sem4 = ['./img/arch/sem1/full/skeleton.jpg', './img/arch/sem1/full/sundail.jpg', './img/arch/sem1/full/pinhole.jpg'];
 //Photography Picture Preview Arrays
 var photoAmsterdamPreview = ['./img/PictureByGallery/Amsterdam/preview/cantelever.jpg', './img/PictureByGallery/Amsterdam/preview/amsterdamtrainstation.jpg', './img/PictureByGallery/Amsterdam/preview/nemo.jpg'];
 var photoBelgiumPreview = ['./img/PictureByGallery/Belgium/preview/IMG_1017.jpg', './img/PictureByGallery/Belgium/preview/IMG_1018.jpg', './img/PictureByGallery/Belgium/preview/streetart.jpg', './img/PictureByGallery/Belgium/preview/IMG_1067.jpg'];
@@ -28,6 +31,10 @@ sem1Preview.name = "sem1Preview";
 sem2Preview.name = "sem2Preview";
 sem3Preview.name = "sem3Preview";
 sem4Preview.name = "sem4Preview";
+sem1.name = "sem1";
+sem2.name = "sem2";
+sem3.name = "sem3";
+sem4.name = "sem4";
 photoAmsterdam.name = "photoAmsterdam";
 photoAmsterdamPreview.name = "photoAmsterdamPreview";
 photoBelgium.name = "photoBelgium";

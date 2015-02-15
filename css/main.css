@@ -271,22 +271,28 @@ Menu - SectionMenu
 
 .sectionMenu {
     position: absolute;
-    left: 41%;
-    top: 5%;
-    background-color: black;
+    left: 25%;
+    width: 50%;
+    top: 5.6%;
     z-index: 999999;
 }
 
 .selectionNav {
-    margin: 0;
-    padding: 0;
+    width: auto;
+    margin-left: 25%;
     list-style: none;
 }
 
 .selectionNav > li {
-    display: inline-block;
+    display: block;
+    float: left;
+    margin-right: 4.5%;
+    background-color: rgba(0,0,0,0.85);
 }
 
+.selectionNav li ul li {
+    padding: 5px 8px;
+}
 
 .selectionNav ul.inner {
     display: none;
