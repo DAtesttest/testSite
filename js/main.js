@@ -52,34 +52,35 @@ var y = document.getElementById("archBody");
 //create back button to go to initial arch page
 
 //Detect current page
-try {
-    if (y.id === "archBody") {
-        for(i = 0; i < targetArray.length; i ++) {
-            x = targetArray[i];
-            for(r = 0; r < x.length; r ++) {
-                if(x[r].indexOf("full") < 0 && x[r].indexOf("sem") > -1) {
-                    //clear the div and call assignboxes on previews again
-                    //make this so it only loads 5 images at a time
-                    assignBoxImages(x[r]);
+$(document).ready(function() {
+    try {
+        if (y.id === "archBody") {
+            for(i = 0; i < targetArray.length; i ++) {
+                x = targetArray[i];
+                for(r = 0; r < x.length; r ++) {
+                    if(x[r].indexOf("full") < 0 && x[r].indexOf("sem") > -1) {
+                        //clear the div and call assignboxes on previews again
+                        //make this so it only loads 5 images at a time
+                        assignBoxImages(x[r]);
+                    }
                 }
             }
         }
-    }
-} catch (e) {}
-try {
-    if (x.id === "photoBody") {
-        $('.scrollButton').css("display", "initial");
-        for(i = 0; i < targetArray.length; i ++) {
-            x = targetArray[i];
-            for(r = 0; r < x.length; r ++) {
-                if(x[r].indexOf("preview") > -1) {
-                    assignBoxImages(x[r]);
+    } catch (e) {}
+    try {
+        if (x.id === "photoBody") {
+            $('.scrollButton').css("display", "initial");
+            for(i = 0; i < targetArray.length; i ++) {
+                x = targetArray[i];
+                for(r = 0; r < x.length; r ++) {
+                    if(x[r].indexOf("preview") > -1) {
+                        assignBoxImages(x[r]);
+                    }
                 }
             }
         }
-    }
-} catch (e) {}
-
+    } catch (e) {}
+});
 //checks what is clicked on
 $(optionTarget).on("click", function() {
     whatId = this.id;
@@ -174,4 +175,11 @@ $('.scrollLeft').on("click", function() {
     $('.contentContainer').animate( {
         scrollLeft: "-=350%"
     }, "fast");
+});
+
+//sectionMenu
+$('.outer').click(function() {
+    whatRegion = this.className;
+    whatRegion = whatRegion.replace("outer ", "");
+    $('.inner.'+whatRegion).toggleClass('visible');
 });

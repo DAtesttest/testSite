@@ -82,7 +82,7 @@ Main Content - Architecture
 }
 .contentContainer.architecture {
     position: absolute;
-    left: 20%;
+    left: 19%;
     width: 60%;
     top: 10%;
 }
@@ -113,6 +113,7 @@ Main Content - Photography
     border-bottom: 2px solid #2E2B2B;
     overflow: hidden;
     white-space: nowrap;
+    /*background-color: (0,0,0,0.25);*/
     background-image: url("../img/arch/bg/sem1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -267,15 +268,53 @@ Menu - Main
 /* ============================================================
 Menu - SectionMenu
 ============================================================= */
+
+.sectionMenu {
+    position: absolute;
+    left: 41%;
+    top: 5%;
+    background-color: black;
+    z-index: 999999;
+}
+
+.selectionNav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.selectionNav > li {
+    display: inline-block;
+}
+
+
+.selectionNav ul.inner {
+    display: none;
+}
+
+.selectionNav ul.visible {
+    display: block;
+}
+
+.selectionNav li a {
+    display:block;
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+}
+/*
 .sectionMenu {
     position: absolute;
     z-index: 9999;
-    left: 37%;
-    top: -4%;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    top: 4.5%;
+    left: 33.5%;
+    text-align:center;
 }
 
 .sectionMenu ul {
-    position: fixed;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -284,9 +323,9 @@ Menu - SectionMenu
 
 .sectionMenu ul li {
     display: block;
-    position: relative;
     float:left;
     font-size: 0.9vw;
+    text-align: center;
 }
 
 .sectionMenu li ul {
@@ -327,13 +366,16 @@ Menu - SectionMenu
     background: #95A9B1;
 }
 
+*/
+
 /* ============================================================
-Menu - SectionNav
+Menu - BottomNav
 ============================================================= */
 .bottomNav {
     position: relative;
     text-align: center;
     font-size: 0;
+    width: 100%;
     margin-top: 1.2%;
     font-weight: normal;
 }
@@ -341,7 +383,7 @@ Menu - SectionNav
 .bottomNav li {
     display: inline-block;
     font-size: 1vw;
-    margin-right: 3%;
+    padding-right: 4.3%;
     text-align: center;
 }
 
@@ -356,6 +398,7 @@ ImageZoom
     position: absolute;
     width: 80%;
     height: 96%;
+    top: 2%;
     left: 10%;
     border: 2px solid black;
     z-index: 9999;
