@@ -246,7 +246,6 @@ Menu - Main
 .mainMenu {
     position: relative;
     text-align: center;
-    font-size: 0;
 }
 
 .mainMenu a {
@@ -271,22 +270,22 @@ Menu - SectionMenu
 
 .sectionMenu {
     position: absolute;
-    left: 25%;
-    width: 50%;
-    top: 5.6%;
+    width: 100%;
     z-index: 999999;
+    top: 4.5%;
+    font-size: 1vw;
 }
 
 .selectionNav {
     width: auto;
-    margin-left: 25%;
+    margin-left: 32%;
     list-style: none;
 }
 
 .selectionNav > li {
     display: block;
     float: left;
-    margin-right: 4.5%;
+    padding-right: 5%;
     background-color: rgba(0,0,0,0.85);
 }
 
@@ -464,7 +463,6 @@ PageControl
     padding: 0;
     border: 0;
 }
-
 h1 {
     font-family: 'PT Sans', sans-serif;
 }

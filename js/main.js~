@@ -31,10 +31,10 @@ sem1Preview.name = "sem1Preview";
 sem2Preview.name = "sem2Preview";
 sem3Preview.name = "sem3Preview";
 sem4Preview.name = "sem4Preview";
-sem1.name = "sem1Preview";
-sem2.name = "sem2Preview";
-sem3.name = "sem3Preview";
-sem4.name = "sem4Preview";
+sem1.name = "sem1";
+sem2.name = "sem2";
+sem3.name = "sem3";
+sem4.name = "sem4";
 photoAmsterdam.name = "photoAmsterdam";
 photoAmsterdamPreview.name = "photoAmsterdamPreview";
 photoBelgium.name = "photoBelgium";
@@ -52,50 +52,59 @@ var attachTo = document.getElementsByClassName("fillTarget")[0];
 var optionTarget = document.getElementsByClassName("optionTarget");
 var zoomedImage = document.getElementsByClassName("zoomedImage")[0];
 //Page Variables
-var x = document.getElementById("photoBody");
-var y = document.getElementById("archBody");
 
 //highlight the menu at what semester it is at
 //create back button to go to initial arch page
 
 //Detect current page
 $(document).ready(function() {
+    var x = document.getElementsByTagName("body")[0];
     try {
-        if (y.id === "archBody") {
-            for(i = 0; i < targetArray.length; i ++) {
-                x = targetArray[i];
-                for(r = 0; r < x.length; r ++) {
-                    if(x[r].indexOf("full") < 0 && x[r].indexOf("sem") > -1) {
-                        //clear the div and call assignboxes on previews again
-                        //make this so it only loads 5 images at a time
-                        assignBoxImages(x[r]);
-                    }
-                }
-            }
+        if (x.id === "photoBody") {
+            initialPhotog();
         }
     } catch (e) {}
     try {
-        if (x.id === "photoBody") {
-            $('.scrollButton').css("display", "initial");
-            for(i = 0; i < targetArray.length; i ++) {
-                x = targetArray[i];
-                for(r = 0; r < x.length; r ++) {
-                    if(x[r].indexOf("preview") > -1) {
-                        assignBoxImages(x[r]);
-                    }
-                }
-            }
+        if (x.id === "archBody") {
+            initialArch();
         }
     } catch (e) {}
 });
+
+function initialPhotog() {
+    $('.scrollButton').css("display", "initial");
+    for(i = 0; i < targetArray.length; i ++) {
+        x = targetArray[i];
+        for(r = 0; r < x.length; r ++) {
+            if(x[r].indexOf("preview") > -1) {
+                assignBoxImages(x[r]);
+            }
+        }
+    }
+}
+
+function initialArch() {
+    console.log("cat");
+    for(i = 0; i < targetArray.length; i ++) {
+        x = targetArray[i];
+        for(r = 0; r < x.length; r ++) {
+            if(x[r].indexOf("full") < 0 && x[r].indexOf("sem") > -1) {
+                assignBoxImages(x[r]);
+            }
+        }
+    }
+}
+
 //checks what is clicked on
 $(optionTarget).on("click", function() {
     whatId = this.id;
     //looks if click correlates with something in namearray
+    if(whatId === "back") {
+        location.reload();
+    }
     function checkClick(whatId, nameArray) {
         return nameArray.indexOf(whatId) > -1;
     }
-
     if(checkClick) {
         //clears already loaded images
         attachTo.innerHTML = "";

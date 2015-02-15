@@ -273,13 +273,13 @@ Menu - SectionMenu
     position: absolute;
     width: 100%;
     z-index: 999999;
-    top: 4.5%;
+    top: -2%;
     font-size: 1vw;
 }
 
 .selectionNav {
     width: auto;
-    margin-left: 32%;
+    margin-left: 30%;
     list-style: none;
 }
 
