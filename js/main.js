@@ -1,14 +1,11 @@
+//ARRAYS:
 //Architecture Picture Preview Arrays
 var sem1Preview = ['./img/arch/sem1/skeletonOfADrawing.jpg', './img/arch/sem1/pinhole.jpg', './img/arch/sem1/sundailPavilion.jpg',];
 var sem2Preview = ['./img/arch/sem2/Pavilion.jpg', './img/arch/sem2/sculpture1.jpg', './img/arch/sem2/sculpture2.jpg', './img/arch/sem2/bridgeproject.jpg'];
 var sem3Preview = ['./img/arch/sem3/readingroom.jpg', './img/arch/sem3/houseaddition.jpg', './img/arch/sem3/houseanalysis.jpg', './img/arch/sem3/conceptualexplorations.jpg'];
 var sem4Preview = ['./img/arch/sem4/winterplaza.jpg'];
-
 //Architecture Picture Arrays
-
 var sem1 = ['./img/arch/sem1/full/skeleton.jpg', './img/arch/sem1/full/sundail.jpg', './img/arch/sem1/full/pinhole.jpg'];
-
-
 //Photography Picture Preview Arrays
 var photoAmsterdamPreview = ['./img/PictureByGallery/Amsterdam/preview/cantelever.jpg', './img/PictureByGallery/Amsterdam/preview/amsterdamtrainstation.jpg', './img/PictureByGallery/Amsterdam/preview/nemo.jpg'];
 var photoBelgiumPreview = ['./img/PictureByGallery/Belgium/preview/IMG_1017.jpg', './img/PictureByGallery/Belgium/preview/IMG_1018.jpg', './img/PictureByGallery/Belgium/preview/streetart.jpg', './img/PictureByGallery/Belgium/preview/IMG_1067.jpg'];
@@ -16,7 +13,6 @@ var photoBerlinPreview = ['./img/PictureByGallery/Berlin/preview/berlinwall.jpg'
 var photoBoliviaPreview = ['./img/PictureByGallery/Bolivia/preview/bolivia3.jpg', './img/PictureByGallery/Bolivia/preview/bolivia2.jpg', './img/PictureByGallery/Bolivia/preview/bolivia6.jpg', './img/PictureByGallery/Bolivia/preview/Bolivia4.jpg'];
 var photoFrancePreview = ['./img/PictureByGallery/France/preview/france2012-2.jpg', './img/PictureByGallery/France/preview/grapes.jpg', './img/PictureByGallery/France/preview/Barcelonedugers1.jpg', './img/PictureByGallery/France/preview/caveavin.jpg'];
 var photoNewYorkPreview = ['./img/PictureByGallery/NewYork/preview/IMG_9020.jpg', './img/PictureByGallery/NewYork/preview/IMG_8867.jpg', './img/PictureByGallery/NewYork/preview/IMG_9651.jpg', './img/PictureByGallery/NewYork/preview/IMG_9087.jpg', './img/PictureByGallery/NewYork/preview/IMG_9523.jpg', './img/PictureByGallery/NewYork/preview/IMG_9235.jpg', './img/PictureByGallery/NewYork/preview/IMG_9523.jpg', './img/PictureByGallery/NewYork/preview/newyork.jpg'];
-
 //Photography Picture Arrays
 var photoAmsterdam = ['./img/PictureByGallery/Amsterdam/cantelever.jpg', './img/PictureByGallery/Amsterdam/amsterdamtrainstation.jpg', './img/PictureByGallery/Amsterdam/nemo.jpg'];
 var photoBelgium = ['./img/PictureByGallery/Belgium/IMG_1017.jpg', './img/PictureByGallery/Belgium/IMG_1018.jpg', './img/PictureByGallery/Belgium/streetart.jpg', './img/PictureByGallery/Belgium/IMG_1067.jpg'];
@@ -24,16 +20,9 @@ var photoBerlin = ['./img/PictureByGallery/Berlin/berlinwall.jpg'];
 var photoBolivia = ['./img/PictureByGallery/Bolivia/bolivia3.jpg', './img/PictureByGallery/Bolivia/bolivia2.jpg', './img/PictureByGallery/Bolivia/bolivia6.jpg', './img/PictureByGallery/Bolivia/Bolivia4.jpg'];
 var photoFrance = ['./img/PictureByGallery/France/france2012-2.jpg', './img/PictureByGallery/France/grapes.jpg', './img/PictureByGallery/France/Barcelonedugers1.jpg', './img/PictureByGallery/France/caveavin.jpg'];
 var photoNewYork = ['./img/PictureByGallery/NewYork/IMG_9020.jpg', './img/PictureByGallery/NewYork/IMG_8867.jpg', './img/PictureByGallery/NewYork/IMG_9651.jpg', './img/PictureByGallery/NewYork/IMG_9087.jpg', './img/PictureByGallery/NewYork/IMG_9523.jpg', './img/PictureByGallery/NewYork/IMG_9235.jpg', './img/PictureByGallery/NewYork/IMG_9523.jpg', './img/PictureByGallery/NewYork/newyork.jpg'];
-
-//Background Array
-var archBG = ['./img/arch/bg/sem1.jpg','./img/arch/bg/sem2.jpg', './img/arch/bg/pavilion.sem3', './img/arch/bg/sem4',];
-
+//Name Arrays
 var targetArray = [sem1, sem1Preview, sem2Preview, sem3Preview, sem4Preview, photoAmsterdamPreview, photoAmsterdam, photoBelgiumPreview, photoBelgium, photoBerlinPreview, photoBerlin, photoBoliviaPreview, photoBolivia, photoFrancePreview, photoFrance, photoNewYorkPreview, photoNewYork];
 var nameArray = [sem1.name, sem1Preview.name, sem2Preview.name, sem3Preview.name, sem4Preview.name, photoAmsterdam, photoBelgium, photoBerlin, photoBolivia, photoFrance, photoNewYork];
-var optionTarget = document.getElementsByClassName("optionTarget");
-var attachTo = document.getElementsByClassName("fillTarget")[0];
-var zoomedImage = document.getElementsByClassName("zoomedImage")[0];
-
 sem1.name = "sem1";
 sem1Preview.name = "sem1Preview";
 sem2Preview.name = "sem2Preview";
@@ -51,25 +40,32 @@ photoFrance.name = "photoFrance";
 photoFrancePreview.name = "photoFrancePreview";
 photoNewYork.name = "photoNewYork";
 photoNewYorkPreview.name = "photoNewYorkPreview";
-
+//Image Variables
+var attachTo = document.getElementsByClassName("fillTarget")[0];
+var optionTarget = document.getElementsByClassName("optionTarget");
+var zoomedImage = document.getElementsByClassName("zoomedImage")[0];
+//Page Variables
 var x = document.getElementById("photoBody");
 var y = document.getElementById("archBody");
 
-//make this so it only loads 5 images at a time
-//make it so hover near arrows scrolls slowly, say 200% instead of 400%
+//highlight the menu at what semester it is at
+//create back button to go to initial arch page
+
+//Detect current page
 try {
     if (y.id === "archBody") {
         for(i = 0; i < targetArray.length; i ++) {
             x = targetArray[i];
             for(r = 0; r < x.length; r ++) {
                 if(x[r].indexOf("full") < 0 && x[r].indexOf("sem") > -1) {
+                    //clear the div and call assignboxes on previews again
+                    //make this so it only loads 5 images at a time
                     assignBoxImages(x[r]);
                 }
             }
         }
     }
 } catch (e) {}
-
 try {
     if (x.id === "photoBody") {
         $('.scrollButton').css("display", "initial");
@@ -84,15 +80,18 @@ try {
     }
 } catch (e) {}
 
+//checks what is clicked on
 $(optionTarget).on("click", function() {
     whatId = this.id;
+    //looks if click correlates with something in namearray
     function checkClick(whatId, nameArray) {
         return nameArray.indexOf(whatId) > -1;
     }
 
     if(checkClick) {
+        //clears already loaded images
         attachTo.innerHTML = "";
-        setBG(whatId);
+        //call images associated with click and creats scroll buttons
         chooseImages(whatId);
         $('.scrollButton').css("display", "initial");
     }
@@ -106,49 +105,24 @@ function chooseImages(whatId){
 
 
     for(i = 0; i < targetArray.length; i ++) {
+        //uses id name to look through array of names
         if (whatId == targetArray[i].name) {
+            //when it's found it uses that dir as images
             target = targetArray[i];
         }
     }
     for(i = 0; i < target.length; i++ ) {
+        //loops through image dir 
         whichOne = target[i];
         if(target[i].indexOf("full") > -1) {
             $('.scrollButton').css("display", "initial");
             $(".contentContainer").addClass("afterClick");
+            //for non preview images
             assignBoxImagesFull(whichOne);
         } else {
+            //for preview images
             assignBoxImages(whichOne);
         }
-    }
-}
-
-$('.scrollRight').on("click", function() {
-    $('.contentContainer').animate( {
-        scrollLeft: "+=500%"
-    }, "fast");
-});
-
-$('.scrollLeft').on("click", function() {
-    $('.contentContainer').animate( {
-        scrollLeft: "-=500%"
-    }, "fast");
-});
-
-
-//load the image flipper at initial page, cycle through semesters
-//highlight the menu at what semester it is at
-//have zoom effect to go from semester to projects
-//have zoom effect when mouse over next in line
-//look into flat design for icons and links
-
-
-function setBG(target) {
-
-    if (target.substring(0, 3) == "sem") {
-        var bgTarget = 'url(' + './img/arch/bg/' + target + '.jpg)';
-        document.getElementById("archBody").style.backgroundImage = bgTarget;
-    } else {
-        return;
     }
 }
 
@@ -176,21 +150,28 @@ $('.fillTarget').on("click", "img", function() {
     newName = thisName.replace("preview/", "");
     zoomBox = document.createElement("img");
 
-    $("#photoBody").removeClass("initial");
-    $("#photoBody").addClass("zoom");
     zoomBox.setAttribute("class", "imageZoom");
     zoomBox.setAttribute("src", newName);
     zoomedImage.appendChild(zoomBox);
     $(".box").css("opacity", "0.2");
-    $("#contentPhotography").css("border", "0px");
 });
 
 $('.zoomedImage').on("click", "img", function() {
     zoomedImage.innerHTML = "";
-    $("#photoBody").removeClass("zoom");
-    $("#photoBody").addClass("initial");
-    $("body").css("background-color", "white");
     $(".box").css("opacity", "1");
     $("#contentPhotography").css("border-top", "2px solid #2E2B2B");
     $("#contentPhotography").css("border-bottom", "2px solid #2E2B2B");
+});
+
+//controls scroll buttons
+$('.scrollRight').on("click", function() {
+    $('.contentContainer').animate( {
+        scrollLeft: "+=1150%"
+    }, "fast");
+});
+
+$('.scrollLeft').on("click", function() {
+    $('.contentContainer').animate( {
+        scrollLeft: "-=350%"
+    }, "fast");
 });
