@@ -118,7 +118,9 @@ $(optionTarget).on("click", function() {
 
 function chooseImages(whatId){
     $('.contentContainer').removeClass("archGrid");
-    $('.contentContainer').addClass("archScroll");
+    if(whatId.indexOf("sem") > -1) {
+        $('.contentContainer').addClass("archScroll");
+    }
     $('.contentContainer').animate( {
         scrollLeft: "0%"
     }, "fast");

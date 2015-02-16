@@ -118,6 +118,7 @@ $(optionTarget).on("click", function() {
 
 function chooseImages(whatId){
     $('.contentContainer').removeClass("archGrid");
+    console.log(whatId);
     $('.contentContainer').addClass("archScroll");
     $('.contentContainer').animate( {
         scrollLeft: "0%"
