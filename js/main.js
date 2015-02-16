@@ -183,14 +183,16 @@ $('.zoomedImage').on("click", "img", function() {
 
 //controls scroll buttons
 $('.scrollRight').on("click", function() {
-    $('.contentContainer.projectSlider').animate( {
-        scrollLeft: "+=1150%"
+    console.log("dog");
+    $('.contentContainer').animate( {
+        left: "-=350"
     }, "fast");
 });
 
 $('.scrollLeft').on("click", function() {
-    $('.contentContainer.projectSlider').animate( {
-        scrollLeft: "-=350%"
+    console.log("cat");
+    $('.contentContainer').animate( {
+        left: "+=350"
     }, "fast");
 });
 

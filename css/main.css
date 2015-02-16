@@ -38,9 +38,10 @@ Main Content - Architecture
 ============================================================= */
 #contentArchitecture {
     position: absolute;
-    width: 100%;
     height: 100%;
+    width: 100%;
     overflow: hidden;
+    border: 1px solid red;
 }
 
 .tintBG {
@@ -52,7 +53,7 @@ Main Content - Architecture
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
-    filter: opacity(50%);
+    filter: opacity(40%);
 }
 
 .afterClick {
@@ -63,6 +64,7 @@ Main Content - Architecture
     position: absolute;
     top: 29%;
     left: 6%;
+    z-index: -1;
 }
 
 .projects li {
@@ -89,10 +91,18 @@ Main Content - Architecture
 }
 
 .contentContainer.projectSlider {
-    position: relative;
+    position: absolute;
+    display: inline-block;
+    top: 13.5%;
+    height: 90%;
+    width: 90%;
+    left: 5%;
 }
 .contentContainer.projectSlider .box2 {
-    position: absolute;
+    position: relative; 
+    margin-right: 5%;
+    width: 60%;
+    height: 80%;
     display: inline-block;
     box-shadow: 0 10px 6px -6px black;
 }
@@ -107,7 +117,6 @@ Main Content - Photography
     height: 100%;
     overflow: hidden;
     white-space: nowrap;
-    /*background-color: (0,0,0,0.25);*/
     background-image: url("../img/arch/bg/sem1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -124,46 +133,6 @@ Main Content - Photography
     height: 40.2vh;
 }
 
-.scrollButton {
-    position: fixed;
-    display: none;
-    top: 45%;
-    background: transparent;
-    border: none;
-    font-size: 0;
-    background-color: rgba(0,0,0,0.2);
-}
-
-.scrollButton p {
-    color: #FC374A;
-    text-shadow: 0.2rem 0.3rem black;
-}
-
-.scrollRight {
-    z-index: 999;
-    right: 1%;
-}
-
-.scrollLeft {
-    z-index: 999;
-    left: 1%;
-}
-.scrollRight img {
-    -webkit-animation: pulse 1.5s;
-    animation: pulse 1.5s;
-    -webkit-animation-iteration-count: 20;
-    animation-iteration-count: 20;
-}
-
-@-webkit-keyframes pulse {
-    0% {opacity: 0.55;}
-    100% {opacity: 1;}
-}
-
-@keyframes pulse {
-    0% {opacity: 0.55;}
-    100% {opacity: 1;}
-}
 
 /* ============================================================
 Main Content - About
@@ -411,6 +380,50 @@ Header/Footer
 }
 
 /* ============================================================
+Scroll Buttons
+============================================================= */
+.scrollButton {
+    position: fixed;
+    display: none;
+    top: 45%;
+    background: transparent;
+    border: none;
+    font-size: 0;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.scrollButton p {
+    color: #FC374A;
+    text-shadow: 0.2rem 0.3rem black;
+}
+
+.scrollRight {
+    z-index: 999;
+    right: 1%;
+}
+
+.scrollLeft {
+    z-index: 999;
+    left: 1%;
+}
+.scrollRight img {
+    -webkit-animation: pulse 1.5s;
+    animation: pulse 1.5s;
+    -webkit-animation-iteration-count: 20;
+    animation-iteration-count: 20;
+}
+
+@-webkit-keyframes pulse {
+    0% {opacity: 0.55;}
+    100% {opacity: 1;}
+}
+
+@keyframes pulse {
+    0% {opacity: 0.55;}
+    100% {opacity: 1;}
+}
+
+/* ============================================================
 ImageZoom
 ============================================================= */
 .imageZoom {
@@ -484,7 +497,6 @@ h1 {
 }
 
 #container {
-    position: relative;
     min-height: 100%;;
 }
 
