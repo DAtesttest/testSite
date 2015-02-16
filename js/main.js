@@ -118,7 +118,7 @@ $(optionTarget).on("click", function() {
 
 function chooseImages(whatId){
     $('.contentContainer').removeClass("archGrid");
-    $('.contentContainer').addClass("projectSlider");
+    $('.contentContainer').addClass("archScroll");
     $('.contentContainer').animate( {
         scrollLeft: "0%"
     }, "fast");
@@ -183,16 +183,14 @@ $('.zoomedImage').on("click", "img", function() {
 
 //controls scroll buttons
 $('.scrollRight').on("click", function() {
-    console.log("dog");
     $('.contentContainer').animate( {
-        left: "-=350"
+        scrollLeft: "+=350"
     }, "fast");
 });
 
 $('.scrollLeft').on("click", function() {
-    console.log("cat");
     $('.contentContainer').animate( {
-        left: "+=350"
+        scrollLeft: "-=350"
     }, "fast");
 });
 

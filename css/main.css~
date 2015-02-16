@@ -40,6 +40,7 @@ Main Content - contentContainer
 ============================================================= */
 .contentContainer {
     position: relative;
+    border: 1px solid blue;
     width: 100%;
     height: 100%;
 }
@@ -49,11 +50,14 @@ Main Content - Architecture
 ============================================================= */
 #contentArchitecture {
     position: absolute;
-    height: 100%;
+    top: 10%;
+    height: 80%;
     width: 100%;
     overflow: hidden;
     background-color: #000;
+    border: 1px solid red;
 }
+
 
 .pageBG.tint.arch {
     background-image: url("../img/PictureByGallery/Amsterdam/cantelever.jpg");
@@ -69,7 +73,7 @@ Main Content - Architecture
 .projects {
     position: absolute;
     top: 16%;
-    left: 12%;
+    left: 11.5%;
 }
 
 .projects h4 {
@@ -110,13 +114,23 @@ Main Content - Architecture
     width: 90%;
     left: 5%;
 }
-.contentContainer.projectSlider .box2 {
+.contentContainer.archScroll {
+    position: relative;
+    display: inline-block;
+    top: 15%;
+    width: 80%;
+    height: 90%;
+    left: 15%;
+    overflow: auto;
+}
+.contentContainer.archScroll .box2 {
     position: relative; 
     margin-right: 5%;
-    width: 60%;
+    width: 50%;
     height: 80%;
     display: inline-block;
     box-shadow: 0 10px 6px -6px black;
+    z-index: 999;
 }
 
 /* ============================================================
@@ -124,11 +138,20 @@ Main Content - Photography
 ============================================================= */
 #contentPhotography {
     position: absolute;
+    top: 10%;
     width: 100%;
-    height: 100%;
+    height: 80%;
     overflow: hidden;
     white-space: nowrap;
     background-color: #000;
+}
+
+.contentContainer.photogScroll {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    height: 49%;
+    overflow: auto;
 }
 
 .pageBG.tint.photog {
@@ -140,8 +163,6 @@ Main Content - Photography
 .contentContainer .box {
     box-shadow: 0 10px 6px -6px black;
     display: inline-block;
-    margin-left: 5%;
-    margin-top: 15%;
     width: 60vh;
     height: 40.2vh;
 }
@@ -268,6 +289,15 @@ Menu - SectionMenu
 
 .selectionNav ul.visible {
     display: block;
+}
+
+.sectionNav ul li a {
+    display:block;
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 5px 25px 5px 25px;
+    color: white;
 }
 
 
@@ -436,12 +466,12 @@ Scroll Buttons
 }
 
 .scrollRight {
-    z-index: 999;
+    z-index: 9999;
     right: 1%;
 }
 
 .scrollLeft {
-    z-index: 999;
+    z-index: 9999;
     left: 1%;
 }
 .scrollRight img {
