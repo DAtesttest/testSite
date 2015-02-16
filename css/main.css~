@@ -71,7 +71,7 @@ Main Content - Architecture
 
 .projects {
     position: absolute;
-    top: 16%;
+    top: 14%;
     left: 12%;
     text-decoration: none;
 }
