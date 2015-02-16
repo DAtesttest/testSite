@@ -55,6 +55,8 @@ var zoomedImage = document.getElementsByClassName("zoomedImage")[0];
 
 //highlight the menu at what semester it is at
 //create back button to go to initial arch page
+//header and footer start at middle of page, taking up whole page
+////quick transition down, revealing site, and bringing them to normal position
 
 //Detect current page
 $(document).ready(function() {
@@ -115,6 +117,8 @@ $(optionTarget).on("click", function() {
 });
 
 function chooseImages(whatId){
+    $('.contentContainer').removeClass("archGrid");
+    $('.contentContainer').addClass("projectSlider");
     $('.contentContainer').animate( {
         scrollLeft: "0%"
     }, "fast");
@@ -175,19 +179,17 @@ $('.fillTarget').on("click", "img", function() {
 $('.zoomedImage').on("click", "img", function() {
     zoomedImage.innerHTML = "";
     $(".box").css("opacity", "1");
-    $("#contentPhotography").css("border-top", "2px solid #2E2B2B");
-    $("#contentPhotography").css("border-bottom", "2px solid #2E2B2B");
 });
 
 //controls scroll buttons
 $('.scrollRight').on("click", function() {
-    $('.contentContainer').animate( {
+    $('.contentContainer.projectSlider').animate( {
         scrollLeft: "+=1150%"
     }, "fast");
 });
 
 $('.scrollLeft').on("click", function() {
-    $('.contentContainer').animate( {
+    $('.contentContainer.projectSlider').animate( {
         scrollLeft: "-=350%"
     }, "fast");
 });

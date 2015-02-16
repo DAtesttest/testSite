@@ -3,7 +3,7 @@
     <head>
         <title> David Anderson - Architecture </title>
         <meta charset='utf-8'>
-        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- <link rel="favicon" href="img/favicon.ico"> -->
         <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -12,35 +12,37 @@
     </head>
 
     <body id="archBody" class="initial">
-        <!-- Translate/Social Buttons -->
-        <ul id="socialAndTranslateButtons">
-            <li><img class="social" src="./img/icons/In-2C-34px-R.png" /></li>
-            <li><img class="social2" src="./img/icons/1423825228_email.png" /></li>
-            <li>EN</li>
-            <li>FR</li>
-        </ul>
-
-        <h1 class="sectionTitle white"> David Anderson - Architecture</h1>
-
-            <div id="archMenu" class="sectionMenu">
-                <ul class="selectionNav">
-                    <li><a id="sem1" class="optionTarget" href="">Semester One</a>
-                    </li>
-                    <li><a id="sem2" class="optionTarget" href="">Semester Two</a>
-                    </li>
-                    <li><a id="sem3" class="optionTarget" href="">Semester Three</a>
-                    </li>
-                    <li><a id="sem4" class="optionTarget" href="">Semester Four</a>
-                    </li>
-                    <li><a id="back" class="optionTarget" href="">Back</a>
-                    </li>
-                </ul>
-            </div>
         <div id="container">
-        <!-- have a list of all sub categories in semester on left of image, highlight project name when image focused -->
-            <button class="scrollButton scrollRight"><img src="./img/icons/rightArrow.png" alt="rightArrow"></button>
-            <button class="scrollButton scrollLeft"><img src="./img/icons/leftArrow.png" alt="leftArrow"></button>
+            <div class="header">
+                <!-- Translate/Social Buttons -->
+                <ul id="socialAndTranslateButtons">
+                    <li><img class="social" src="./img/icons/In-2C-34px-R.png" /></li>
+                    <li><img class="social2" src="./img/icons/1423825228_email.png" /></li>
+                    <li>EN</li>
+                    <li>FR</li>
+                </ul>
+
+                <h1 class="sectionTitle"> David Anderson - Architecture</h1>
+
+                <div id="archMenu" class="sectionMenu">
+                    <ul class="selectionNav">
+                        <li><a id="sem1" class="optionTarget" href="">Semester One</a>
+                        </li>
+                        <li><a id="sem2" class="optionTarget" href="">Semester Two</a>
+                        </li>
+                        <li><a id="sem3" class="optionTarget" href="">Semester Three</a>
+                        </li>
+                        <li><a id="sem4" class="optionTarget" href="">Semester Four</a>
+                        </li>
+                        <li><a id="back" class="optionTarget" href="">Back</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
             <div id="contentArchitecture" class="fadeIn">
+                    <div class="tintBG"></div>
+                <button class="scrollButton scrollRight"><img src="./img/icons/rightArrow.png" alt="rightArrow"></button>
+                <button class="scrollButton scrollLeft"><img src="./img/icons/leftArrow.png" alt="leftArrow"></button>
                 <ul class="projects">
                     <li>Skeleton of a Drawing</li>
                     <li>Pinhole</li>
@@ -50,41 +52,43 @@
                     <li>Snake in the Wind</li>
                     <li>Dow's Lake Pavilion</li>
                     <li>Calatrava Inspired Bridge</li>
-                    <li>Weekend House -- Downtown Sao Paulo</li>
+                    <li>Weekend House</li>
                     <li>Conceptual Explorations</li>
                     <li>House Addition</li>
                     <li>Renaissance Plaza</li>
                 </ul>
-                    <div class="zoomedImage">
-                    </div>
-                <div class="contentContainer fillTarget architecture">
+                <div class="zoomedImage">
+                </div>
+                <div class="contentContainer fillTarget archGrid">
+                </div>
+            </div>
+            <div class="footer">
+                <div class="bottomNav">
+                    <ul>
+                        <li><a href="photography.html">
+                                Photography
+                            </a>
+                        </li>
+                        <li><a href="about.html">
+                                About Me
+                            </a>
+                        </li>
+                        <li><a href="index.html">
+                                Home
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="credits">
+                    <p class="da">
+                    &#169; David Anderson 2015
+                    </p>
+                    <p class="me">
+                    Developed and Designed by J.Baldwin
+                    </p>
                 </div>
             </div>
         </div>
-            <div class="bottomNav">
-                <ul>
-                    <li><a href="photography.html">
-                            Photography
-                        </a>
-                    </li>
-                    <li><a href="about.html">
-                            About Me
-                        </a>
-                    </li>
-                    <li><a href="index.html">
-                            Home
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="credits">
-                <p class="da">
-                &#169; David Anderson 2015
-                </p>
-                <p class="me">
-                Developed and Designed by J.Baldwin
-                </p>
-            </div>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="js/main.js"></script>
     </body>
