@@ -41,20 +41,15 @@ Main Content - Architecture
     height: 100%;
     width: 100%;
     overflow: hidden;
-    border: 1px solid red;
+    background-color: #000;
 }
 
-.tintBG {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+.pageBG.tint.arch {
     background-image: url("../img/PictureByGallery/Amsterdam/cantelever.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
-    filter: opacity(40%);
+    filter: opacity(75%);
+    -webkit-filter: opacity(75%);
 }
+
 
 .afterClick {
     white-space: nowrap;
@@ -64,15 +59,14 @@ Main Content - Architecture
     position: absolute;
     top: 29%;
     left: 6%;
-    z-index: -1;
 }
 
 .projects li {
-    font-size: 0.9vw;
-    line-height: 1.3vw;
-    font-weight: 600;
+    font-size: 1vw;
+    line-height: 1.5vw;
     text-shadow: 1px 1px #000;
-    color: black;
+    font-family: 'PT Sans', sans-serif;
+    color: white;
 }
 
 .contentContainer.archGrid {
@@ -81,12 +75,11 @@ Main Content - Architecture
     left: 25%;
     width: 50%;
     height: 49%;
-    border: 1px solid green;
 }
 
 .contentContainer.archGrid .box {
-    margin: 2.5%;
-    width: 20%;
+    margin: 3.5%;
+    width: 18%;
     height: 35%;
     box-shadow: 0 10px 6px -6px black;
 }
@@ -98,7 +91,6 @@ Main Content - Architecture
     height: 90%;
     width: 90%;
     left: 5%;
-    border: 1px solid blue;
 }
 .contentContainer.projectSlider .box2 {
     position: relative; 
@@ -112,18 +104,19 @@ Main Content - Architecture
 /* ============================================================
 Main Content - Photography
 ============================================================= */
-
 #contentPhotography {
     position: absolute;
     width: 100%;
     height: 100%;
     overflow: hidden;
     white-space: nowrap;
+    background-color: #000;
+}
+
+.pageBG.tint.photog {
     background-image: url("../img/arch/bg/sem1.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
+    filter: opacity(90%);
+    -webkit-filter: opacity(90%);
 }
 
 .contentContainer .box {
@@ -141,15 +134,18 @@ Main Content - About
 ============================================================= */
 #contentAbout {
     position: absolute;
-    background-image: url("../img/aboutMeBG.jpg");
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
+    background-color: #000;
 }
+
+.pageBG.tint.about {
+    background-image: url("../img/aboutMeBG.jpg");
+    filter: opacity(90%);
+    -webkit-filter: opacity(90%);
+}
+
 .fadeIn {
     animation: fadeIn 2s;
     -webkit-animation: fadeIn 2s;
@@ -346,7 +342,6 @@ Menu - BottomNav
 /* ============================================================
 SectionTitle
 ============================================================= */
-
 .sectionTitle {
     position: relative;
     text-align: left;
@@ -359,6 +354,23 @@ SectionTitle
 
 /* make it so shows name as header then description of current page(ie. photography) in smaller font and italics below*/
 
+
+/* ============================================================
+PageBackground
+============================================================= */
+.pageBG {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+}
+.tint {
+    filter: opacity(50%);
+    -webkit-filter: opacity(50%);
+}
 
 /* ============================================================
 Header/Footer
@@ -400,12 +412,12 @@ Scroll Buttons
 }
 
 .scrollRight {
-    z-index: 9999999999999999999999999999999999999999999999999999999999999999999;
+    z-index: 999;
     right: 1%;
 }
 
 .scrollLeft {
-    z-index: 9999999999;
+    z-index: 999;
     left: 1%;
 }
 .scrollRight img {
