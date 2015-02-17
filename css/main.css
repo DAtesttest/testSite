@@ -48,13 +48,13 @@ Main Content - contentContainer
 /* ============================================================
 Main Content - Architecture
 ============================================================= */
+
 #contentArchitecture {
     position: absolute;
     top: 10%;
     height: 80%;
     width: 100%;
     overflow: hidden;
-    background-color: #000;
 }
 
 
@@ -71,7 +71,7 @@ Main Content - Architecture
 
 .projects {
     position: absolute;
-    top: 14.5%;
+    top: 22%;
     width: 20%;
     left: 13%;
 }
@@ -83,10 +83,6 @@ Main Content - Architecture
 .projects li {
     font-size: 0.9vw;
     padding: 0.5% 0%;
-    text-shadow: -1.5px -1px #000,
-                 1.5px -1px #000,
-                 -1.5px 1px #000,
-                 1.5px 1px #000;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -95,14 +91,14 @@ Main Content - Architecture
 .projects a:hover {
     background-color: #CB3535;
     text-shadow: 0px;
+    cursor: none;
     font-size: 1vw;
     padding: 5px 10px 5px 10px;
 }
 
 .contentContainer.archGrid {
-    position: relative;
-    margin-top: 0%;
-    top: 12%;
+    position: absolute;
+    top: 6.3%;
     left: 26%;
     width: 50%;
     height: 49%;
@@ -116,9 +112,9 @@ Main Content - Architecture
 }
 
 .contentContainer.archScroll {
-    position: relative;
-    top: 8%;
-    width: 45%;
+    position: absolute;
+    top: 12%;
+    width: 52%;
     height: 105%;
     left: 30%;
     overflow: auto;
@@ -128,8 +124,8 @@ Main Content - Architecture
     box-shadow: 0 10px 6px -6px black;
     margin-right: 2.5%;
     margin-left: 2.5%;
-    width: 80vh;
-    height: 53.7vh;
+    width: 90vh;
+    height: 60.4vh;
 }
 
 /* ============================================================
@@ -250,6 +246,9 @@ Menu - Main
 .mainMenu a:visited {
     color: black;
 }
+.mainMenu a:link {
+    color: black;
+}
 
 /* ============================================================
 Menu - SectionMenu
@@ -336,7 +335,6 @@ SectionTitle
     margin-top: 1.7%;
     margin-left: 0.8%;
     font-size: 1.2vw;
-    color: white;
     font-weight: 100;
 }
 
@@ -368,8 +366,8 @@ Header/Footer
     top: 0;
     width: 100%;
     height: 10%;
-    background-color: #151515;
     z-index: 999;
+    background-color: rgba(0,0,0,0);
 }
 
 .footer {
@@ -377,8 +375,8 @@ Header/Footer
     bottom: 0;
     width: 100%;
     height: 10%;
-    background-color: #151515;
     z-index: 999;
+    background-color: rgba(0,0,0,0);
 }
 
 /* ============================================================
@@ -422,8 +420,8 @@ Scroll Buttons
     position: absolute;
     display: none;
     background: transparent;
-    bottom: 2%;
-    left: 48.2%;
+    top: 16.5%;
+    right: 17%;
     border: none;
     font-size: 0;
 }
@@ -431,18 +429,19 @@ Scroll Buttons
 .scrollButtonArch {
     position: fixed;
     display: none;
-    bottom: 12%;
+    top: 47%;
     background: transparent;
     border: none;
     font-size: 0;
 }
 
 .scrollRightArch {
-    right: 46.2%;
+    right: 15.5%;
 }
 
 .scrollLeftArch {
-    left: 44.9%;
+    left: 27.5%;
+    z-index: 999;
 }
 
 .scaleImage2 img {
@@ -461,14 +460,15 @@ Scroll Buttons
 /* ============================================================
 ImageZoom
 ============================================================= */
+
 .imageZoom {
     position: absolute;
-    max-width: 60%;
-    max-height: 95%;
+    max-width: 90%;
+    max-height: 90%;
     top: 5%;
     left: 20%;
-    border: 2px solid black;
     z-index: 9999;
+    vertical-align: text-top;
 }
 
 /* ============================================================
@@ -515,7 +515,10 @@ Credits
     font-size: 0.6vw;
     bottom: 0;
 }
-
+.home {
+    color: #000;
+    background-color: #FFF;
+}
 .me {
     position: absolute;
     left: 1%;
@@ -539,23 +542,27 @@ h1 {
 }
 
 #container {
-    min-height: 100%;;
+    position: relative;
+    height: 100%;
+    width: 100%;
 }
 
 html, body {
     height: 100%;
+}
+body {
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
-    color: #FFF;
+    color: #000;
     overflow: auto;
 }
 
 a:visited {
-    color: #FFF;
+    color: #000;
 }
 
 a:link {
-    color: #FFF;
+    color: #000;
 }
 

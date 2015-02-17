@@ -194,16 +194,18 @@ $(document).ready(function() {
         $(".hide").css("display", "none");
         $(".box").css("opacity", "0");
         $(".box2").css("opacity", "0");
+        $(".scaleImage").css("display", "none");
     });
 
     $('.zoomedImage').on("click", "img", function() {
         zoomedImage.innerHTML = "";
         $(".pageBG").toggleClass("tint");
-        $(".header").css("background-color", "#151515");
-        $(".footer").css("background-color", "#151515");
+        $(".header").css("background-color", "rgba(0,0,0,0.0)");
+        $(".footer").css("background-color", "rgba(0,0,0,0.0)");
         $(".hide").css("display", "initial");
         $(".box").css("opacity", "1");
         $(".box2").css("opacity", "1");
+        $(".scaleImage").css("display", "initial");
     });
 
     $('.backButton').on("click", "img", function() {
