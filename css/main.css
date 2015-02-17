@@ -72,6 +72,7 @@ Main Content - Architecture
 .projects {
     position: absolute;
     top: 14%;
+    width: 20%;
     left: 12%;
     text-decoration: none;
 }
@@ -97,6 +98,7 @@ Main Content - Architecture
 
 .projects a:hover {
     background-color: #CB3535;
+    padding: 5px 10px 5px 10px;
 }
 
 .contentContainer.archGrid {
@@ -154,7 +156,7 @@ Main Content - Photography
     overflow: auto;
 }
 
-.pageBG.tint.photog {
+.pageBG.tint {
     background-image: url("../img/arch/bg/sem1.jpg");
     filter: opacity(95%);
     -webkit-filter: opacity(95%);
@@ -258,13 +260,15 @@ Menu - Main
 Menu - SectionMenu
 ============================================================= */
 .sectionMenu {
-    position: relative;
+    position: absolute;
+    top: 40%;
     width: 100%;
     font-size: 1vw;
     color: white;
     list-style: none;
+    margin: 0;
+    padding: 0;
     text-align: center;
-    bottom: 15%;
 }
 
 .selectionNav {
@@ -276,11 +280,18 @@ Menu - SectionMenu
     display: inline-block;
     color: white;
     margin: 0% 1.5%;
+    padding: 0px 15px 0px 15px;
 }
 
 .selectionNav li ul li {
+    position: relative;
+    font-size: 0.8vw;
     display: block;
     background-color: rgba(0,0,0,0.88);
+    padding: 10px 15px 5px 15px;
+}
+
+.selectionNav ul li a {
 }
 
 .selectionNav ul.inner {
@@ -290,95 +301,18 @@ Menu - SectionMenu
 .selectionNav ul.visible {
     position: absolute;
     display: block;
-    text-align: center;
+    padding: 0;
 }
 
-.sectionNav ul li a {
-    display:block;
-    text-decoration: none;
-    white-space: nowrap;
-    overflow: hidden;
-    padding: 5px 25px 5px 25px;
-    color: white;
-}
-
-.sectionMenu a:hover {
+.sectionMenu li:hover {
     background-color: #CB3535;
 }
-
-
-
-/*
-.sectionMenu {
-    position: absolute;
-    z-index: 9999;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    top: 4.5%;
-    left: 33.5%;
-    text-align:center;
-}
-
-.sectionMenu ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    width: 100%;
-}
-
-.sectionMenu ul li {
-    display: block;
-    float:left;
-    font-size: 0.9vw;
-    text-align: center;
-}
-
-.sectionMenu li ul {
-    display: none;
-}
-
-.sectionMenu li ul li {
-    font-size: 0.6vw;
-    background-color: rgba(0,0,0,0.8);
-}
-
-.sectionMenu ul li a {
-    display:block;
-    text-decoration: none;
-    white-space: nowrap;
-    overflow: hidden;
-    padding: 5px 25px 5px 25px;
-    color: white;
-}
-
-.sectionMenu ul li a:hover {
-    background: #FC374A;
-}
-
-.sectionMenu li:hover ul {
-    display: block;
-    position: relative;
-}
-
-.sectionMenu li:hover li {
-    float: none;
-}
-
-.sectionMenu li:hover a {
-}
-
-.sectionMenu li:hover li a:hover {
-    background: #95A9B1;
-}
-
-*/
 
 /* ============================================================
 Menu - BottomNav
 ============================================================= */
 .bottomNav {
-    position: relative;
+    position: absolute;
     text-align: center;
     font-size: 0;
     width: 100%;
@@ -401,9 +335,10 @@ Menu - BottomNav
 SectionTitle
 ============================================================= */
 .sectionTitle {
-    position: relative;
+    position: absolute;
     text-align: left;
     width: 50%;
+    margin-top: 1.5%;
     margin-left: 0.8%;
     font-size: 1.4vw;
     color: white;
@@ -489,15 +424,26 @@ Scroll Buttons
     100% {opacity: 1;}
 }
 
+.backButton {
+    position: fixed;
+    display: none;
+    background: transparent;
+    top: 16%;
+    left: 48%;
+    border: none;
+    font-size: 0;
+    z-index: 99999999;
+}
+
 /* ============================================================
 ImageZoom
 ============================================================= */
 .imageZoom {
     position: absolute;
-    width: 80%;
-    height: 96%;
-    top: 2%;
-    left: 10%;
+    width: 60%;
+    height: 90%;
+    top: 5%;
+    left: 20%;
     border: 2px solid black;
     z-index: 9999;
 }
@@ -535,14 +481,14 @@ Credits
 ============================================================= */
 .da {
     position: absolute;
-    left: 1%;
+    right: 1%;
     font-size: 0.6vw;
     bottom: 0;
 }
 
 .me {
     position: absolute;
-    right: 1%;
+    left: 1%;
     font-size: 0.4vw;
     bottom: 0;
 }

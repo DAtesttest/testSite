@@ -54,7 +54,6 @@ var zoomedImage = document.getElementsByClassName("zoomedImage")[0];
 //Page Variables
 
 //highlight the menu at what semester it is at
-//create back button to go to initial arch page
 //header and footer start at middle of page, taking up whole page
 ////quick transition down, revealing site, and bringing them to normal position
 
@@ -101,7 +100,7 @@ function initialArch() {
 $(optionTarget).on("click", function() {
     whatId = this.id;
     if(whatId === "back") {
-        location.reload();
+        history.go(0);
     }
     function checkClick(whatId, nameArray) {
         return nameArray.indexOf(whatId) > -1;
@@ -117,13 +116,11 @@ $(optionTarget).on("click", function() {
 });
 
 function chooseImages(whatId){
-    $('.contentContainer').removeClass("archGrid");
+    $('.contentContainer').scrollLeft(0);
     if(whatId.indexOf("sem") > -1) {
+        $('.contentContainer').removeClass("archGrid");
         $('.contentContainer').addClass("archScroll");
     }
-    $('.contentContainer').animate( {
-        scrollLeft: "0%"
-    }, "fast");
 
 
     for(i = 0; i < targetArray.length; i ++) {
@@ -138,6 +135,7 @@ function chooseImages(whatId){
         whichOne = target[i];
         if(target[i].indexOf("full") > -1) {
             $('.scrollButton').css("display", "initial");
+            $('.backButton').css("display", "initial");
             $(".contentContainer").addClass("afterClick");
             //for non preview images
             assignBoxImagesFull(whichOne);
@@ -175,12 +173,24 @@ $('.fillTarget').on("click", "img", function() {
     zoomBox.setAttribute("class", "imageZoom");
     zoomBox.setAttribute("src", newName);
     zoomedImage.appendChild(zoomBox);
-    $(".box").css("opacity", "0.2");
+    $(".pageBG").toggleClass("tint");
+    $(".bottomNav").css("display", "none");
+    $("#photoMenu").css("display", "none");
+    $(".scrollButton").css("display", "none");
+    $(".box").css("display", "none");
 });
 
 $('.zoomedImage').on("click", "img", function() {
     zoomedImage.innerHTML = "";
-    $(".box").css("opacity", "1");
+    $("#photoMenu").css("display", "initial");
+    $(".bottomNav").css("display", "initial");
+    $(".scrollButton").css("display", "initial");
+    $(".pageBG").toggleClass("tint");
+    $(".box").css("display", "initial");
+});
+
+$('.backButton').on("click", "img", function() {
+    location.reload();
 });
 
 //controls scroll buttons

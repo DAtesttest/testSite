@@ -117,12 +117,11 @@ $(optionTarget).on("click", function() {
 });
 
 function chooseImages(whatId){
-    $('.contentContainer').removeClass("archGrid");
-    console.log(whatId);
-    $('.contentContainer').addClass("archScroll");
-    $('.contentContainer').animate( {
-        scrollLeft: "0%"
-    }, "fast");
+    $('.contentContainer').scrollLeft(0);
+    if(whatId.indexOf("sem") > -1) {
+        $('.contentContainer').removeClass("archGrid");
+        $('.contentContainer').addClass("archScroll");
+    }
 
 
     for(i = 0; i < targetArray.length; i ++) {
@@ -137,6 +136,7 @@ function chooseImages(whatId){
         whichOne = target[i];
         if(target[i].indexOf("full") > -1) {
             $('.scrollButton').css("display", "initial");
+            $('.backButton').css("display", "initial");
             $(".contentContainer").addClass("afterClick");
             //for non preview images
             assignBoxImagesFull(whichOne);
@@ -174,12 +174,24 @@ $('.fillTarget').on("click", "img", function() {
     zoomBox.setAttribute("class", "imageZoom");
     zoomBox.setAttribute("src", newName);
     zoomedImage.appendChild(zoomBox);
-    $(".box").css("opacity", "0.2");
+    $(".pageBG").toggleClass("tint");
+    $(".bottomNav").css("display", "none");
+    $("#photoMenu").css("display", "none");
+    $(".scrollButton").css("display", "none");
+    $(".box").css("display", "none");
 });
 
 $('.zoomedImage').on("click", "img", function() {
     zoomedImage.innerHTML = "";
-    $(".box").css("opacity", "1");
+    $("#photoMenu").css("display", "initial");
+    $(".bottomNav").css("display", "initial");
+    $(".scrollButton").css("display", "initial");
+    $(".pageBG").toggleClass("tint");
+    $(".box").css("display", "initial");
+});
+
+$('.backButton').on("click", "img", function() {
+    location.reload();
 });
 
 //controls scroll buttons
