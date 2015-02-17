@@ -340,9 +340,9 @@ SectionTitle
     width: 50%;
     margin-top: 1.5%;
     margin-left: 0.8%;
-    font-size: 1.4vw;
+    font-size: 1.2vw;
     color: white;
-    font-weight: normal;
+    font-weight: 100;
 }
 
 /* make it so shows name as header then description of current page(ie. photography) in smaller font and italics below*/
