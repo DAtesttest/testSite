@@ -71,14 +71,13 @@ Main Content - Architecture
 
 .projects {
     position: absolute;
-    top: 14%;
+    top: 14.5%;
     width: 20%;
-    left: 12%;
-    text-decoration: none;
+    left: 13%;
 }
 
-.projects h4 {
-    text-decoration: underline;
+.project span {
+    font-weight: 900;
 }
 
 .projects li {
@@ -89,15 +88,14 @@ Main Content - Architecture
                  -1.5px 1px #000,
                  1.5px 1px #000;
     font-family: 'Open Sans', sans-serif;
-    color: white;
 }
 
-.projects a:visited {
-    color: #FFF;
-}
+.underline {text-decoration: underline;}
 
 .projects a:hover {
     background-color: #CB3535;
+    text-shadow: 0px;
+    font-size: 1vw;
     padding: 5px 10px 5px 10px;
 }
 
@@ -119,20 +117,19 @@ Main Content - Architecture
 
 .contentContainer.archScroll {
     position: relative;
-    top: 7%;
-    width: 80%;
+    top: 8%;
+    width: 45%;
     height: 105%;
-    left: 8%;
+    left: 30%;
     overflow: auto;
 }
 .contentContainer.archScroll .box2 {
-    position: relative; 
-    margin-right: 5%;
-    width: 50%;
-    height: 70%;
     display: inline-block;
     box-shadow: 0 10px 6px -6px black;
-    z-index: 999;
+    margin-right: 2.5%;
+    margin-left: 2.5%;
+    width: 80vh;
+    height: 53.7vh;
 }
 
 /* ============================================================
@@ -156,12 +153,6 @@ Main Content - Photography
     overflow: auto;
 }
 
-.pageBG.tint {
-    background-image: url("../img/arch/bg/sem1.jpg");
-    filter: opacity(95%);
-    -webkit-filter: opacity(95%);
-}
-
 .contentContainer.photogScroll .box {
     box-shadow: 0 10px 6px -6px black;
     display: inline-block;
@@ -170,7 +161,11 @@ Main Content - Photography
     height: 40.2vh;
 }
 
-
+.pageBG.tint {
+    background-image: url("../img/arch/bg/sem1.jpg");
+    filter: opacity(95%);
+    -webkit-filter: opacity(95%);
+}
 /* ============================================================
 Main Content - About
 ============================================================= */
@@ -221,7 +216,7 @@ Main Content - About
     position: absolute;
     width: 30%;
     top: 15%;
-    right: 5.5%;
+    right: 3%;
     box-shadow: 0 10px 6px -6px black;
 }
 
@@ -323,7 +318,7 @@ Menu - BottomNav
 .bottomNav li {
     display: inline-block;
     font-size: 1vw;
-    padding-right: 4.3%;
+    padding-right: 6%;
     text-align: center;
 }
 
@@ -396,15 +391,14 @@ Scroll Buttons
     background: transparent;
     border: none;
     font-size: 0;
+    z-index: 999;
 }
 
 .scrollRight {
-    z-index: 9999;
     right: 3.5%;
 }
 
 .scrollLeft {
-    z-index: 9999;
     left: 3.5%;
 }
 .scrollRight img {
@@ -425,23 +419,52 @@ Scroll Buttons
 }
 
 .backButton {
-    position: fixed;
+    position: absolute;
     display: none;
     background: transparent;
-    top: 16%;
-    left: 48%;
+    bottom: 2%;
+    left: 48.2%;
     border: none;
     font-size: 0;
-    z-index: 99999999;
 }
 
+.scrollButtonArch {
+    position: fixed;
+    display: none;
+    bottom: 12%;
+    background: transparent;
+    border: none;
+    font-size: 0;
+}
+
+.scrollRightArch {
+    right: 45.9%;
+}
+
+.scrollLeftArch {
+    left: 44.9%;
+}
+
+.scaleImage2 img {
+    width: 2vw;
+}
+
+@-webkit-keyframes pulse {
+    0% {opacity: 0.55;}
+    100% {opacity: 1;}
+}
+
+@keyframes pulse {
+    0% {opacity: 0.55;}
+    100% {opacity: 1;}
+}
 /* ============================================================
 ImageZoom
 ============================================================= */
 .imageZoom {
     position: absolute;
-    width: 60%;
-    height: 90%;
+    max-width: 60%;
+    max-height: 95%;
     top: 5%;
     left: 20%;
     border: 2px solid black;
@@ -451,29 +474,36 @@ ImageZoom
 /* ============================================================
 SocialAndTranslateButtons
 ============================================================= */
-#socialAndTranslateButtons {
-    position: absolute;
-    width: 15%;
-    top: 1%;
-    right: 0;
-    text-align: center;
-}
 
-#socialAndTranslateButtons,
-#socialAndTranslateButtons li {
+#socialAndTranslateButtons {
+    position: fixed;
+    width: 50%;
+    right: 1%;
     margin: 0;
     padding: 0;
+    top: 2%;
+    text-align: right;
 }
 
+.translate {font-size: 1vw;}
 
-#socialAndTranslateButtons li { 
+.translate li {
     display: inline-block;
-    margin-top: 0%;
-    margin-right: 4%;
 }
-#socialAndTranslateButtons img { 
-    max-width: 100%;
-    margin-right: 4%;
+
+.socialButton {
+    position: fixed;
+    right: 3.5%;
+    top: 2%;
+    width: 10%;
+}
+
+.socialButton li {
+    display: inline-block;
+    margin-right: 10%;
+}
+.scaleImage img {
+    width: 2vw;
 }
 
 /* ============================================================
@@ -521,9 +551,10 @@ html, body {
 }
 
 a:visited {
-    color: white;
+    color: #FFF;
 }
 
 a:link {
-    color: white;
+    color: #FFF;
 }
+
