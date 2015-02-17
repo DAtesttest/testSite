@@ -438,11 +438,11 @@ Scroll Buttons
 }
 
 .scrollRightArch {
-    right: 45.9%;
+    right: 46.1%;
 }
 
 .scrollLeftArch {
-    left: 45%;
+    left: 44.9%;
 }
 
 .scaleImage2 img {
