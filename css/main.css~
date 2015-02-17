@@ -103,7 +103,7 @@ Main Content - Architecture
     position: relative;
     margin-top: 0%;
     top: 12%;
-    left: 25%;
+    left: 26%;
     width: 50%;
     height: 49%;
 }
@@ -115,27 +115,19 @@ Main Content - Architecture
     box-shadow: 0 10px 6px -6px black;
 }
 
-.contentContainer.projectSlider {
-    position: absolute;
-    display: inline-block;
-    top: 13.5%;
-    height: 90%;
-    width: 90%;
-    left: 5%;
-}
 .contentContainer.archScroll {
     position: relative;
-    display: inline-block;
+    top: 7%;
     width: 80%;
     height: 105%;
-    left: 15%;
+    left: 8%;
     overflow: auto;
 }
 .contentContainer.archScroll .box2 {
     position: relative; 
     margin-right: 5%;
     width: 50%;
-    height: 80%;
+    height: 70%;
     display: inline-block;
     box-shadow: 0 10px 6px -6px black;
     z-index: 999;
@@ -158,7 +150,7 @@ Main Content - Photography
     position: relative;
     width: 80%;
     top: 15%;
-    left: 5%;
+    left: 8%;
     overflow: auto;
 }
 
@@ -217,7 +209,7 @@ Main Content - About
     padding: 1.2%;
     top: 15%;
     width: 25%;
-    left: 2%;
+    left: 3%;
     font-size: 0.8vw;
     font-weight: 500;
     color: black;
@@ -473,12 +465,12 @@ Scroll Buttons
 
 .scrollRight {
     z-index: 9999;
-    right: 1%;
+    right: 3.5%;
 }
 
 .scrollLeft {
     z-index: 9999;
-    left: 1%;
+    left: 3.5%;
 }
 .scrollRight img {
     -webkit-animation: pulse 1.5s;
@@ -583,5 +575,9 @@ html, body {
 }
 
 a:visited {
+    color: white;
+}
+
+a:link {
     color: white;
 }
