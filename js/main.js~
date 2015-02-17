@@ -85,158 +85,159 @@ $(document).ready(function() {
             initialArch();
         }
     } catch (e) {}
-});
 
-function initialPhotog() {
-    $('.scrollButton').css("display", "initial");
-    for(i = 0; i < targetArray.length; i ++) {
-        x = targetArray[i];
-        for(r = 0; r < x.length; r ++) {
-            if(x[r].indexOf("preview") > -1) {
-                assignBoxImages(x[r]);
-            }
-        }
-    }
-}
-
-function initialArch() {
-    for(i = 0; i < targetArray.length; i ++) {
-        x = targetArray[i];
-        for(r = 0; r < x.length; r ++) {
-            if(x[r].indexOf("sem") > -1 && x[r].indexOf("full") < 0) {
-                assignBoxImages(x[r]);
-            }
-        }
-    }
-}
-
-//checks what is clicked on
-$(optionTarget).on("click", function() {
-    whatId = this.id;
-    if(whatId === "back") {
-        initialArch();
-    }
-    function checkClick(whatId, nameArray) {
-        return nameArray.indexOf(whatId) > -1;
-    }
-    if(checkClick) {
-        //clears already loaded images
-        attachTo.innerHTML = "";
-        //call images associated with click and creats scroll buttons
-        chooseImages(whatId);
+    function initialPhotog() {
         $('.scrollButton').css("display", "initial");
-        $('.scrollButtonArch').css("display", "initial");
-    }
-    return false;
-});
-
-function chooseImages(whatId){
-    if(whatId.indexOf("pr") > -1) {
-        $('.contentContainer').scrollLeft(0);
-        $('.contentContainer').removeClass("archGrid");
-        $('.contentContainer').addClass("archScroll");
-    }
-
-
-    for(i = 0; i < targetArray.length; i ++) {
-        //uses id name to look through array of names
-        if (whatId == targetArray[i].name) {
-            //when it's found it uses that dir as images
-            target = targetArray[i];
+        for(i = 0; i < targetArray.length; i ++) {
+            x = targetArray[i];
+            for(r = 0; r < x.length; r ++) {
+                if(x[r].indexOf("preview") > -1) {
+                    assignBoxImages(x[r]);
+                }
+            }
         }
     }
-    for(i = 0; i < target.length; i++ ) {
-        //loops through image dir 
-        whichOne = target[i];
-        if(target[i].indexOf("full") > -1) {
+
+    function initialArch() {
+        for(i = 0; i < targetArray.length; i ++) {
+            x = targetArray[i];
+            for(r = 0; r < x.length; r ++) {
+                if(x[r].indexOf("sem") > -1 && x[r].indexOf("full") < 0) {
+                    assignBoxImages(x[r]);
+                }
+            }
+        }
+    }
+
+    //checks what is clicked on
+    $(optionTarget).on("click", function() {
+        whatId = this.id;
+        if(whatId === "back") {
+            attachTo.innerHTML = "";
+            initialArch();
+        }
+        function checkClick(whatId, nameArray) {
+            return nameArray.indexOf(whatId) > -1;
+        }
+        if(checkClick) {
+            //clears already loaded images
+            attachTo.innerHTML = "";
+            //call images associated with click and creats scroll buttons
+            chooseImages(whatId);
             $('.scrollButton').css("display", "initial");
-            $('.backButton').css("display", "initial");
-            $(".contentContainer").addClass("afterClick");
-            //for non preview images
-            assignBoxImagesFull(whichOne);
-        } else {
-            //for preview images
-            assignBoxImages(whichOne);
+            $('.scrollButtonArch').css("display", "initial");
+        }
+        return false;
+    });
+
+    function chooseImages(whatId){
+        if(whatId.indexOf("pr") > -1) {
+            $('.contentContainer').scrollLeft(0);
+            $('.contentContainer').removeClass("archGrid");
+            $('.contentContainer').addClass("archScroll");
+        }
+
+
+        for(i = 0; i < targetArray.length; i ++) {
+            //uses id name to look through array of names
+            if (whatId == targetArray[i].name) {
+                //when it's found it uses that dir as images
+                target = targetArray[i];
+            }
+        }
+        for(i = 0; i < target.length; i++ ) {
+            //loops through image dir 
+            whichOne = target[i];
+            if(target[i].indexOf("full") > -1) {
+                $('.scrollButton').css("display", "initial");
+                $('.backButton').css("display", "initial");
+                $(".contentContainer").addClass("afterClick");
+                //for non preview images
+                assignBoxImagesFull(whichOne);
+            } else {
+                //for preview images
+                assignBoxImages(whichOne);
+            }
         }
     }
-}
 
-function assignBoxImagesFull(whichOne) {
-    var targetFill = document.createElement("img");
+    function assignBoxImagesFull(whichOne) {
+        var targetFill = document.createElement("img");
 
-    targetFill.setAttribute("class", "box2");
-    targetFill.setAttribute("name", whichOne);
-    targetFill.setAttribute("src", whichOne);
-    attachTo.appendChild(targetFill);
-}
+        targetFill.setAttribute("class", "box2");
+        targetFill.setAttribute("name", whichOne);
+        targetFill.setAttribute("src", whichOne);
+        attachTo.appendChild(targetFill);
+    }
 
-function assignBoxImages(whichOne) {
-    var targetFill = document.createElement("img");
+    function assignBoxImages(whichOne) {
+        var targetFill = document.createElement("img");
 
-    targetFill.setAttribute("class", "box");
-    targetFill.setAttribute("name", whichOne);
-    targetFill.setAttribute("src", whichOne);
-    attachTo.appendChild(targetFill);
-}
+        targetFill.setAttribute("class", "box");
+        targetFill.setAttribute("name", whichOne);
+        targetFill.setAttribute("src", whichOne);
+        attachTo.appendChild(targetFill);
+    }
 
-//Zoom image stuff
-$('.fillTarget').on("click", "img", function() {
-    thisName = this.name;
-    newName = thisName.replace("preview/", "");
-    zoomBox = document.createElement("img");
+    //Zoom image stuff
+    $('.fillTarget').on("click", "img", function() {
+        thisName = this.name;
+        newName = thisName.replace("preview/", "");
+        zoomBox = document.createElement("img");
 
-    zoomBox.setAttribute("class", "imageZoom");
-    zoomBox.setAttribute("src", newName);
-    zoomedImage.appendChild(zoomBox);
-    $(".pageBG").toggleClass("tint");
-    $(".header").css("background-color", "#000");
-    $(".footer").css("background-color", "#000");
-    $(".hide").css("display", "none");
-    $(".box").css("opacity", "0");
-    $(".box2").css("opacity", "0");
-});
+        zoomBox.setAttribute("class", "imageZoom");
+        zoomBox.setAttribute("src", newName);
+        zoomedImage.appendChild(zoomBox);
+        $(".pageBG").toggleClass("tint");
+        $(".header").css("background-color", "#000");
+        $(".footer").css("background-color", "#000");
+        $(".hide").css("display", "none");
+        $(".box").css("opacity", "0");
+        $(".box2").css("opacity", "0");
+    });
 
-$('.zoomedImage').on("click", "img", function() {
-    zoomedImage.innerHTML = "";
-    $(".pageBG").toggleClass("tint");
-    $(".header").css("background-color", "#151515");
-    $(".footer").css("background-color", "#151515");
-    $(".hide").css("display", "initial");
-    $(".box").css("opacity", "1");
-    $(".box2").css("opacity", "1");
-});
+    $('.zoomedImage').on("click", "img", function() {
+        zoomedImage.innerHTML = "";
+        $(".pageBG").toggleClass("tint");
+        $(".header").css("background-color", "#151515");
+        $(".footer").css("background-color", "#151515");
+        $(".hide").css("display", "initial");
+        $(".box").css("opacity", "1");
+        $(".box2").css("opacity", "1");
+    });
 
-$('.backButton').on("click", "img", function() {
-    location.reload();
-});
+    $('.backButton').on("click", "img", function() {
+        location.reload();
+    });
 
-//controls scroll buttons
-$('.scrollRight').on("click", function() {
-    $('.contentContainer').animate( {
-        scrollLeft: "+=350"
-    }, "fast");
-});
+    //controls scroll buttons
+    $('.scrollRight').on("click", function() {
+        $('.contentContainer').animate( {
+            scrollLeft: "+=350"
+        }, "fast");
+    });
 
-$('.scrollLeft').on("click", function() {
-    $('.contentContainer').animate( {
-        scrollLeft: "-=350"
-    }, "fast");
-});
+    $('.scrollLeft').on("click", function() {
+        $('.contentContainer').animate( {
+            scrollLeft: "-=350"
+        }, "fast");
+    });
 
-$('.scrollRightArch').on("click", function() {
-    $('.contentContainer').animate( {
-        scrollLeft: "+=100"
-    }, "fast");
-});
+    $('.scrollRightArch').on("click", function() {
+        $('.contentContainer').animate( {
+            scrollLeft: "+=100"
+        }, "fast");
+    });
 
-$('.scrollLeftArch').on("click", function() {
-    $('.contentContainer').animate( {
-        scrollLeft: "-=100"
-    }, "fast");
-});
-//sectionMenu
-$('.outer').click(function() {
-    whatRegion = this.className;
-    whatRegion = whatRegion.replace("outer ", "");
-    $('.inner.'+whatRegion).toggleClass('visible');
+    $('.scrollLeftArch').on("click", function() {
+        $('.contentContainer').animate( {
+            scrollLeft: "-=100"
+        }, "fast");
+    });
+    //sectionMenu
+    $('.outer').click(function() {
+        whatRegion = this.className;
+        whatRegion = whatRegion.replace("outer ", "");
+        $('.inner.'+whatRegion).toggleClass('visible');
+    });
 });
