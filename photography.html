@@ -12,23 +12,23 @@
     </head>
 
     <body id="photoBody" class="initial">
-        <div class="container">
+        <div id="container">
             <div class="header">
                 <!-- Translate/Social Buttons -->
                 <div id="socialAndTranslateButtons">
-                    <ul class="translate">
+                    <ul class="translate hide">
                         <li class="translate EN">EN</li>
                         <li class="translate FR">FR</li>
                     </ul>
-                    <div class="scaleImage">
-                    <ul class="socialButton">
-                        <li><img src="./img/icons/1423825228_email.png" /></li>
-                        <li><img src="./img/icons/In-2C-34px-R.png" /></li>
-                    </ul>
+                    <div class="scaleSocial">
+                        <ul class="socialButton hide">
+                            <li><img src="./img/icons/email.png" /></li>
+                            <li><img src="./img/icons/linkedIn.png" /></li>
+                        </ul>
                     </div>
                 </div>
 
-                <h1 class="sectionTitle">David Anderson - Photography</h1>
+                <h2 class="sectionTitle hide">David Anderson - Photography</h2>
 
                 <div id="photoMenu" class="sectionMenu photogMenu hide">
                     <ul class="selectionNav photogMenu">
@@ -61,13 +61,15 @@
                 </div>
             </div>
 
+            <div class="pageBG photog"></div>
             <div id="contentPhotography" class="fadeIn">
-            <button class="scrollButton scrollRight hide"><img src="./img/icons/rightArrow.png" alt="rightArrow"></button>
-            <button class="scrollButton scrollLeft hide"><img src="./img/icons/leftArrow.png" alt="leftArrow"></button>
-            <div class="pageBG photog tint"></div>
                 <div class="zoomedImage">
-            </div>
-                <div class="contentContainer photogScroll fillTarget">
+                    <span class="centerImage"></span>
+                </div>
+                <div class="contentContainer fillTarget photogScroll hide"></div>
+                <div class="scaleButtons">
+                    <button class="scrollButton scrollRight hide"><img src="./img/icons/rightArrow.png" alt="rightArrow"></button>
+                    <button class="scrollButton scrollLeft hide"><img src="./img/icons/leftArrow.png" alt="leftArrow"></button>
                 </div>
             </div>
             <div class="footer">

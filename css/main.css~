@@ -1,27 +1,32 @@
 /* ============================================================
-Main Content - Home 
+Main Content - Home
 ============================================================= */
-#contentHome {
-    position: absolute;
+.pageBG.homePage {
+    position: relative;
     width: 100%;
     height: 100%;
-    background-color: #FFF;
+}
+
+#contentHome {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.homeTitle {
+    position: absolute;
+    width: 100%;
+    top: 20%;
+    text-align: center;
+    font-size: 2vw;
+    font-weight: 500;
 }
 
 #contentHome img {
     position: absolute;
-    width: 100%;
     top: 31%;
-}
-
-.homeTitle {
-    width: 100%;
-    color: #000;
-    position: absolute;
-    top: 20%;
-    text-align: center;
-    font-size: 2vw;
-    font-weight: normal;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .contactFront {
@@ -31,9 +36,7 @@ Main Content - Home
     line-height:0.9vw;
 }
 
-.contactFront span {
-    text-decoration: underline;
-}
+.home {color: #000;}
 
 /* ============================================================
 Main Content - contentContainer
@@ -48,45 +51,25 @@ Main Content - contentContainer
 /* ============================================================
 Main Content - Architecture
 ============================================================= */
-
 #contentArchitecture {
-    position: absolute;
+    position: relative;
     top: 10%;
-    height: 80%;
     width: 100%;
-    overflow: hidden;
+    height: 80%;
 }
 
-
-.pageBG.tint.arch {
-    background-image: url("../img/PictureByGallery/Amsterdam/cantelever.jpg");
-    filter: opacity(65%);
-    -webkit-filter: opacity(65%);
-}
-
-
-.afterClick {
-    white-space: nowrap;
-}
-
-.projects {
+ul.projects {
     position: absolute;
-    top: 22%;
-    width: 20%;
-    left: 13%;
-}
-
-.project span {
-    font-weight: 900;
-}
-
-.projects li {
+    top: 17%;
+    left: 11.7%;
+    color: #FFF;
     font-size: 0.9vw;
-    padding: 0.5% 0%;
-    font-family: 'Open Sans', sans-serif;
 }
 
-.underline {text-decoration: underline;}
+ul.projects a {
+    line-height: 1.5vw;
+    color: #FFF;
+}
 
 .projects a:hover {
     background-color: #CB3535;
@@ -98,8 +81,8 @@ Main Content - Architecture
 
 .contentContainer.archGrid {
     position: absolute;
-    top: 6.3%;
-    left: 26%;
+    top: 2.5%;
+    left: 25.5%;
     width: 50%;
     height: 49%;
 }
@@ -113,55 +96,99 @@ Main Content - Architecture
 
 .contentContainer.archScroll {
     position: absolute;
-    top: 12%;
-    width: 52%;
+    top: 2%;
+    width: 55%;
     height: 105%;
-    left: 30%;
+    left: 27%;
     overflow: auto;
 }
+
 .contentContainer.archScroll .box2 {
     display: inline-block;
     box-shadow: 0 10px 6px -6px black;
     margin-right: 2.5%;
-    margin-left: 2.5%;
-    width: 90vh;
+    width: 93vh;
     height: 60.4vh;
 }
+
+.contentContainer.archScroll .box2:hover {
+    cursor: pointer;
+    box-shadow: 2px 8px 8px 2px #000;
+}
+
+.pageBG.arch {
+    background:
+    linear-gradient(
+    rgba(0,0,0,0.3),
+    rgba(0,0,0,0.7)
+    ),
+
+    url("../img/photog/amsterdam/cantelever.jpg");
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+.archWhite {color: #FFF;}
+
+.bottomNav.archWhite a {color: #FFF;}
+
+.afterClick {white-space: nowrap;}
 
 /* ============================================================
 Main Content - Photography
 ============================================================= */
 #contentPhotography {
-    position: absolute;
+    position: relative;
     top: 10%;
     width: 100%;
     height: 80%;
-    overflow: hidden;
     white-space: nowrap;
-    background-color: #000;
 }
 
 .contentContainer.photogScroll {
-    position: relative;
+    position: absolute;
+    top: 12%;
+    left: 10%;
     width: 80%;
-    top: 15%;
-    left: 8%;
+    height: 105%;
     overflow: auto;
 }
 
 .contentContainer.photogScroll .box {
-    box-shadow: 0 10px 6px -6px black;
     display: inline-block;
-    margin-left: 5%;
-    width: 60vh;
-    height: 40.2vh;
+    box-shadow: 0px 10px 6px -6px #000;
+    margin-right: 2.5%;
+    width: 69.8vh;
+    height: 47vh;
 }
 
-.pageBG.tint {
-    background-image: url("../img/arch/bg/sem1.jpg");
-    filter: opacity(95%);
-    -webkit-filter: opacity(95%);
+.contentContainer.photogScroll .box:hover {
+    cursor: pointer;
+    box-shadow: 2px 8px 8px 2px #000;
 }
+
+.pageBG.photog {
+    background:
+    linear-gradient(
+    rgba(0,0,0,0.1),
+    rgba(0,0,0,0.1)
+    ),
+
+    url("../img/bg/photog.jpg");
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
 /* ============================================================
 Main Content - About
 ============================================================= */
@@ -169,18 +196,27 @@ Main Content - About
     position: absolute;
     width: 100%;
     height: 100%;
+}
+
+#contactInfo span {text-decoration: underline;}
+
+.pageBG.about {
+    background:
+    linear-gradient(
+    rgba(0,0,0,0),
+    rgba(0,0,0,0)
+    ),
+
+    url("../img//bg/aboutMeBG.jpg");
+    bottom: 10%;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
     overflow: hidden;
-    background-color: #000;
-}
-
-#contactInfo span {
-    text-decoration: underline;
-}
-
-.pageBG.tint.about {
-    background-image: url("../img/aboutMeBG.jpg");
-    filter: opacity(90%);
-    -webkit-filter: opacity(90%);
 }
 
 .fadeIn {
@@ -199,40 +235,37 @@ Main Content - About
 
 #aboutText {
     position: absolute;
-    padding: 1.2%;
-    top: 16%;
-    width: 25%;
-    left: 3%;
-    font-size: 0.8vw;
-    font-weight: 500;
-    color: black;
+    top: 24%;
+    width: 24%;
+    left: 4%;
+    font-size: 0.85vw;
 }
 
 #contentAbout img {
     position: absolute;
     width: 30%;
-    top: 15%;
-    right: 3%;
+    top: 17%;
+    right: 4%;
     box-shadow: 0 10px 6px -6px black;
 }
 
 #contactInfo {
     position: absolute;
-    font-size: 0.7vw;
+    font-size: 0.8vw;
     color: #000;
-    padding: 1%;
-    top: 50%;
-    left: 8%;
+    top: 58%;
+    left: 10%;
 }
 
-
 /* ============================================================
-Menu - Main
+Menu - Home 
 ============================================================= */
 .mainMenu {
+    padding: 0%;
+    margin: 0%;
     position: absolute;
     width: 100%;
-    top: 68%;
+    bottom: 28%;
     text-align: center;
 }
 
@@ -240,14 +273,6 @@ Menu - Main
     display: inline-block;
     padding: 0% 2%;
     font-size: 1vw;
-    color: black;
-}
-
-.mainMenu a:visited {
-    color: black;
-}
-.mainMenu a:link {
-    color: black;
 }
 
 /* ============================================================
@@ -257,6 +282,7 @@ Menu - SectionMenu
     position: absolute;
     top: 40%;
     width: 100%;
+    height: auto;
     font-size: 1vw;
     color: white;
     list-style: none;
@@ -272,25 +298,20 @@ Menu - SectionMenu
 
 .selectionNav > li {
     display: inline-block;
-    color: white;
+    color: #FFF;
     margin: 0% 1.5%;
-    padding: 0px 15px 0px 15px;
+    padding: 5px 15px 5px 15px;
 }
 
 .selectionNav li ul li {
+    margin-top: 10%;
     position: relative;
     font-size: 0.8vw;
     display: block;
-    background-color: rgba(0,0,0,0.88);
-    padding: 10px 15px 5px 15px;
+    padding: 5px 10px 5px 10px;
 }
 
-.selectionNav ul li a {
-}
-
-.selectionNav ul.inner {
-    display: none;
-}
+.selectionNav ul.inner {display: none;}
 
 .selectionNav ul.visible {
     position: absolute;
@@ -298,9 +319,7 @@ Menu - SectionMenu
     padding: 0;
 }
 
-.sectionMenu li:hover {
-    background-color: #CB3535;
-}
+.sectionMenu li:hover {background-color: #CB3535;}
 
 /* ============================================================
 Menu - BottomNav
@@ -317,52 +336,27 @@ Menu - BottomNav
 .bottomNav li {
     display: inline-block;
     font-size: 1vw;
-    padding-right: 6%;
+    padding-right: 6.2%;
     text-align: center;
 }
 
-.bottomNav li:hover {
-    text-shadow: 0.4px 0.6px grey;
-}
+.bottomNav li:hover {text-shadow: 0.4px 0.6px grey;}
 
 /* ============================================================
 SectionTitle
 ============================================================= */
 .sectionTitle {
     position: absolute;
-    text-align: left;
-    width: 50%;
-    margin-top: 1.7%;
-    margin-left: 0.8%;
-    font-size: 1.2vw;
-    font-weight: 100;
-}
-
-/* make it so shows name as header then description of current page(ie. photography) in smaller font and italics below*/
-
-
-/* ============================================================
-PageBackground
-============================================================= */
-.pageBG {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
-}
-.tint {
-    filter: opacity(50%);
-    -webkit-filter: opacity(50%);
+    top: 5%;
+    left: 2%;
+    width: 25%;
 }
 
 /* ============================================================
 Header/Footer
 ============================================================= */
 .header {
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
     height: 10%;
@@ -371,7 +365,7 @@ Header/Footer
 }
 
 .footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
     height: 10%;
@@ -389,16 +383,12 @@ Scroll Buttons
     background: transparent;
     border: none;
     font-size: 0;
-    z-index: 999;
 }
 
-.scrollRight {
-    right: 3.5%;
-}
+.scrollRight {right: 3.5%;}
 
-.scrollLeft {
-    left: 3.5%;
-}
+.scrollLeft {left: 3.5%;}
+
 .scrollRight img {
     -webkit-animation: pulse 1.5s;
     animation: pulse 1.5s;
@@ -420,10 +410,11 @@ Scroll Buttons
     position: absolute;
     display: none;
     background: transparent;
-    top: 16.5%;
-    right: 17%;
+    top: 7%;
+    left: 25%;
     border: none;
     font-size: 0;
+    z-index: 9999999999;
 }
 
 .scrollButtonArch {
@@ -435,17 +426,15 @@ Scroll Buttons
     font-size: 0;
 }
 
-.scrollRightArch {
-    right: 15.5%;
-}
+.scrollRightArch {right: 14.5%;}
 
 .scrollLeftArch {
-    left: 27.5%;
+    left: 23.5%;
+    z-index: 999;
 }
 
-.scaleImage2 img {
-    width: 2vw;
-}
+.scaleButtons img {width: 3vw;}
+
 
 @-webkit-keyframes pulse {
     0% {opacity: 0.55;}
@@ -456,24 +445,47 @@ Scroll Buttons
     0% {opacity: 0.55;}
     100% {opacity: 1;}
 }
+
 /* ============================================================
 ImageZoom
 ============================================================= */
+.zoomedImage {
+    top: -1.5%;;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    white-space: nowrap;
+    text-align: center;
+    margin: 1em 0;
+}
+
+.centerImage {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin: 0 auto;
+}
 
 .imageZoom {
+    vertical-align: middle;
+    margin: 0 auto;
+    max-height: 99%;
+    max-width: 99%;
+}
+
+.minimiseButton {
     position: absolute;
-    max-width: 90%;
-    max-height: 90%;
-    top: 5%;
-    left: 20%;
-    z-index: 9999;
-    vertical-align: text-top;
+    display: none;
+    background: transparent;
+    top: 16.5%;
+    right: 17%;
+    border: none;
+    font-size: 0;
 }
 
 /* ============================================================
 SocialAndTranslateButtons
 ============================================================= */
-
 #socialAndTranslateButtons {
     position: fixed;
     width: 50%;
@@ -482,12 +494,6 @@ SocialAndTranslateButtons
     padding: 0;
     top: 2%;
     text-align: right;
-}
-
-.translate {font-size: 1vw;}
-
-.translate li {
-    display: inline-block;
 }
 
 .socialButton {
@@ -501,9 +507,12 @@ SocialAndTranslateButtons
     display: inline-block;
     margin-right: 10%;
 }
-.scaleImage img {
-    width: 2vw;
-}
+
+.translate {font-size: 1vw;}
+
+.translate li {display: inline-block;}
+
+.scaleSocial img {width: 2vw;}
 
 /* ============================================================
 Credits
@@ -514,16 +523,14 @@ Credits
     font-size: 0.6vw;
     bottom: 0;
 }
-.home {
-    color: #000;
-    background-color: #FFF;
-}
+
 .me {
     position: absolute;
     left: 1%;
     font-size: 0.4vw;
     bottom: 0;
 }
+
 
 /* ============================================================
 PageControl
@@ -536,32 +543,65 @@ PageControl
     list-style: none;
 }
 
-h1 {
-    font-family: 'PT Sans', sans-serif;
+html, body {height: 100%;}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: #000;
 }
 
 #container {
     position: relative;
     height: 100%;
     width: 100%;
+    overflow: hidden;
 }
 
-html, body {
-    height: 100%;
+h1,
+h2 {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1.6vw;
 }
+
 body {
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
     color: #000;
-    overflow: auto;
 }
 
-a:visited {
-    color: #000;
-}
+a:visited {color: #000;}
 
-a:link {
-    color: #000;
-}
+a:link {color: #000;}
 
+.underline {text-decoration: underline;}
+
+/* ============================================================
+MediaQueries
+============================================================= */
+@media (max-width: 1199px) {
+    /* ===========
+    Home
+    ============== */
+    .homeTitle {
+        font-size: 3vw;
+    }
+    #contentHome img {
+        display: none;
+    }
+    .mainMenu a {
+        color: #FFF;
+    }
+    .mainMenu li {
+        background-color: #000;
+        display: block;
+        font-size: 2vw;
+    }
+
+    .contactFront {
+        font-size: 1vw;
+        line-height: 1.3vw;
+    }
+}
