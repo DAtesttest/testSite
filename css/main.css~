@@ -611,15 +611,21 @@ MediaQueries
     /* ===========
     Home
     ============== */
+    #container {
+        overflow: auto;
+    }
+    #contentHome {
+        display: block;
+    }
     .homeTitle {
-        top: 8%;
+        position: fixed;
         font-size: 8vw;
+        background-color: red;
     }
     #contentHome img {
         display: none;
     }
     .mainMenu {
-        bottom: 40%;
     }
     .mainMenu a {
         color: #FFF;
