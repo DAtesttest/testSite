@@ -606,3 +606,30 @@ MediaQueries
         line-height: 1.3vw;
     }
 }
+
+@media (max-width: 950px) {
+    /* ===========
+    Home
+    ============== */
+    .homeTitle {
+        font-size: 4vw;
+    }
+    #contentHome img {
+        display: none;
+    }
+    .mainMenu a {
+        color: #FFF;
+    }
+    .mainMenu li {
+        background-color: #000;
+        display: block;
+        font-size: 3vw;
+        line-height: 5vw;
+    }
+
+    .contactFront {
+        font-size: 2vw;
+        line-height: 2.3vw;
+    }
+}
+
