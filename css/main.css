@@ -45,7 +45,6 @@ Main Content - contentContainer
     position: relative;
     width: 100%;
     height: 100%;
-    margin-top: 3.5%;
 }
 
 /* ============================================================
@@ -192,14 +191,6 @@ Main Content - Photography
 /* ============================================================
 Main Content - About
 ============================================================= */
-#contentAbout {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-#contactInfo span {text-decoration: underline;}
-
 .pageBG.about {
     background:
     linear-gradient(
@@ -219,43 +210,37 @@ Main Content - About
     overflow: hidden;
 }
 
-.fadeIn {
-    animation: fadeIn 2s;
-    -webkit-animation: fadeIn 2s;
-}
-@-webkit-keyframes fadeIn {
-    0% {opacity: 0.55;}
-    100% {opacity: 1;}
-}
-
-@keyframes fadeIn {
-    0% {opacity: 0.55;}
-    100% {opacity: 1;}
+#contentAbout {
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 #aboutText {
     position: absolute;
-    top: 22%;
-    width: 24%;
+    top: 29.5%;
     left: 4%;
+    width: 24%;
     font-size: 0.85vw;
 }
 
 #contentAbout img {
     position: absolute;
-    width: 30%;
-    top: 17%;
+    top: 24.5%;
     right: 4%;
+    width: 30%;
     box-shadow: 0 10px 6px -6px black;
 }
 
 #contactInfo {
     position: absolute;
+    bottom: 23%;
+    left: 10%;
     font-size: 0.8vw;
     color: #000;
-    top: 58%;
-    left: 10%;
 }
+
+#contactInfo span {text-decoration: underline;}
 
 /* ============================================================
 Menu - Home
@@ -536,6 +521,22 @@ Credits
     bottom: 0;
 }
 
+/* ============================================================
+Animations
+============================================================= */
+.fadeIn {
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+}
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0.55;}
+    100% {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0.55;}
+    100% {opacity: 1;}
+}
 
 /* ============================================================
 PageControl
@@ -613,7 +614,7 @@ MediaQueries
 
 @media only screen
 and (max-width: 767px)
-and (orientation: portrait) {
+and (orientation: landscape) {
 
     /* ===========
     Page Control
@@ -655,11 +656,11 @@ and (orientation: portrait) {
     }
 
     /* ===========
-    Architecture 
+    Architecture
     ============== */
 
     /* ===========
-    Photography 
+    Photography
     ============== */
     .footer {
         display: none;
@@ -670,7 +671,7 @@ and (orientation: portrait) {
         rgba(0,0,0,0.9),
         rgba(0,0,0,0.9)
         ),
-    
+
         url("../img/bg/photog.jpg");
         position: fixed;
         width: 100%;
@@ -696,7 +697,6 @@ and (orientation: portrait) {
     .contentContainer.photogScroll .box {
         margin-top: 3%;
         max-width: 100%;
-        z-index: 9999;
     }
 }
 
@@ -744,12 +744,37 @@ and (orientation: portrait) {
     }
 
     /* ===========
-    Architecture 
+    Architecture
     ============== */
 
     /* ===========
-    Photography 
+    Photography
     ============== */
+    .footer {
+        display: none;
+    }
+
+    .pageBG.photog {
+        background:
+        linear-gradient(
+        rgba(0,0,0,0.9),
+        rgba(0,0,0,0.9)
+        ),
+
+        url("../img/bg/photog.jpg");
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center center;
+    }
+
+    #contentPhotography {
+        height: 100%;
+    }
+
     .contentContainer.photogScroll {
         display: block;
         top: 0%;
@@ -762,5 +787,19 @@ and (orientation: portrait) {
     .contentContainer.photogScroll .box {
         margin-top: 3%;
         width: 100%;
+    }
+    /* ===========
+    About 
+    ============== */
+    #contentAbout img {
+        position: relative;
+        width: 100%;
+        top: 10%;
+    }
+    #aboutText {
+        position: relative;
+        font-size: 2.5vw;
+        width: 100%;
+        top: 15%;
     }
 }
