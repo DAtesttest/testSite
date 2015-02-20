@@ -620,7 +620,7 @@ MediaQueries
         position: relative;
         display: blck;
         height: 5%;
-        top: 20%;
+        top: 10%;
         font-size: 8vw;
     }
     #contentHome img {
@@ -645,7 +645,7 @@ MediaQueries
 
     .contactFront {
         position: relative;
-        bottom: 45%;
+        bottom: 85%;
         margin-top: 10%;
         color: #000;
         font-size: 2vw;
