@@ -663,7 +663,7 @@ and (orientation: portrait) {
     ============== */
     .contentContainer.photogScroll {
         top: 15%;
-        left: 3%;
+        left: 1%;
         width: 100%;
         height: 105%;
         overflow: auto;
