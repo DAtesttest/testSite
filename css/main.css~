@@ -628,7 +628,7 @@ MediaQueries
     }
     .mainMenu li {
         background-color: #000;
-        display: block;
+        display: inline-block;
         font-size: 7vw;
     }
 
@@ -638,4 +638,3 @@ MediaQueries
         line-height: 2.3vw;
     }
 }
-
