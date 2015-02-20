@@ -618,10 +618,8 @@ and (orientation: portrait) {
     Home
     ============== */
     .pageBG.homePage {
-        background:
-            linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0)),
-            url('../img/arch/sem1/full/sundail/sundail04.jpg');
-        background-size: 210%;
+        background: url('../img/arch/sem1/full/sundail/sundail04.jpg');
+        background-size: 184% 130%;
         position: center center;
         background-repeat: no-repeat;
     }
