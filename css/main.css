@@ -611,32 +611,3 @@ MediaQueries
         line-height: 1.3vw;
     }
 }
-
-@media screen and (max-width: 899px) {
-    /* ===========
-    Home
-    ============== */
-    .homeTitle {
-        margin-top: 15%;
-    }
-    #contentHome img {
-        display: none;
-    }
-
-    .mainMenu a {
-        color: #FFF;
-    }
-    .mainMenu li {
-        background-color: #000;
-        display: block;
-        font-size: 7vw;
-    }
-
-    .contactFront {
-        position: relative;
-        color: #000;
-        font-size: 2vw;
-        line-height: 2.3vw;
-    }
-}
-
