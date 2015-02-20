@@ -619,8 +619,8 @@ and (orientation: portrait) {
     ============== */
     .pageBG.homePage {
         background: url('../img/arch/sem1/full/sundail/sundail04.jpg');
-        background-size: 200%;
-        top: 10%;
+        background-size: 210%;
+        top: 25%;
         position: center center;
         background-repeat: no-repeat;
     }
