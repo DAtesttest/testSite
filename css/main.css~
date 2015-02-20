@@ -619,13 +619,13 @@ and (orientation: portrait) {
     ============== */
     .pageBG.homePage {
         background: url('../img/bg/mobilePortrait.jpg');
-        background-size: 184% 140%;
+        background-size: cover;
         position: center center;
         background-repeat: no-repeat;
     }
     .homeTitle {
         margin-top: 30%;
-        font-size: 6vw;
+        font-size: 7vw;
     }
     #contentHome img {
         display: none;
@@ -636,9 +636,7 @@ and (orientation: portrait) {
         background-color: #000;
         font-size: 3vw;
         line-height: 10vw;
-    }
-
-    .mainMenu a {
+        margin-right: 5%;
     }
 
     .contactFront {
