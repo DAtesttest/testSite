@@ -581,7 +581,7 @@ a:link {color: #000;}
 /* ============================================================
 MediaQueries
 ============================================================= */
-@media (max-width: 1199px) {
+@media screen and (max-width: 1199px) {
     /* ===========
     Home
     ============== */
@@ -607,25 +607,31 @@ MediaQueries
     }
 }
 
-@media (max-width: 950px) {
+@media screen and (max-width: 899px) {
     /* ===========
     Home
     ============== */
-    #container {
+    #contentHome {
+        position: relative;
         overflow: auto;
     }
-    #contentHome {
-        display: block;
-    }
+
     .homeTitle {
-        position: fixed;
+        position: relative;
+        display: blck;
+        height: 5%;
+        top: 20%;
         font-size: 8vw;
-        background-color: red;
     }
     #contentHome img {
         display: none;
     }
     .mainMenu {
+        position: relative;
+        margin-top: 10%;
+        top: 30%;
+        height: 20%;
+        display: block;
     }
     .mainMenu a {
         color: #FFF;
@@ -638,7 +644,10 @@ MediaQueries
     }
 
     .contactFront {
-        margin-top: 0%;
+        position: relative;
+        bottom: 45%;
+        margin-top: 10%;
+        color: #000;
         font-size: 2vw;
         line-height: 2.3vw;
     }
