@@ -601,7 +601,7 @@ MediaQueries
     }
     .mainMenu li {
         background-color: #000;
-        display: block;
+        display: inline-block;
         font-size: 2vw;
         line-height: 4vw;
     }
