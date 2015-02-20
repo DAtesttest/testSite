@@ -617,8 +617,11 @@ and (orientation: portrait) {
     /* ===========
     Home
     ============== */
+    .pageBG.homePage {
+        url('../img/bg/aboutMeBG.jpg');
+    }
     .homeTitle {
-        margin-top: 20%;
+        margin-top: 30%;
         font-size: 6vw;
     }
     #contentHome img {
@@ -626,7 +629,7 @@ and (orientation: portrait) {
     }
 
     .mainMenu ul li {
-        margin-top: 10%;
+        margin-top: 45%;
         background-color: #000;
         font-size: 3vw;
         line-height: 10vw;
