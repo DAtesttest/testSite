@@ -620,7 +620,7 @@ MediaQueries
         position: relative;
         display: blck;
         height: 5%;
-        top: 10%;
+        top: 5%;
         font-size: 8vw;
     }
     #contentHome img {
@@ -629,7 +629,7 @@ MediaQueries
     .mainMenu {
         position: relative;
         margin-top: 10%;
-        top: 20%;
+        top: 15%;
         height: 20%;
         display: block;
     }
