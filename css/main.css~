@@ -661,17 +661,22 @@ and (orientation: portrait) {
     /* ===========
     Photography 
     ============== */
+    #contentPhotography {
+        height: 100%;
+    }
     .contentContainer.photogScroll {
         display: block;
-        top: 5%;
+        top: 0%;
         left: 8%;
         width: 100%;
-        height: 95%;
+        height: 100%;
         overflow: auto;
         white-space: normal;
     }
     .contentContainer.photogScroll .box {
+        margin-top: 3%;
         width: 55vh;
         height: 37vh;
+        z-index: 9999;
     }
 }
