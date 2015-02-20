@@ -601,7 +601,6 @@ MediaQueries
     }
     .mainMenu li {
         background-color: #000;
-        display: inline-block;
         font-size: 2vw;
         line-height: 4vw;
     }
@@ -612,7 +611,9 @@ MediaQueries
     }
 }
 
-@media screen and (max-width: 899px) {
+@media only screen 
+and (max-width: 767px)
+and (orientation: portrait) {
     /* ===========
     Home
     ============== */
@@ -623,18 +624,18 @@ MediaQueries
         display: none;
     }
 
-    .mainMenu a {
-        color: #FFF;
-    }
     .mainMenu li {
         background-color: #000;
-        display: inline-block;
-        font-size: 7vw;
+        margin: 2% 2% 2% 2%;
+    }
+
+    .mainMenu a {
+        color: red;
+        font-size: 3vw;
     }
 
     .contactFront {
         color: #000;
         font-size: 2vw;
-        line-height: 2.3vw;
     }
 }
