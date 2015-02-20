@@ -661,6 +661,9 @@ and (orientation: portrait) {
     /* ===========
     Photography 
     ============== */
+    .footer {
+        display: none;
+    }
     .pageBG.photog {
         background:
         linear-gradient(
@@ -694,5 +697,70 @@ and (orientation: portrait) {
         margin-top: 3%;
         max-width: 100%;
         z-index: 9999;
+    }
+}
+
+@media only screen
+and (max-width: 767px)
+and (orientation: portrait) {
+
+    /* ===========
+    Page Control
+    ============== */
+    .scaleButtons {
+        display: none;
+    }
+
+    /* ===========
+    Home
+    ============== */
+    .pageBG.homePage {
+        background: url('../img/bg/mobilePortrait.jpg');
+        background-size: cover;
+        position: center center;
+        background-repeat: no-repeat;
+    }
+    .homeTitle {
+        margin-top: 30%;
+        font-size: 7vw;
+    }
+    #contentHome img {
+        display: none;
+    }
+
+    .mainMenu ul li {
+        margin-top: 45%;
+        background-color: rgba(0,0,0,0.90);
+        font-size: 3vw;
+        margin-right: 3%;
+        padding: 3.5%;
+    }
+
+    .contactFront {
+        color: #000;
+        font-size: 2vw;
+        line-height: 3vw;
+        margin-bottom: 15%;
+    }
+
+    /* ===========
+    Architecture 
+    ============== */
+
+    /* ===========
+    Photography 
+    ============== */
+    .contentContainer.photogScroll {
+        display: block;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        white-space: normal;
+    }
+    .contentContainer.photogScroll .box {
+        margin-top: 3%;
+        width: 100%;
     }
 }
