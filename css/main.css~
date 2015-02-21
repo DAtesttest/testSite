@@ -834,7 +834,7 @@ and (orientation: portrait) {
         text-align: center;
         width: 100%;
         bottom: 0%;
-        top: 5%;
+        top: 8%;
         left: 0%;
         font-size: 2vw;
         color: #FFF;

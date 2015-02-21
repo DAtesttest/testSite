@@ -806,6 +806,7 @@ and (orientation: portrait) {
         background-attachment: fixed;
         background-position: center center;
         bottom: 0;
+        overflow: auto;
     }
 
     #contentAbout {
