@@ -823,9 +823,9 @@ and (orientation: portrait) {
     #aboutText {
         position: relative;
         top: 5%;
-        left: 1%;
+        left: 5%;
         font-size: 3vw;
-        width: 99%;
+        width: 90%;
         color: #FFF;
     }
 
@@ -834,7 +834,7 @@ and (orientation: portrait) {
         text-align: center;
         width: 100%;
         bottom: 0%;
-        top: 5%;
+        top: 8%;
         left: 0%;
         font-size: 2vw;
         color: #FFF;

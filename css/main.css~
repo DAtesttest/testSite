@@ -794,7 +794,7 @@ and (orientation: portrait) {
     .pageBG.about {
         background:
         linear-gradient(
-        rgba(0,0,0,0.4),
+        rgba(0,0,0,0.7),
         rgba(0,0,0,0.9)
         ),
         url("../img//bg/aboutMeBG.jpg");
@@ -823,9 +823,9 @@ and (orientation: portrait) {
     #aboutText {
         position: relative;
         top: 5%;
-        left: 1%;
+        left: 5%;
         font-size: 3vw;
-        width: 99%;
+        width: 90%;
         color: #FFF;
     }
 
