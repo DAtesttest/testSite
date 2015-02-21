@@ -346,7 +346,7 @@ SectionTitle
 Header/Footer
 ============================================================= */
 .header {
-    position: fixed;
+    position: relative;
     top: 0;
     width: 100%;
     height: 10%;
@@ -792,35 +792,51 @@ and (orientation: portrait) {
     About 
     ============== */
     .pageBG.about {
+        background:
+        linear-gradient(
+        rgba(0,0,0,0.4),
+        rgba(0,0,0,0.9)
+        ),
+        url("../img//bg/aboutMeBG.jpg");
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center center;
         bottom: 0;
+    }
+
+    #contentAbout {
+        overflow: auto;
     }
 
     #contentAbout img {
         position: relative;
-        top: 5%;
         width: 100%;
         top: 0%;
         right: 0%;
         left: 0%;
-        padding: 0;
-        margin: 0;
     }
 
     #aboutText {
         position: relative;
         top: 5%;
-        left: 0%;
-        font-size: 2.5vw;
-        width: 100%;
+        left: 1%;
+        font-size: 3vw;
+        width: 99%;
+        color: #FFF;
     }
 
     #contactInfo {
         position: relative;
         text-align: center;
         width: 100%;
-        top: 8%;
         bottom: 0%;
+        top: 5%;
         left: 0%;
         font-size: 2vw;
+        color: #FFF;
     }
 }
