@@ -709,6 +709,8 @@ and (orientation: portrait) {
     ============== */
     .header {
         background-color: #000;
+        color: #FFF;
+        height: 5%;
     }
 
     .footer {
@@ -717,6 +719,10 @@ and (orientation: portrait) {
 
     .scaleButtons {
         display: none;
+    }
+
+    .sectionTitle {
+        font-size: 2.5vw;
     }
 
     /* ===========
@@ -818,8 +824,9 @@ and (orientation: portrait) {
     #contentAbout img {
         position: relative;
         width: 100%;
-        top: 0%;
         right: 0%;
+        top: 0%;
+        margin-top: 5%;
         left: 0%;
     }
 
