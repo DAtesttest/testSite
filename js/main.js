@@ -1,9 +1,9 @@
 //ARRAYS:
 //Architecture Picture Preview Arrays
-var sem1Preview = ['./img/arch/sem1/01.jpg', './img/arch/sem1/02.jpg', './img/arch/sem1/03.jpg',];
-var sem2Preview = ['./img/arch/sem2/01.jpg', './img/arch/sem2/02.jpg', './img/arch/sem2/03.jpg', './img/arch/sem2/04.jpg'];
-var sem3Preview = ['./img/arch/sem3/01.jpg', './img/arch/sem3/02.jpg', './img/arch/sem3/03.jpg', './img/arch/sem3/04.jpg'];
-var sem4Preview = ['./img/arch/sem4/01.jpg'];
+var sem1Preview = ['./img/arch/sem1/grid/skeleton01.jpg', './img/arch/sem1/grid/pinhole01.jpg', './img/arch/sem1/grid/sundail01.jpg'];
+var sem2Preview = ['./img/arch/sem2/grid/01.jpg', './img/arch/sem2/grid/02.jpg', './img/arch/sem2/grid/03.jpg', './img/arch/sem2/grid/04.jpg'];
+var sem3Preview = ['./img/arch/sem3/grid/01.jpg', './img/arch/sem3/grid/02.jpg', './img/arch/sem3/grid/03.jpg', './img/arch/sem3/grid/04.jpg'];
+var sem4Preview = ['./img/arch/sem4/grid/01.jpg'];
 //Architecture Picture Arrays
 var pr1 = ['./img/arch/sem1/full/skeleton/skeleton01.jpg'];
 var pr2 = ['./img/arch/sem1/full/pinhole/pinhole01.jpg'];
@@ -11,13 +11,13 @@ var pr3 = ['./img/arch/sem1/full/sundail/sundail01.jpg', './img/arch/sem1/full/s
 var pr4 = ['./img/arch/sem2/full/sculpture1/sculpture101.jpg', './img/arch/sem2/full/sculpture1/sculpture102.jpg', './img/arch/sem2/full/sculpture1/sculpture103.jpg'];
 var pr5 = ['./img/arch/sem2/full/sculpture2/sculpture201.jpg', './img/arch/sem2/full/sculpture2/sculpture202.jpg', './img/arch/sem2/full/sculpture2/sculpture203.jpg'];
 var pr6 = ['./img/arch/sem2/full/pavilion/pavilion01.jpg', './img/arch/sem2/full/pavilion/pavilion02.jpg', './img/arch/sem2/full/pavilion/pavilion03.jpg', './img/arch/sem2/full/pavilion/pavilion04.jpg', './img/arch/sem2/full/pavilion/pavilion05.jpg', './img/arch/sem2/full/pavilion/pavilion06.jpg'];
-var pr7 = ['./img/arch/sem2/full/bridgeProject/bridge01.jpg', './img/arch/sem2/full/bridgeProject/bridge02.jpg', './img/arch/sem2/full/bridgeProject/bridge03.jpg','./img/arch/sem2/full/bridgeProject/bridge04.jpg'];
+var pr7 = ['./img/arch/sem2/full/bridgeProject/bridge01.jpg', './img/arch/sem2/full/bridgeProject/bridge02.jpg', './img/arch/sem2/full/bridgeProject/bridge03.jpg', './img/arch/sem2/full/bridgeProject/bridge04.jpg'];
 var pr8 = ['./img/arch/sem3/full/readingSpace/readingSpace01.jpg', './img/arch/sem3/full/readingSpace/readingSpace02.jpg'];
-var pr9 = ['./img/arch/sem3/full/houseAddition/houseAddition01.jpg', './img/arch/sem3/full/houseAddition/houseAddition02.jpg'];
-var pr10 = ['./img/arch/sem3/full/weekendHouse/weekendHouse01.jpg', './img/arch/sem3/full/weekendHouse/weekendHouse02.jpg'];
+var pr9 = ['./img/arch/sem3/full/weekendHouse/weekendHouse01.jpg', './img/arch/sem3/full/weekendHouse/weekendHouse02.jpg'];
+var pr10 = ['./img/arch/sem3/full/houseAddition/houseAddition01.jpg', './img/arch/sem3/full/houseAddition/houseAddition02.jpg'];
 var pr11 = ['./img/arch/sem3/full/conceptualExplorations/ce1.jpg'];
 var pr12 = ['./img/arch/sem4/full/plaza/plaza01.jpg', './img/arch/sem4/full/plaza/plaza02.jpg', './img/arch/sem4/full/plaza/plaza03.jpg', './img/arch/sem4/full/plaza/plaza04.jpg', './img/arch/sem4/full/plaza/plaza05.jpg', './img/arch/sem4/full/plaza/plaza06.jpg', './img/arch/sem4/full/plaza/plaza07.jpg', './img/arch/sem4/full/plaza/plaza08.jpg', './img/arch/sem4/full/plaza/plaza09.jpg', './img/arch/sem4/full/plaza/plaza10.jpg', './img/arch/sem4/full/plaza/plaza11.jpg'];
-var prALL = ['./img/arch/sem1/full/pinhole/pinhole01.jpg', './img/arch/sem1/full/sundail/sundail01.jpg', './img/arch/sem2/full/sculpture1/sculpture101.jpg', './img/arch/sem2/full/sculpture1/sculpture102.jpg', './img/arch/sem2/full/sculpture2/sculpture201.jpg', './img/arch/sem2/full/pavilion/pavilion01.jpg', './img/arch/sem2/full/pavilion/pavilion03.jpg','./img/arch/sem2/full/pavilion/pavilion06.jpg', './img/arch/sem2/full/bridgeProject/bridge01.jpg', './img/arch/sem3/full/readingSpace/readingSpace01.jpg', './img/arch/sem3/full/readingSpace/readingSpace02.jpg', './img/arch/sem3/full/weekendHouse/weekendHouse01.jpg', './img/arch/sem3/full/weekendHouse/weekendHouse02.jpg', './img/arch/sem3/full/houseAddition/houseAddition01.jpg', './img/arch/sem3/full/houseAddition/houseAddition02.jpg', './img/arch/sem3/full/conceptualExplorations/ce1.jpg', './img/arch/sem4/full/plaza/plaza01.jpg', './img/arch/sem4/full/plaza/plaza02.jpg'];
+var prALL = ['./img/arch/sem1/full/pinhole/pinhole01.jpg', './img/arch/sem1/full/sundail/sundail01.jpg', './img/arch/sem2/full/sculpture1/sculpture101.jpg', './img/arch/sem2/full/sculpture1/sculpture102.jpg', './img/arch/sem2/full/sculpture2/sculpture201.jpg', './img/arch/sem2/full/pavilion/pavilion01.jpg', './img/arch/sem2/full/pavilion/pavilion03.jpg', './img/arch/sem2/full/pavilion/pavilion06.jpg', './img/arch/sem2/full/bridgeProject/bridge01.jpg', './img/arch/sem3/full/readingSpace/readingSpace01.jpg', './img/arch/sem3/full/readingSpace/readingSpace02.jpg', './img/arch/sem3/full/weekendHouse/weekendHouse01.jpg', './img/arch/sem3/full/weekendHouse/weekendHouse02.jpg', './img/arch/sem3/full/houseAddition/houseAddition01.jpg', './img/arch/sem3/full/houseAddition/houseAddition02.jpg', './img/arch/sem3/full/conceptualExplorations/ce1.jpg', './img/arch/sem4/full/plaza/plaza01.jpg', './img/arch/sem4/full/plaza/plaza02.jpg'];
 //Photography Picture Preview Arrays
 var photoAmsterdamPreview = ['./img/photog/amsterdam/preview/cantelever.jpg', './img/photog/amsterdam/preview/amsterdamtrainstation.jpg', './img/photog/amsterdam/preview/nemo.jpg'];
 var photoBelgiumPreview = ['./img/photog/belgium/preview/IMG_1017.jpg', './img/photog/belgium/preview/IMG_1018.jpg', './img/photog/belgium/preview/streetart.jpg', './img/photog/belgium/preview/IMG_1067.jpg'];
@@ -64,72 +64,26 @@ photoFrance.name = "photoFrance";
 photoFrancePreview.name = "photoFrancePreview";
 photoNewYork.name = "photoNewYork";
 photoNewYorkPreview.name = "photoNewYorkPreview";
-//Image Variables
+//Project Descriptions
+var pr1Description = "Asked to re-imagine our studio work space, I designed a conceptual environment combining different communal and personal work spaces. I played with wooden members creating openings and boundaries for light and the space themselves.";
+var pr2Description = "Using a handmade pinhole camera that I designed and built, I took these four pictures simultaneously at 30 second exposures. The camera consists of four quadrants accomodating 4x6 inch warped photographic paper in order to achieve the fisheye effect. The four pictures line up as a 360 panorama.";
+var pr3Description = "Using a metal exploration model, I generated a photogram that was used to generate inspiration for the pavilion. The concept around the observation deck is to experience light in a different fashion. By starting from the top floor and descending, one can choose to experience different levels of lighting starting with the most exposed one. The pavilion starts with a very large communal open space and as it descends it gets to a smaller, more personal atmosphere.";
+var pr4Description = "Now acquired by a school in Sherbrooke, this sculpture installation was inspired from the work of architect and artst Tim Prentice. His work is mostly based on the idea of art being shaped by the wind. I created this design with the same goal in mind -- to experience wind in a visual way.\n\n Installed in the entrance of the school, every time one opens the doors a flow of air reshapes the structure as it dances in the wind. After its installation, the school renovated the ceiling in order to add a series of coloured lights angled to shine on the sculpture -- upgrading the already pleasing visual experience.";
+var pr5Description = "Anchored to the ceiling of the teachers' lounge, this piece was part of my studio analysis of artist Tim Prentice. It is a playful sculpture secured by four main frames that subdivide subsequently to become a final structure of 128 chrome-finished Lexan plates.\n\nStimulated by either wind or the action of a hand, the sculptures movements are similar to a snake flowing through the air.";
+var pr6Description = "Located on the edge of the Dow's Lake peninsula, this pavilion serves both as a semi-sheltered resting area in the summer and as a bench where people can sit to put on their skates in the winter. It allows direct access to the canal. Kinetic members hang from its branching structure, inducing an interesting view of the structure and its relation with the wind.";
+var pr7Description = "Inspired from the work of Santiago Calatrava, and more specficically his Jeursalem Bridge, my two peers and I designed a bridge that relies on balance. It is inspired by the idea of two leaning bodies, opposed to each other.\n\n The bridge balances by having the two extremities pulling one way of the central tower while the middle extends the other way -- counterbalancing itself.";
+var pr8Description = "Reading Space";
+var pr9Description = "Located in a dense neighbourhood downtown in the Brazilian metropolis, the house is designed as an alternative retreat from the crowded beach. Light, water, and vegetation all permeate through the construction allowing the client an opportunity to be privately immersed in those three elements.";
+var pr10Description = "By using the space that would conventionally be used for a swimming pool, I created a new collection of intimate spaces.\n\n The underground addition, which includes a massage area, a sauna, and a reading or meditative space, is carved into the surface. The landscape was rearranged in order to maintain the integrity of the original plan while at the same time allowing natural elements to enter the flow through the created addition. A series of skylights and mesh roofs (upon which vegetation grows) allows a sense of privacy without totally blocking natural light.";
+var pr11Description = "Subsequent to the first phase of analysis and exploration of the Weekend House in Sao Paulo, the focus was set on redefining the surface and the idea of balance. Sculptural pieces were made as exploration models that helped fuel the next phase of the design process.";
+var pr12Description = "Summertime brings a flow of tourists and locals to Little Italy to take part in many festivities, while businesses pursue sales on the street. Despite its strong family-based culture, Little Italy dies down during the winter months and the lack of communal spaces is definitely a factor that should be addressed.\n\nThe open front section acts as a stepped court with podiums that will accomodate ice sculptures, bringing both the winter festivities to the centre of little Italy along with a subtle reference to traditional caryatides of Roman gardens. This consequently gives sense to its name along with the fact that it is meant to revitalise the centre of Little Italy.\n\nThis first section is very public and can be seen with ease from the street. In the summertime, the podiums become seating areas and the stepped court allows a clear view of the street. The rear section speaks more to the intimacy of Italian culture by being a simple, more secluded gathering area where locals could come and partake in whatever activities they wish.";
+var prALLDescription = "Full architecture portfolio.";
+//Page Variables
 var attachTo = document.getElementsByClassName("fillTarget")[0];
 var optionTarget = document.getElementsByClassName("optionTarget");
 var zoomedImage = document.getElementsByClassName("zoomedImage")[0];
-//Page Variables
 
-//highlight the menu at what semester it is at
-//header and footer start at middle of page, taking up whole page
-////quick transition down, revealing site, and bringing them to normal position
-//"turn off the lights" button by setting background color to #000 on .zoomedImage
-
-
-//checks what is clicked on
-$(optionTarget).on("click", function() {
-    whatId = this.id;
-    function checkClick(whatId, nameArray) {
-        return nameArray.indexOf(whatId) > -1;
-    }
-    if(checkClick) {
-        //clears already loaded images
-        attachTo.innerHTML = "";
-        //call images associated with click and creats scroll buttons
-        chooseImages(whatId);
-        $('.scrollButton').css("display", "initial");
-        $('.scrollButtonArch').css("display", "initial");
-    }
-    return false;
-});
-
-function chooseImages(whatId){
-    if(whatId.indexOf("pr") > -1) {
-        $('.contentContainer').scrollLeft(0);
-        $('.contentContainer').removeClass("archGrid");
-        $('.contentContainer').addClass("archScroll");
-    }
-
-
-    for(i = 0; i < targetArray.length; i ++) {
-        //uses id name to look through array of names
-        if (whatId == targetArray[i].name) {
-            //when it's found it uses that dir as images
-            target = targetArray[i];
-        }
-    }
-
-    if(whatId === "prALL") {
-        console.log("CAT!!!!");
-    }
-
-    for(i = 0; i < target.length; i++ ) {
-        //loops through image dir
-        whichOne = target[i];
-        if(target[i].indexOf("full") > -1) {
-            $('.scrollButton').css("display", "initial");
-            $('.backButton').css("display", "initial");
-            $(".contentContainer").addClass("afterClick");
-            //for non preview images
-            assignBoxImagesFull(whichOne);
-        } else {
-            //for preview images
-            assignBoxImages(whichOne);
-        }
-    }
-}
-
-function assignBoxImagesFull(whichOne) {
+function assignBoxImagesProjects(whichOne) {
     var targetFill = document.createElement("img");
 
     targetFill.setAttribute("class", "box2");
@@ -144,25 +98,96 @@ function assignBoxImages(whichOne) {
     targetFill.setAttribute("class", "box");
     targetFill.setAttribute("name", whichOne);
     targetFill.setAttribute("src", whichOne);
+    targetFill.setAttribute("href", "1");
     attachTo.appendChild(targetFill);
 }
+
+function assignDescription(whatId) {
+    var projectTitle = $("#" + whatId).find("span").html();
+    var projectDescription = window[whatId + "Description"].replace(/\n/g, '<br>');
+    $(".projectDescription").css("display", "initial");
+    $(".projectDescription h3").text(projectTitle);
+    $(".projectDescription p").text("");
+    $(".projectDescription p").html(projectDescription);
+}
+
+function chooseImages(whatId) {
+    if (whatId.indexOf("pr") > -1) {
+        $('.contentContainer').scrollLeft(0);
+        $('.contentContainer').removeClass("archGrid");
+        $('.contentContainer').addClass("archScroll");
+        $('ul.projects').css("top", "8%");
+        $('ul.projects').css("left", "1%");
+        $('.scrollButtonArch').css("display", "none");
+        assignDescription(whatId);
+    }
+    for (i = 0; i < targetArray.length; i++) {
+        //uses id name to look through array of names
+        if (whatId === targetArray[i].name) {
+            //when it's found it uses that dir as images
+            target = targetArray[i];
+            if (target.length > 1) {
+                $('.scrollButtonArch').css("display", "initial");
+            }
+        }
+    }
+    for (i = 0; i < target.length; i++) {
+        //loops through image dir
+        whichOne = target[i];
+        if (whichOne.indexOf("full") > -1) {
+            $('.backButton').css("display", "initial");
+            $(".contentContainer").addClass("afterClick");
+            //for non preview images
+            assignBoxImagesProjects(whichOne);
+        } else {
+            //for preview images
+            assignBoxImages(whichOne);
+        }
+    }
+}
+
+function initialArch() {
+    for (i = 0; i < targetArray.length; i ++) {
+        x = targetArray[i];
+        for (r = 0; r < x.length; r++) {
+            if (x[r].indexOf("sem") > -1 && x[r].indexOf("full") < 0) {
+                assignBoxImages(x[r]);
+            }
+        }
+    }
+}
+
+function initialPhotog() {
+    $('.scrollButton').css("display", "initial");
+    for (i = 0; i < targetArray.length; i++) {
+        x = targetArray[i];
+        for (r = 0; r < x.length; r ++) {
+            if (x[r].indexOf("preview") > -1) {
+                assignBoxImages(x[r]);
+            }
+        }
+    }
+}
+
 //Zoom image stuff
-$('.fillTarget').on("click", "img", function() {
+$('.fillTarget').on("click", "img", function () {
     thisName = this.name;
-    newName = thisName.replace("preview/", "");
-    zoomBox = document.createElement("img");
-    zoomBox.setAttribute("class", "imageZoom");
-    zoomBox.setAttribute("src", newName);
-    zoomedImage.appendChild(zoomBox);
-    $(".hide").css("display", "none");
-    $(".box").css("display", "none");
-    $(".box2").css("display", "none");
-    $(".scaleImage").css("display", "none");
-    $(".zoomedImage").css("cursor", "pointer");
-    $(".zoomedImage").css("background-color", "rgba(0,0,0,0.9)");
+    if (thisName.indexOf("grid") < 0) {
+        newName = thisName.replace("preview/", "");
+        zoomBox = document.createElement("img");
+        zoomBox.setAttribute("class", "imageZoom");
+        zoomBox.setAttribute("src", newName);
+        zoomedImage.appendChild(zoomBox);
+        $(".hide").css("display", "none");
+        $(".box").css("display", "none");
+        $(".box2").css("display", "none");
+        $(".scaleImage").css("display", "none");
+        $(".zoomedImage").css("cursor", "pointer");
+        $(".zoomedImage").css("background-color", "rgba(0,0,0,0.9)");
+    }
 });
 
-$('.zoomedImage').on("click", "img", function() {
+$('.zoomedImage').on("click", "img", function () {
     zoomedImage.innerHTML = "";
     $(".hide").css("display", "initial");
     $(".box").css("display", "initial");
@@ -172,84 +197,72 @@ $('.zoomedImage').on("click", "img", function() {
     $(".zoomedImage").css("background-color", "");
 });
 
-$('.backButton').on("click", function() {
+$('.backButton').on("click", function () {
     location.reload();
 });
 
 //controls scroll buttons
-$('.scrollRight').on("click", function() {
-    $('.contentContainer').animate( {
+$('.scrollRight').on("click", function () {
+    $('.contentContainer').animate({
         scrollLeft: "+=350"
     }, "fast");
 });
 
-$('.scrollLeft').on("click", function() {
-    $('.contentContainer').animate( {
+$('.scrollLeft').on("click", function () {
+    $('.contentContainer').animate({
         scrollLeft: "-=350"
     }, "fast");
 });
 
-$('.scrollRightArch').on("click", function() {
-    $('.contentContainer').animate( {
+$('.scrollRightArch').on("click", function () {
+    $('.contentContainer').animate({
         scrollLeft: "+=230"
     }, "fast");
 });
 
-$('.scrollLeftArch').on("click", function() {
-    $('.contentContainer').animate( {
+$('.scrollLeftArch').on("click", function () {
+    $('.contentContainer').animate({
         scrollLeft: "-=230"
     }, "fast");
 });
-//sectionMenu
 
-var whatRegion = "";
-
-$('.outer').mouseenter(function() {
+$('.outer').mouseenter(function () {
     whatRegion = this.className;
     whatRegion = whatRegion.replace("outer ", "");
-    whatRegion = '.inner.'+whatRegion;
+    whatRegion = '.inner.' + whatRegion;
     $(whatRegion).toggleClass('visible');
-    $(whatRegion).mouseleave(function() {
+    $(whatRegion).mouseleave(function () {
         $(whatRegion).toggleClass('visible');
     });
 });
 
-
-
-//Detect current page
-var x = document.getElementsByTagName("body")[0];
-function initialArch() {
-    for(i = 0; i < targetArray.length; i ++) {
-        x = targetArray[i];
-        for(r = 0; r < x.length; r ++) {
-            if(x[r].indexOf("sem") > -1 && x[r].indexOf("full") < 0) {
-                assignBoxImages(x[r]);
-            }
-        }
+//checks what is clicked on
+$(optionTarget).on("click", function () {
+    whatId = this.id;
+    function checkClick(whatId, nameArray) {
+        return nameArray.indexOf(whatId) > -1;
     }
-}
-
-function initialPhotog() {
-    $('.scrollButton').css("display", "initial");
-    for(i = 0; i < targetArray.length; i ++) {
-        x = targetArray[i];
-        for(r = 0; r < x.length; r ++) {
-            if(x[r].indexOf("preview") > -1) {
-                assignBoxImages(x[r]);
-            }
-        }
+    if (checkClick) {
+        //clears already loaded images
+        attachTo.innerHTML = "";
+        //call images associated with click and creats scroll buttons
+        chooseImages(whatId);
+        $('.scrollButton').css("display", "initial");
     }
-}
+    return false;
+});
 
-$(document).ready(function() {
+$(document).ready(function () {
+    //Detect current page
+    var x = document.getElementsByTagName("body")[0];
     try {
         if (x.id === "photoBody") {
             initialPhotog();
         }
-    } catch (e) {}
+    } catch (ignore) {}
     try {
         if (x.id === "archBody") {
             initialArch();
         }
-    } catch (e) {}
+    } catch (ignore) {}
 });
