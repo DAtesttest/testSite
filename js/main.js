@@ -213,7 +213,7 @@ $('.fillTarget').on("click", "img", function () {
 //minimise zoomed image
 $('.zoomedImage').on("click", "img", function () {
     "use strict";
-    zoomBox.setAttribute("src", "");
+    $(".imageZoom").detach();
     $(".zoomedImage").css("display", "none");
     $(".hide").css("display", "initial");
     $(".box").css("display", "initial");
