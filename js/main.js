@@ -205,6 +205,7 @@ $('.fillTarget').on("click", "img", function () {
         $(".box").css("display", "none");
         $(".box2").css("display", "none");
         $(".scaleImage").css("display", "none");
+        $(".zoomedImage").css("display", "initial");
         $(".zoomedImage").css("cursor", "pointer");
         $(".zoomedImage").css("background-color", "rgba(0,0,0,0.9)");
     }
@@ -212,7 +213,8 @@ $('.fillTarget').on("click", "img", function () {
 //minimise zoomed image
 $('.zoomedImage').on("click", "img", function () {
     "use strict";
-    zoomedImage.innerHTML = "";
+    zoomBox.setAttribute("src", "");
+    $(".zoomedImage").css("display", "none");
     $(".hide").css("display", "initial");
     $(".box").css("display", "initial");
     $(".box2").css("display", "inline-block");
