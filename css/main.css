@@ -869,15 +869,24 @@ and (orientation: portrait) {
     }
 
     .sectionMenu {
-        top: 200%;
+        top: 100%;
     }
 
     .selectionNav {
-        text-align: left;
+        left: 0%;
+        margin: 0%;
+        padding: 0%;
+        text-align: center;
         display: block;
     }
 
+    .selectionNav li a {
+        font-size: 2vw;
+    }
+
     .outer {
+        margin: 0;
+        padding: 0;
         position: relative;
         display: block;
         width: 100%;
