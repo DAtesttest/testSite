@@ -881,7 +881,7 @@ and (orientation: portrait) {
     }
 
     .selectionNav li a {
-        font-size: 2vw;
+        font-size: 4.5vw;
     }
 
     .outer {
