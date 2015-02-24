@@ -32,9 +32,7 @@ var photoBerlin = ['./img/photog/berlin/berlinwall.jpg'];
 var photoBolivia = ['./img/photog/bolivia/bolivia3.jpg', './img/photog/bolivia/bolivia2.jpg', './img/photog/bolivia/bolivia6.jpg', './img/photog/bolivia/Bolivia4.jpg'];
 var photoFrance = ['./img/photog/france/france2012-2.jpg', './img/photog/france/grapes.jpg', './img/photog/france/Barcelonedugers1.jpg', './img/photog/france/caveavin.jpg'];
 var photoNewYork = ['./img/photog/newYork/IMG_9020.jpg', './img/photog/newYork/IMG_8867.jpg', './img/photog/newYork/IMG_9651.jpg', './img/photog/newYork/IMG_9087.jpg', './img/photog/newYork/IMG_9523.jpg', './img/photog/newYork/IMG_9235.jpg', './img/photog/newYork/IMG_9523.jpg', './img/photog/newYork/newyork.jpg'];
-//Name Arrays
-var targetArray = [sem1Preview, sem2Preview, sem3Preview, sem4Preview, pr1, pr2, pr3, pr4, pr5, pr6, pr7, pr8, pr9, pr10, pr11, pr12, prALL, photoAmsterdamPreview, photoBelgiumPreview, photoBerlinPreview, photoBoliviaPreview, photoFrancePreview, photoNewYorkPreview, photoAmsterdam, photoBelgium, photoBerlin, photoBolivia,  photoFrance, photoNewYork];
-var nameArray = [sem1Preview.name, sem2Preview.name, sem3Preview.name, sem4Preview.name, pr1.name,  pr2.name, pr3.name, pr4.name, pr5.name, pr6.name, pr7.name, pr8.name, pr9.name, pr10.name, pr11.name, pr12.name, prALL.name, photoAmsterdam, photoBelgium, photoBerlin, photoBolivia, photoFrance, photoNewYork];
+//Give Arrays Names
 pr1.name = "pr1";
 pr2.name = "pr2";
 pr3.name = "pr3";
@@ -64,6 +62,9 @@ photoFrance.name = "photoFrance";
 photoFrancePreview.name = "photoFrancePreview";
 photoNewYork.name = "photoNewYork";
 photoNewYorkPreview.name = "photoNewYorkPreview";
+//Name Arrays
+var targetArray = [sem1Preview, sem2Preview, sem3Preview, sem4Preview, pr1, pr2, pr3, pr4, pr5, pr6, pr7, pr8, pr9, pr10, pr11, pr12, prALL, photoAmsterdamPreview, photoBelgiumPreview, photoBerlinPreview, photoBoliviaPreview, photoFrancePreview, photoNewYorkPreview, photoAmsterdam, photoBelgium, photoBerlin, photoBolivia,  photoFrance, photoNewYork];
+var nameArray = [sem1Preview.name, sem2Preview.name, sem3Preview.name, sem4Preview.name, pr1.name,  pr2.name, pr3.name, pr4.name, pr5.name, pr6.name, pr7.name, pr8.name, pr9.name, pr10.name, pr11.name, pr12.name, prALL.name, photoAmsterdam, photoBelgium, photoBerlin, photoBolivia, photoFrance, photoNewYork];
 //Project Descriptions
 var pr1Description = "Asked to re-imagine our studio work space, I designed a conceptual environment combining different communal and personal work spaces. I played with wooden members creating openings and boundaries for light and the space themselves.";
 var pr2Description = "Using a handmade pinhole camera that I designed and built, I took these four pictures simultaneously at 30 second exposures. The camera consists of four quadrants accomodating 4x6 inch warped photographic paper in order to achieve the fisheye effect. The four pictures line up as a 360 panorama.";
@@ -72,7 +73,7 @@ var pr4Description = "Now acquired by a school in Sherbrooke, this sculpture ins
 var pr5Description = "Anchored to the ceiling of the teachers' lounge, this piece was part of my studio analysis of artist Tim Prentice. It is a playful sculpture secured by four main frames that subdivide subsequently to become a final structure of 128 chrome-finished Lexan plates.\n\nStimulated by either wind or the action of a hand, the sculptures movements are similar to a snake flowing through the air.";
 var pr6Description = "Located on the edge of the Dow's Lake peninsula, this pavilion serves both as a semi-sheltered resting area in the summer and as a bench where people can sit to put on their skates in the winter. It allows direct access to the canal. Kinetic members hang from its branching structure, inducing an interesting view of the structure and its relation with the wind.";
 var pr7Description = "Inspired from the work of Santiago Calatrava, and more specficically his Jeursalem Bridge, my two peers and I designed a bridge that relies on balance. It is inspired by the idea of two leaning bodies, opposed to each other.\n\n The bridge balances by having the two extremities pulling one way of the central tower while the middle extends the other way -- counterbalancing itself.";
-var pr8Description = "Reading Space";
+var pr8Description = "We were asked to build a rough model, from foundation to skin, of a small reading space. The design was our choice and would accurately incorporate every structural aspect. Once finished, we analysed our design and completed a set of construction drawings.\n\nThe set includes as-built drawings, along with revised drawings arising from our analysis that revealed certain flaws, imperfections, and weaknesses of the original model.";
 var pr9Description = "Located in a dense neighbourhood downtown in the Brazilian metropolis, the house is designed as an alternative retreat from the crowded beach. Light, water, and vegetation all permeate through the construction allowing the client an opportunity to be privately immersed in those three elements.";
 var pr10Description = "By using the space that would conventionally be used for a swimming pool, I created a new collection of intimate spaces.\n\n The underground addition, which includes a massage area, a sauna, and a reading or meditative space, is carved into the surface. The landscape was rearranged in order to maintain the integrity of the original plan while at the same time allowing natural elements to enter the flow through the created addition. A series of skylights and mesh roofs (upon which vegetation grows) allows a sense of privacy without totally blocking natural light.";
 var pr11Description = "Subsequent to the first phase of analysis and exploration of the Weekend House in Sao Paulo, the focus was set on redefining the surface and the idea of balance. Sculptural pieces were made as exploration models that helped fuel the next phase of the design process.";
@@ -82,8 +83,22 @@ var prALLDescription = "Full architecture portfolio.";
 var attachTo = document.getElementsByClassName("fillTarget")[0];
 var optionTarget = document.getElementsByClassName("optionTarget");
 var zoomedImage = document.getElementsByClassName("zoomedImage")[0];
+var $;
+var whatId;
+var whichOne;
+var thisName;
+var zoomBox;
+var newName;
+var whatRegion;
+var checkForCollapse;
+var i;
+var x;
+var r;
+var target;
 
+//start of functions
 function assignBoxImagesProjects(whichOne) {
+    "use strict";
     var targetFill = document.createElement("img");
 
     targetFill.setAttribute("class", "box2");
@@ -91,8 +106,8 @@ function assignBoxImagesProjects(whichOne) {
     targetFill.setAttribute("src", whichOne);
     attachTo.appendChild(targetFill);
 }
-
 function assignBoxImages(whichOne) {
+    "use strict";
     var targetFill = document.createElement("img");
 
     targetFill.setAttribute("class", "box");
@@ -101,24 +116,25 @@ function assignBoxImages(whichOne) {
     targetFill.setAttribute("href", "1");
     attachTo.appendChild(targetFill);
 }
-
 function assignDescription(whatId) {
-    var projectTitle = $("#" + whatId).find("span").html();
-    var projectDescription = window[whatId + "Description"].replace(/\n/g, '<br>');
+    "use strict";
+    var projectTitle = $("#" + whatId).find("span").html(),
+        projectDescription = window[whatId + "Description"].replace(/\n/g, '<br>');
+    $('.projects').animate({top: "8%"}, {duration: 500, queue: false});
     $(".projectDescription").css("display", "initial");
     $(".projectDescription h3").text(projectTitle);
     $(".projectDescription p").text("");
     $(".projectDescription p").html(projectDescription);
 }
-
 function chooseImages(whatId) {
+    "use strict";
     if (whatId.indexOf("pr") > -1) {
+        $('.scrollButtonArch').css("display", "none");
         $('.contentContainer').scrollLeft(0);
         $('.contentContainer').removeClass("archGrid");
         $('.contentContainer').addClass("archScroll");
-        $('ul.projects').css("top", "8%");
-        $('ul.projects').css("left", "1%");
-        $('.scrollButtonArch').css("display", "none");
+        $('.projectDescription').animate({opacity: "0.9"}, 1000);
+        $('.archScroll').animate({opacity: "0.95"}, 1000);
         assignDescription(whatId);
     }
     for (i = 0; i < targetArray.length; i++) {
@@ -128,6 +144,13 @@ function chooseImages(whatId) {
             target = targetArray[i];
             if (target.length > 1) {
                 $('.scrollButtonArch').css("display", "initial");
+                $('.projects').animate({left: "2%"}, {duration: 500, queue: false});
+                $('.backButton').animate({left: "16.3%"}, {duration: 500, queue: false});
+                $('.contentContainer.archScroll').animate({left: "18%"}, {duration: 500, queue: false});
+            } else {
+                $('.contentContainer.archScroll').animate({left: "25%"}, {duration: 500, queue: false});
+                $('.backButton').animate({left: "23.3%"}, {duration: 500, queue: false});
+                $('.projects').animate({left: "6%"}, {duration: 500, queue: false});
             }
         }
     }
@@ -145,9 +168,9 @@ function chooseImages(whatId) {
         }
     }
 }
-
 function initialArch() {
-    for (i = 0; i < targetArray.length; i ++) {
+    "use strict";
+    for (i = 0; i < targetArray.length; i++) {
         x = targetArray[i];
         for (r = 0; r < x.length; r++) {
             if (x[r].indexOf("sem") > -1 && x[r].indexOf("full") < 0) {
@@ -156,21 +179,21 @@ function initialArch() {
         }
     }
 }
-
 function initialPhotog() {
+    "use strict";
     $('.scrollButton').css("display", "initial");
     for (i = 0; i < targetArray.length; i++) {
         x = targetArray[i];
-        for (r = 0; r < x.length; r ++) {
+        for (r = 0; r < x.length; r++) {
             if (x[r].indexOf("preview") > -1) {
                 assignBoxImages(x[r]);
             }
         }
     }
 }
-
-//Zoom image stuff
+//zoom image
 $('.fillTarget').on("click", "img", function () {
+    "use strict";
     thisName = this.name;
     if (thisName.indexOf("grid") < 0) {
         newName = thisName.replace("preview/", "");
@@ -186,58 +209,61 @@ $('.fillTarget').on("click", "img", function () {
         $(".zoomedImage").css("background-color", "rgba(0,0,0,0.9)");
     }
 });
-
+//minimise zoomed image
 $('.zoomedImage').on("click", "img", function () {
+    "use strict";
     zoomedImage.innerHTML = "";
     $(".hide").css("display", "initial");
     $(".box").css("display", "initial");
-    $(".box2").css("display", "initial");
+    $(".box2").css("display", "inline-block");
     $(".scaleImage").css("display", "initial");
     $(".zoomedImage").css("cursor", "initial");
     $(".zoomedImage").css("background-color", "");
 });
-
+//arch back button
 $('.backButton').on("click", function () {
+    "use strict";
     location.reload();
 });
-
-//controls scroll buttons
+//control scroll buttons
 $('.scrollRight').on("click", function () {
+    "use strict";
     $('.contentContainer').animate({
-        scrollLeft: "+=350"
+        scrollLeft: "+=950"
     }, "fast");
 });
-
 $('.scrollLeft').on("click", function () {
+    "use strict";
     $('.contentContainer').animate({
-        scrollLeft: "-=350"
+        scrollLeft: "-=950"
     }, "fast");
 });
-
 $('.scrollRightArch').on("click", function () {
+    "use strict";
     $('.contentContainer').animate({
-        scrollLeft: "+=230"
+        scrollLeft: "+=900"
     }, "fast");
 });
-
 $('.scrollLeftArch').on("click", function () {
+    "use strict";
     $('.contentContainer').animate({
-        scrollLeft: "-=230"
+        scrollLeft: "-=900"
     }, "fast");
 });
-
-$('.outer').mouseenter(function () {
-    whatRegion = this.className;
-    whatRegion = whatRegion.replace("outer ", "");
+//photography menu
+$('.selectionNav > li').mouseenter(function () {
+    "use strict";
+    checkForCollapse = this.className;
+    whatRegion = checkForCollapse.replace("outer ", "");
     whatRegion = '.inner.' + whatRegion;
-    $(whatRegion).toggleClass('visible');
-    $(whatRegion).mouseleave(function () {
-        $(whatRegion).toggleClass('visible');
+    $(whatRegion).toggleClass('hidden');
+    $('.inner').mouseleave(function () {
+        $(whatRegion).toggleClass('hidden');
     });
 });
-
-//checks what is clicked on
+//check what is clicked
 $(optionTarget).on("click", function () {
+    "use strict";
     whatId = this.id;
     function checkClick(whatId, nameArray) {
         return nameArray.indexOf(whatId) > -1;
@@ -251,17 +277,18 @@ $(optionTarget).on("click", function () {
     }
     return false;
 });
-
+//on load
 $(document).ready(function () {
+    "use strict";
     //Detect current page
-    var x = document.getElementsByTagName("body")[0];
+    var pageSection = document.getElementsByTagName("body")[0];
     try {
-        if (x.id === "photoBody") {
+        if (pageSection.id === "photoBody") {
             initialPhotog();
         }
     } catch (ignore) {}
     try {
-        if (x.id === "archBody") {
+        if (pageSection.id === "archBody") {
             initialArch();
         }
     } catch (ignore) {}

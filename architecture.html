@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<HTML>
+<HTML lang="en">
     <head>
         <title> David Anderson - Architecture </title>
         <!-- Created by JBaldwin: jdbldwin@gmail.com -->
@@ -11,6 +11,8 @@
         <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/main.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" defer></script>
+        <script src="js/main.js" defer></script>
     </head>
 
     <body id="archBody" class="initial">
@@ -38,14 +40,14 @@
                 <div class="zoomedImage">
                     <span class="centerImage"></span>
                 </div>
-                <div class="contentContainer fillTarget archGrid hide transition05s"></div>
-                <div class="projectDescription transition05s hide"><h3></h3><p></p></div>
+                <div class="contentContainer fillTarget archGrid hide"></div>
+                <div class="projectDescription hide"><h3></h3><p></p></div>
                 <div class="scaleButtons">
                     <button class="scrollButtonArch scrollRightArch hide"><img src="./img/icons/rightArrowWhite.png" alt="rightArrow"></button>
                     <button class="scrollButtonArch scrollLeftArch hide"><img src="./img/icons/leftArrowWhite.png" alt="leftArrow"></button>
                     <button id="back" class="backButton hide"><img src="./img/icons/close.png" alt="backButton"></button>
                 </div>
-                <ul class="projects hide transition05s">
+                <ul class="projects hide">
                     <li><h3><span class="underline">Pro</span>j<span class="underline">ects</span></h3></li>
                     <li><a id="pr1" class="optionTarget" href="1"><span>Skeleton of a Drawing</span></a></li>
                     <li><a id="pr2" class="optionTarget" href="#"><span>Pinhole</span></a></li>
@@ -89,7 +91,5 @@
                 </div>
             </div>
         </div>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script src="js/main.js"></script>
     </body>
 </HTML>
