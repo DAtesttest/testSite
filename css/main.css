@@ -597,6 +597,7 @@ Animations
     animation: fadeIn 2s;
     -webkit-animation: fadeIn 2s;
 }
+
 @-webkit-keyframes fadeIn {
     0% {opacity: 0.55;}
     100% {opacity: 1;}
@@ -616,6 +617,9 @@ PageControl
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    -webkit-user-select: none; /* Chrome/Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
 }
 
 html, body {height: 100%;}
@@ -645,6 +649,8 @@ a:visited {color: #000;}
 a:link {color: #000;}
 
 .underline {text-decoration: underline;}
+
+button:focus {outline:0;}
 
 /* ============================================================
 MediaQueries
@@ -737,7 +743,6 @@ and (orientation: landscape) {
         rgba(0,0,0,0.9),
         rgba(0,0,0,0.9)
         ),
-
         url("../img/bg/photog.jpg");
         position: fixed;
         width: 100%;
@@ -774,8 +779,7 @@ and (orientation: portrait) {
     Page Control
     ============== */
     .header {
-        position: relative;
-        top: 0%;
+        position: absolute;
         background-color: #000;
         color: #FFF;
         height: 6%;
@@ -790,9 +794,8 @@ and (orientation: portrait) {
     }
 
     .sectionTitle {
-        position: relative;
         text-align: center;
-        font-size: 5vw;
+        font-size: 3vw;
         top: 0;
         left: 0;
         width: 100%;
@@ -856,9 +859,11 @@ and (orientation: portrait) {
 
     #contentPhotography {
         height: 100%;
+        width: 100%;
     }
 
     .contentContainer.photogScroll {
+        position: relative;
         display: block;
         top: 0%;
         left: 0%;
@@ -873,6 +878,10 @@ and (orientation: portrait) {
     }
 
     .sectionMenu {
+        position: fixed;
+        top: 6%;
+        margin: 0;
+        padding: 0;
     }
 
     .selectionNav {
@@ -884,7 +893,7 @@ and (orientation: portrait) {
     }
 
     .selectionNav li a {
-        font-size: 4.5vw;
+        font-size: 2.2vw;
     }
 
     .outer {
@@ -893,6 +902,10 @@ and (orientation: portrait) {
         position: relative;
         display: block;
         width: 100%;
+    }
+
+    .inner > li {
+        margin-top: 0%;
     }
     /* ===========
     About
