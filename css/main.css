@@ -699,7 +699,6 @@ and (orientation: landscape) {
     Home
     ============== */
     .pageBG.homePage {
-        position: center center;
         background: url('../img/bg/mobilePortrait.jpg');
         background-size: cover;
         background-repeat: no-repeat;
@@ -779,8 +778,12 @@ and (orientation: portrait) {
     Page Control
     ============== */
 
-    #container {
+    body {
         overflow-y: auto;
+    }
+
+    #container {
+        top: 0%;
     }
 
     .header {
@@ -821,7 +824,6 @@ and (orientation: portrait) {
     .pageBG.homePage {
         background: url('../img/bg/mobilePortrait.jpg');
         background-size: cover;
-        position: center center;
         background-repeat: no-repeat;
     }
     .homeTitle {
@@ -855,19 +857,7 @@ and (orientation: portrait) {
     Photography
     ============== */
     .pageBG.photog {
-        background:
-        linear-gradient(
-        rgba(0,0,0,0.9),
-        rgba(0,0,0,0.9)
-        ),
-        url("../img/bg/photog.jpg");
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center center;
+        display: none;
     }
 
     .sectionMenu {
@@ -914,9 +904,11 @@ and (orientation: portrait) {
     }
 
     #contentPhotography {
-        height: 100%;
+        background-color: #000;
+        white-space: initial;
         width: 100%;
         top: 0%;
+        overflow-y: auto;
     }
 
     .contentContainer.photogScroll {
@@ -927,11 +919,11 @@ and (orientation: portrait) {
         margin: 0;
         padding: 0;
         width: 100%;
-        height: 100%;
-        overflow: auto;
+        overflow-y: auto;
         white-space: normal;
     }
     .contentContainer.photogScroll .box {
+        margin-top: 2%;
         width: 100%;
     }
     /* ===========
