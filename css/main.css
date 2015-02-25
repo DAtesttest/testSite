@@ -652,6 +652,8 @@ a:link {color: #000;}
 
 button:focus {outline:0;}
 
+#mobileMenuContainer {display: none;}
+
 /* ============================================================
 MediaQueries
 ============================================================= */
@@ -662,12 +664,15 @@ MediaQueries
     .homeTitle {
         font-size: 3vw;
     }
+
     #contentHome img {
         display: none;
     }
+
     .mainMenu a {
         color: #FFF;
     }
+
     .mainMenu li {
         background-color: #000;
         font-size: 2vw;
@@ -681,141 +686,57 @@ MediaQueries
 }
 
 @media only screen
-and (max-width: 767px)
-and (orientation: landscape) {
-
+and (max-width: 767px),
+and (orientation: portrait) {
     /* ===========
-    Page Control
+    Mobile Menu 
     ============== */
-    .scaleButtons {
-        display: none;
-    }
-
-    #container {
-        overflow: auto;
-    }
-
-    /* ===========
-    Home
-    ============== */
-    .pageBG.homePage {
-        background: url('../img/bg/mobilePortrait.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-    .homeTitle {
-        margin-top: 30%;
-        font-size: 7vw;
-    }
-    #contentHome img {
-        display: none;
-    }
-
-    .mainMenu ul li {
-        margin-top: 45%;
-        background-color: rgba(0,0,0,0.90);
-        font-size: 3vw;
-        margin-right: 3%;
-        padding: 3.5%;
-    }
-
-    .contactFront {
-        color: #000;
-        font-size: 2vw;
-        line-height: 3vw;
-        margin-bottom: 15%;
-    }
-
-    /* ===========
-    Architecture
-    ============== */
-
-    /* ===========
-    Photography
-    ============== */
-    .footer {
-        display: none;
-    }
-    .pageBG.photog {
-        background:
-        linear-gradient(
-        rgba(0,0,0,0.9),
-        rgba(0,0,0,0.9)
-        ),
-        url("../img/bg/photog.jpg");
+    #mobileMenuContainer {
+        display: initial;
         position: fixed;
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center center;
-    }
-
-    #contentPhotography {
-        height: 100%;
-    }
-    .contentContainer.photogScroll {
-        display: block;
-        top: 0%;
+        top: 2%;
         left: 0%;
         width: 100%;
-        height: 100%;
-        overflow: auto;
-        white-space: normal;
-    }
-    .contentContainer.photogScroll .box {
-        margin-top: 3%;
-        max-width: 100%;
-    }
-}
-
-@media only screen
-and (max-width: 767px)
-and (orientation: portrait) {
-
-    /* ===========
-    Page Control
-    ============== */
-
-    body {
-        overflow-y: auto;
-    }
-
-    #container {
-        top: 0%;
-    }
-
-    .header {
-        position: relative;
-        background-color: #000;
-        color: #FFF;
-        width: 100%;
         height: auto;
-        z-index: 0;
+        z-index: 1;
     }
 
-    .footer {
-        display: none;
+    .mobileMenu {
+        font-size: 0;
     }
 
-    .scaleButtons {
-        display: none;
+    .mobileMenu li a {
+        font-size: 7vw;
+        color: #FFF;
     }
 
-    .sectionTitle {
+    .mobileButton {
         position: relative;
+        border: 2px solid #424242;
+        box-shadow: 1px 1px 15px #2E2E2E;
+        width: 10%;
+        height: 10%;
+        border-radius: 50%;
         text-align: center;
-        font-size: 3vw;
-        top: 0;
-        left: 0;
-        margin: 0;
-        padding: 5%;
-        width: 100%;
     }
 
-    #socialAndTranslateButtons {
+    .mobileMenu2 {
+        position: absolute;
+        border: 1px solid red;
+        margin: 0;
+        padding: 0;
+        font-size: 0;
+        list-style: none;
+    }
+
+    .mobileMenu2.hidden {
         display: none;
+    }
+
+    .mobileMenu2 li a {
+        font-size: 3vw;
+        color: #FFF;
+        text-align: left;
     }
 
     /* ===========
@@ -826,10 +747,12 @@ and (orientation: portrait) {
         background-size: cover;
         background-repeat: no-repeat;
     }
+
     .homeTitle {
         margin-top: 30%;
         font-size: 7vw;
     }
+
     #contentHome img {
         display: none;
     }
@@ -899,6 +822,7 @@ and (orientation: portrait) {
         background-color: #000;
         padding: 2%;
     }
+
     .inner > li a {
         font-size: 2vw;
     }
@@ -922,16 +846,19 @@ and (orientation: portrait) {
         overflow-y: auto;
         white-space: normal;
     }
+
     .contentContainer.photogScroll .box {
         margin-top: 2%;
         width: 100%;
     }
+
     /* ===========
     About
     ============== */
     #contentAbout {
         overflow: auto;
     }
+
     .pageBG.about {
         background:
         linear-gradient(
@@ -976,5 +903,48 @@ and (orientation: portrait) {
         text-align: center;
         font-size: 2vw;
         color: #FFF;
+    }
+
+    /* ===========
+    Page Control
+    ============== */
+    body {
+        overflow-y: auto;
+    }
+
+    #container {
+        top: 0%;
+    }
+
+    .header {
+        position: relative;
+        background-color: #000;
+        color: #FFF;
+        width: 100%;
+        height: auto;
+        z-index: 0;
+    }
+
+    .footer {
+        display: none;
+    }
+
+    .scaleButtons {
+        display: none;
+    }
+
+    .sectionTitle {
+        position: relative;
+        text-align: center;
+        font-size: 3vw;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 5%;
+        width: 100%;
+    }
+
+    #socialAndTranslateButtons {
+        display: none;
     }
 }

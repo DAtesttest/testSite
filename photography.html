@@ -14,7 +14,6 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" defer></script>
         <script src="js/main.js" defer></script>
     </head>
-
     <body id="photoBody" class="initial">
         <div id="container">
             <div class="header">
@@ -31,9 +30,28 @@
                         </ul>
                     </div>
                 </div>
-
                 <h2 class="sectionTitle hide">David Anderson - Photography</h2>
-
+                <div id="mobileMenuContainer">
+                    <ul class="mobileMenu">
+                        <li class="mobileButton">
+                            <a href="#">~</a>
+                            <ul class="mobileMenu2 hidden">
+                                <li><a href="architecture.html">
+                                        ~/Architecture
+                                    </a>
+                                </li>
+                                <li><a href="about.html">
+                                        ~/About Me
+                                    </a>
+                                </li>
+                                <li><a href="index.html">
+                                        ~/Home
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
                 <div id="photoMenu" class="sectionMenu photogMenu hide">
                     <ul class="selectionNav photogMenu ">
                         <li class="outer one">
@@ -64,11 +82,10 @@
                     </ul>
                 </div>
             </div>
-
             <div class="pageBG photog"></div>
-                <div class="zoomedImage">
-                    <span class="centerImage"></span>
-                </div>
+            <div class="zoomedImage">
+                <span class="centerImage"></span>
+            </div>
             <div id="contentPhotography" class="fadeIn transition05s">
                 <div class="contentContainer fillTarget photogScroll hide"></div>
                 <div class="scaleButtons">

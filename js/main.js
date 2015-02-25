@@ -263,6 +263,11 @@ $('.selectionNav > li').click(function () {
         $('.inner').addClass('hidden');
     });
 });
+//mobile menu
+$('.mobileButton').click(function () {
+    "use strict";
+    $(".mobileMenu2").toggleClass('hidden');
+});
 //check what is clicked
 $(optionTarget).on("click", function () {
     "use strict";
