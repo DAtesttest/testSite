@@ -712,7 +712,7 @@ and (orientation: portrait) {
 
     .mobileButton {
         position: relative;
-        border: 2px solid #424242;
+        border: 2px solid #B40431;
         box-shadow: 1px 1px 15px #2E2E2E;
         width: 10%;
         height: 10%;
