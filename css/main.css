@@ -778,6 +778,11 @@ and (orientation: portrait) {
     /* ===========
     Page Control
     ============== */
+
+    #container {
+        overflow: auto;
+    }
+
     .header {
         position: relative;
         background-color: #000;
