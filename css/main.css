@@ -696,13 +696,16 @@ and (orientation: portrait) {
         position: fixed;
         top: 2%;
         left: 0%;
-        width: 100%;
+        width: 10%;
         height: auto;
-        z-index: 1;
+        z-index: 99;
     }
 
     .mobileMenu {
         font-size: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
     }
 
     .mobileMenu li a {
@@ -714,19 +717,24 @@ and (orientation: portrait) {
         position: relative;
         border: 2px solid #B40431;
         box-shadow: 1px 1px 15px #2E2E2E;
-        width: 10%;
-        height: 10%;
+        width: 100%;
+        height: 100%;
         border-radius: 50%;
         text-align: center;
     }
 
     .mobileMenu2 {
-        position: absolute;
-        border: 1px solid red;
+        position: fixed;
+        top: 2%;
+        left: 10%;
         margin: 0;
         padding: 0;
         font-size: 0;
         list-style: none;
+        width: 80%;
+        background-color: rgba(0,0,0,0.95);
+        border: 1px solid #000;
+        border-radius: 10%;
     }
 
     .mobileMenu2.hidden {
@@ -734,9 +742,9 @@ and (orientation: portrait) {
     }
 
     .mobileMenu2 li a {
-        font-size: 3vw;
+        font-size: 4vw;
+        line-height: 12vw;
         color: #FFF;
-        text-align: left;
     }
 
     /* ===========
