@@ -779,10 +779,12 @@ and (orientation: portrait) {
     Page Control
     ============== */
     .header {
-        position: absolute;
+        position: relative;
         background-color: #000;
         color: #FFF;
-        height: 6%;
+        width: 100%;
+        height: auto;
+        z-index: 0;
     }
 
     .footer {
@@ -794,11 +796,16 @@ and (orientation: portrait) {
     }
 
     .sectionTitle {
+        position: relative;
         text-align: center;
         font-size: 3vw;
-        top: 0;
-        left: 0;
+        margin: 0;
+        padding: 0;
         width: 100%;
+    }
+
+    #socialAndTranslateButtons {
+        display: none;
     }
 
     /* ===========
@@ -846,7 +853,6 @@ and (orientation: portrait) {
         rgba(0,0,0,0.9),
         rgba(0,0,0,0.9)
         ),
-
         url("../img/bg/photog.jpg");
         position: fixed;
         width: 100%;
@@ -857,33 +863,15 @@ and (orientation: portrait) {
         background-position: center center;
     }
 
-    #contentPhotography {
-        height: 100%;
-        width: 100%;
-    }
-
-    .contentContainer.photogScroll {
-        display: block;
-        top: 0%;
-        left: 0%;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        white-space: normal;
-    }
-    .contentContainer.photogScroll .box {
-        margin-top: 3%;
-        width: 100%;
-    }
-
     .sectionMenu {
-        position: fixed;
-        top: 6%;
+        position: relative;
         margin: 0;
         padding: 0;
     }
 
     .selectionNav {
+        position: relative;
+        width: 100%;
         left: 0%;
         margin: 0%;
         padding: 0%;
@@ -892,19 +880,50 @@ and (orientation: portrait) {
     }
 
     .selectionNav li a {
-        font-size: 2.2vw;
+        font-size: 3vw;
     }
 
     .outer {
-        margin: 0;
-        padding: 0;
         position: relative;
         display: block;
         width: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: #000;
+    }
+
+    .inner {
+        position: relative;
     }
 
     .inner > li {
         margin-top: 0%;
+        background-color: #000;
+    }
+    .inner > li a {
+        font-size: 2vw;
+    }
+
+    #contentPhotography {
+        height: 100%;
+        width: 100%;
+        top: 0%;
+    }
+
+    .contentContainer.photogScroll {
+        position: relative;
+        display: block;
+        top: 0%;
+        left: 0%;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        white-space: normal;
+    }
+    .contentContainer.photogScroll .box {
+        width: 100%;
     }
     /* ===========
     About
