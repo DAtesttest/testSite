@@ -780,7 +780,7 @@ and (orientation: portrait) {
     ============== */
 
     #container {
-        overflow: auto;
+        overflow-y: auto;
     }
 
     .header {
