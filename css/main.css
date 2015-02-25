@@ -669,15 +669,15 @@ MediaQueries
         display: none;
     }
 
-    .mainMenu a {
-        color: #FFF;
+    .mainMenu {
+        display: none;
     }
 
-    .mainMenu li {
+    /*.mainMenu li {
         background-color: #000;
         font-size: 2vw;
         line-height: 4vw;
-    }
+    }*/
 
     .contactFront {
         font-size: 1vw;
