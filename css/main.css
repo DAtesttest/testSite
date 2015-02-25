@@ -692,13 +692,12 @@ and (orientation: portrait) {
     Mobile Menu 
     ============== */
     #mobileMenuContainer {
-        display: initial;
+        display: block;
         position: fixed;
-        top: 4%;
-        left: 4%;
-        width: 10%;
+        bottom: 7%;
+        right: 10%;
+        width: 12%;
         height: auto;
-        z-index: 99;
     }
 
     .mobileMenu {
@@ -709,14 +708,14 @@ and (orientation: portrait) {
     }
 
     .mobileMenu li a {
-        font-size: 7vw;
+        font-size: 8vw;
         color: #FFF;
     }
 
     .mobileButton {
-        position: relative;
-        border: 2px solid #424242;
         box-shadow: 3px 4px 10px #2E2E2E;
+        border: 3px solid rgba(0,0,0,0.8);
+        background-color: #CB3535;
         width: 100%;
         height: 100%;
         border-radius: 50%;
@@ -731,10 +730,9 @@ and (orientation: portrait) {
         padding: 0;
         font-size: 0;
         list-style: none;
-        width: 60%;
         background-color: rgba(0,0,0,0.95);
         border: 1px solid #000;
-        border-radius: 10%;
+        border-radius: 12%;
     }
 
     .mobileMenu2.hidden {
