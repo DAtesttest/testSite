@@ -694,8 +694,8 @@ and (orientation: portrait) {
     #mobileMenuContainer {
         display: initial;
         position: fixed;
-        top: 2%;
-        left: 0%;
+        top: 4%;
+        left: 4%;
         width: 10%;
         height: auto;
         z-index: 99;
@@ -726,12 +726,12 @@ and (orientation: portrait) {
     .mobileMenu2 {
         position: fixed;
         top: 2%;
-        left: 10%;
+        left: 20%;
         margin: 0;
         padding: 0;
         font-size: 0;
         list-style: none;
-        width: 80%;
+        width: 60%;
         background-color: rgba(0,0,0,0.95);
         border: 1px solid #000;
         border-radius: 10%;
