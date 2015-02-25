@@ -696,7 +696,7 @@ and (orientation: portrait) {
         position: fixed;
         bottom: 7%;
         right: 10%;
-        width: 14%;
+        width: 15%;
         height: auto;
     }
 
@@ -712,8 +712,8 @@ and (orientation: portrait) {
     }
 
     .mobileButton {
-        box-shadow: 3px 4px 10px #2E2E2E;
         border: 3px solid rgba(0,0,0,0.8);
+        box-shadow: 2px 3px 5px #000;
         background-color: #E02828;
         width: 100%;
         height: 100%;
@@ -723,15 +723,12 @@ and (orientation: portrait) {
 
     .mobileMenu2 {
         position: fixed;
-        top: 2%;
-        left: 20%;
+        bottom: 2%;
+        right: 30%;
         margin: 0;
         padding: 0;
         font-size: 0;
         list-style: none;
-        background-color: rgba(0,0,0,0.95);
-        border: 1px solid #000;
-        border-radius: 12%;
     }
 
     .mobileMenu2.hidden {
@@ -742,6 +739,10 @@ and (orientation: portrait) {
         font-size: 4vw;
         line-height: 12vw;
         color: #FFF;
+        background-color: rgba(0,0,0,0.95);
+        padding: 6%;
+        font-weight: 900;
+        text-shadow: 1.5px 1.5px #000;
     }
 
     /* ===========
