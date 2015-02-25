@@ -253,14 +253,14 @@ $('.scrollLeftArch').on("click", function () {
     }, "fast");
 });
 //photography menu
-$('.selectionNav > li').mouseenter(function () {
+$('.selectionNav > li').click(function () {
     "use strict";
     checkForCollapse = this.className;
     whatRegion = checkForCollapse.replace("outer ", "");
     whatRegion = '.inner.' + whatRegion;
-    $(whatRegion).toggleClass('hidden');
-    $('.inner').mouseleave(function () {
-        $(whatRegion).toggleClass('hidden');
+    $(whatRegion).removeClass('hidden');
+    $('.inner li a').click(function () {
+        $('.inner').addClass('hidden');
     });
 });
 //check what is clicked

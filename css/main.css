@@ -863,7 +863,6 @@ and (orientation: portrait) {
     }
 
     .contentContainer.photogScroll {
-        position: relative;
         display: block;
         top: 0%;
         left: 0%;
