@@ -121,7 +121,7 @@ function assignDescription(whatId) {
     var projectTitle = $("#" + whatId).find("span").html(),
         projectDescription = window[whatId + "Description"].replace(/\n/g, '<br>');
     $('.projects').animate({top: "8%"}, {duration: 500, queue: false});
-    $(".projectDescription").css("display", "initial");
+    $(".projectDescription").show();
     $(".projectDescription h3").text(projectTitle);
     $(".projectDescription p").text("");
     $(".projectDescription p").html(projectDescription);
@@ -129,7 +129,7 @@ function assignDescription(whatId) {
 function chooseImages(whatId) {
     "use strict";
     if (whatId.indexOf("pr") > -1) {
-        $('.scrollButtonArch').css("display", "none");
+        $('.scrollButtonArch').hide();
         $('.contentContainer').scrollLeft(0);
         $('.contentContainer').removeClass("archGrid");
         $('.contentContainer').addClass("archScroll");
@@ -143,7 +143,7 @@ function chooseImages(whatId) {
             //when it's found it uses that dir as images
             target = targetArray[i];
             if (target.length > 1) {
-                $('.scrollButtonArch').css("display", "initial");
+                $('.scrollButtonArch').show();
                 $('.projects').animate({left: "2%"}, {duration: 500, queue: false});
                 $('.backButton').animate({left: "16.3%"}, {duration: 500, queue: false});
                 $('.contentContainer.archScroll').animate({left: "18%"}, {duration: 500, queue: false});
@@ -158,7 +158,7 @@ function chooseImages(whatId) {
         //loops through image dir
         whichOne = target[i];
         if (whichOne.indexOf("full") > -1) {
-            $('.backButton').css("display", "initial");
+            $('.backButton').show();
             $(".contentContainer").addClass("afterClick");
             //for non preview images
             assignBoxImagesProjects(whichOne);
@@ -181,7 +181,7 @@ function initialArch() {
 }
 function initialPhotog() {
     "use strict";
-    $('.scrollButton').css("display", "initial");
+    $('.scrollButton').show();
     for (i = 0; i < targetArray.length; i++) {
         x = targetArray[i];
         for (r = 0; r < x.length; r++) {
@@ -202,11 +202,9 @@ $('.fillTarget').on("click", "img", function () {
         zoomBox.setAttribute("src", newName);
         zoomedImage.appendChild(zoomBox);
         $(".hide").hide();
-        $(".contentContainer").hide();
         $(".box").hide();
-        $(".box2").css("display", "none");
-        $(".scaleImage").hide();
-        $(".zoomedImage").css("display", "initial");
+        $(".box2").hide();
+        $(".zoomedImage").show();
         $(".zoomedImage").css("cursor", "pointer");
         $(".zoomedImage").css("background-color", "rgba(0,0,0,0.9)");
     }
@@ -217,11 +215,9 @@ $('.zoomedImage').on("click", "img", function () {
     $(".imageZoom").detach();
     $(".zoomedImage").hide();
     $(".hide").show();
-    $(".contentContainer").css("display", "block");
     $(".box").show();
     $(".box2").show();
-    $(".scaleImage").css("display", "initial");
-    $(".zoomedImage").css("cursor", "initial");
+    $(".zoomedImage").hide();
     $(".zoomedImage").css("background-color", "");
 });
 //arch back button
@@ -282,7 +278,7 @@ $(optionTarget).on("click", function () {
         attachTo.innerHTML = "";
         //call images associated with click and creats scroll buttons
         chooseImages(whatId);
-        $('.scrollButton').css("display", "initial");
+        $('.scrollButton').show();
     }
     return false;
 });
