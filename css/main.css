@@ -673,12 +673,6 @@ MediaQueries
         display: none;
     }
 
-    /*.mainMenu li {
-        background-color: #000;
-        font-size: 2vw;
-        line-height: 4vw;
-    }*/
-
     .contactFront {
         font-size: 1vw;
         line-height: 1.3vw;
@@ -693,9 +687,9 @@ and (orientation: portrait) {
     ============== */
     #mobileMenuContainer {
         display: block;
-        position: fixed;
-        bottom: 7%;
-        right: 10%;
+        position: absolute;
+        bottom: 1%;
+        right: 5%;
         width: 15%;
         height: auto;
     }
@@ -791,18 +785,18 @@ and (orientation: portrait) {
 
     .sectionMenu {
         position: relative;
+        top: 0%;
+        width: 100%;
         margin: 0;
         padding: 0;
     }
 
     .selectionNav {
         position: relative;
-        width: 100%;
-        left: 0%;
-        margin: 0%;
-        padding: 0%;
         text-align: center;
-        display: block;
+        padding: 0%;
+        margin: 0%;
+        font-size: 0;
     }
 
     .selectionNav li a {
@@ -810,22 +804,25 @@ and (orientation: portrait) {
     }
 
     .outer {
-        position: relative;
         display: block;
+        line-height: 6vw;
         width: 100%;
-        margin: 0;
-        padding: 2%;
+        margin: 0%;
+        font-size: 2vw;
         background-color: #000;
     }
 
     .inner {
-        position: relative;
-        padding: 2%;
+        margin-top: 2%;
+        display: block;
+        padding: 0;
+        text-align: center;
     }
 
     .inner > li {
-        margin: 0;
-        padding: 0;
+        width: 100%;
+        margin-top: 2%;
+        padding: 2%;
         background-color: #000;
     }
 
@@ -835,39 +832,35 @@ and (orientation: portrait) {
     }
 
     #contentPhotography {
+        position: relative;
         background-color: #000;
-        white-space: initial;
+        white-space: normal;
         width: 100%;
-        height: 100%;
+        height: 70%;
         top: 0%;
-        overflow-y: auto;
+        overflow: auto;
     }
 
     .contentContainer.photogScroll {
         position: relative;
-        display: block;
+        width: 100%;
+        height: 100%;
         top: 0%;
         left: 0%;
         margin: 0;
         padding: 0;
-        width: 100%;
-        height: 100%;
-        overflow-y: auto;
-        white-space: normal;
+        overflow: auto;
     }
 
     .contentContainer.photogScroll .box {
         margin-top: 2%;
+        margin-right: 0%;
         width: 100%;
     }
 
     /* ===========
     About
     ============== */
-    #contentAbout {
-        overflow: auto;
-    }
-
     .pageBG.about {
         background:
         linear-gradient(
@@ -917,6 +910,12 @@ and (orientation: portrait) {
     /* ===========
     Page Control
     ============== */
+    html, body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
 
     #container {
         top: 0%;
@@ -926,15 +925,18 @@ and (orientation: portrait) {
 
     .header {
         position: relative;
+        top: 0%;
         background-color: #000;
         color: #FFF;
         width: 100%;
-        height: auto;
+        height: 25%;
         z-index: 0;
     }
 
     .footer {
-        display: none;
+        position: relative;
+        background-color: #000;
+        height: 5%;
     }
 
     .scaleButtons {
@@ -954,5 +956,9 @@ and (orientation: portrait) {
 
     #socialAndTranslateButtons {
         display: none;
+    }
+
+    .zoomedImage {
+        top: 0%;
     }
 }
