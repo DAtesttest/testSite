@@ -297,10 +297,9 @@ Menu - Home
 Menu - SectionMenu
 ============================================================= */
 .sectionMenu {
-    position: absolute;
+    position: relative;
     top: 70%;
     width: 100%;
-    height: auto;
 }
 
 .selectionNav {
@@ -785,9 +784,10 @@ and (orientation: portrait) {
 
     .sectionMenu {
         position: relative;
-        top: auto;
         width: 100%;
+        top: 0%;
         margin: 0;
+        margin-top: 5%;
         padding: 0;
     }
 
@@ -836,7 +836,7 @@ and (orientation: portrait) {
         background-color: #000;
         white-space: normal;
         width: 100%;
-        height: 70%;
+        height: 75%;
         top: 0%;
         overflow: auto;
     }
@@ -908,6 +908,19 @@ and (orientation: portrait) {
     }
 
     /* ===========
+    SectionTitle
+    ============== */
+    .sectionTitle {
+        position: relative;
+        padding-top: 2%;
+        text-align: center;
+        font-size: 5vw;
+        left: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    /* ===========
     Page Control
     ============== */
     .header {
@@ -916,28 +929,17 @@ and (orientation: portrait) {
         background-color: #000;
         color: #FFF;
         width: 100%;
-        height: 25%;
+        height: auto;
         z-index: 0;
     }
 
     .footer {
         position: relative;
         background-color: #000;
-        height: 5%;
     }
 
     .scaleButtons {
         display: none;
-    }
-
-    .sectionTitle {
-        position: relative;
-        text-align: center;
-        font-size: 5vw;
-        margin-top: 3%;
-        left: 0;
-        margin: 0;
-        width: 100%;
     }
 
     #socialAndTranslateButtons {
