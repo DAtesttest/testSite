@@ -688,7 +688,7 @@ and (orientation: portrait) {
     #mobileMenuContainer {
         display: block;
         position: absolute;
-        bottom: 1%;
+        bottom: 5%;
         right: 5%;
         width: 15%;
         height: auto;
@@ -785,7 +785,7 @@ and (orientation: portrait) {
 
     .sectionMenu {
         position: relative;
-        top: 0%;
+        top: auto;
         width: 100%;
         margin: 0;
         padding: 0;
@@ -910,19 +910,6 @@ and (orientation: portrait) {
     /* ===========
     Page Control
     ============== */
-    html, body {
-        height: 100%;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
-
-    #container {
-        top: 0%;
-        height: 100%;
-        overflow: auto;
-    }
-
     .header {
         position: relative;
         top: 0%;
@@ -947,10 +934,9 @@ and (orientation: portrait) {
         position: relative;
         text-align: center;
         font-size: 5vw;
-        top: 0;
+        margin-top: 3%;
         left: 0;
         margin: 0;
-        padding: 5%;
         width: 100%;
     }
 
