@@ -201,10 +201,11 @@ $('.fillTarget').on("click", "img", function () {
         zoomBox.setAttribute("class", "imageZoom");
         zoomBox.setAttribute("src", newName);
         zoomedImage.appendChild(zoomBox);
-        $(".hide").css("display", "none");
-        $(".box").css("display", "none");
+        $(".hide").hide();
+        $(".contentContainer").hide();
+        $(".box").hide();
         $(".box2").css("display", "none");
-        $(".scaleImage").css("display", "none");
+        $(".scaleImage").hide();
         $(".zoomedImage").css("display", "initial");
         $(".zoomedImage").css("cursor", "pointer");
         $(".zoomedImage").css("background-color", "rgba(0,0,0,0.9)");
@@ -214,10 +215,11 @@ $('.fillTarget').on("click", "img", function () {
 $('.zoomedImage').on("click", "img", function () {
     "use strict";
     $(".imageZoom").detach();
-    $(".zoomedImage").css("display", "none");
-    $(".hide").css("display", "initial");
-    $(".box").css("display", "initial");
-    $(".box2").css("display", "inline-block");
+    $(".zoomedImage").hide();
+    $(".hide").show();
+    $(".contentContainer").css("display", "block");
+    $(".box").show();
+    $(".box2").show();
     $(".scaleImage").css("display", "initial");
     $(".zoomedImage").css("cursor", "initial");
     $(".zoomedImage").css("background-color", "");
