@@ -777,6 +777,7 @@ and (orientation: portrait) {
 
     .selectionNav li a {
         font-size: 3.5vw;
+        font-weight: 600;
     }
 
     .outer {
@@ -786,6 +787,7 @@ and (orientation: portrait) {
         margin: 0%;
         font-size: 2vw;
         background-color: #000;
+        border-top: 2px solid #424242;
     }
 
     .inner {
@@ -803,7 +805,8 @@ and (orientation: portrait) {
     }
 
     .inner > li a {
-        font-size: 2.5vw;
+        font-size: 3.5vw;
+        font-weight: 300;
         line-height: 10vw;
     }
 
@@ -867,6 +870,26 @@ and (orientation: portrait) {
     /* ===========
     Architecture
     ============== */
+    #contentArchitecture {
+        top: 0%;
+        height: 100%;
+    }
+    .pageBG.arch {
+        display: none;
+    }
+    .archGrid { 
+        display: none;
+    }
+
+    ul.projects {
+        padding: 0;
+        margin: 0;
+        position: relative;
+        text-align: center;
+        top: 0%;
+        left: 0%;
+        font-size: 5vw;
+    }
 
     /* ===========
     Photography
@@ -991,6 +1014,10 @@ and (orientation: portrait) {
         color: #FFF;
         width: 100%;
         height: auto;
+    }
+
+    #container {
+        background-color: #000;
     }
 
     .footer {
