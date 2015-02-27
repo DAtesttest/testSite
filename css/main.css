@@ -847,7 +847,7 @@ and (orientation: portrait) {
         margin: 0%;
         font-size: 2vw;
         background-color: #000;
-        border-top: 2px solid #424242;
+        border-bottom: 2px solid #424242;
     }
 
     .inner {
