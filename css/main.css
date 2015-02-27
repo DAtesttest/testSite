@@ -685,6 +685,10 @@ MediaQueries
         display: none;
     }
 
+    .footer.home {
+        display: none;
+    }
+
     .contactFront {
         font-size: 1vw;
         line-height: 1.3vw;
@@ -730,7 +734,7 @@ and (orientation: portrait) {
     .mobileMenu2 {
         position: absolute;
         bottom: 1%;
-        right: 80%;
+        right: 100%;
         margin: 0;
         padding: 0;
         font-size: 0;
@@ -808,14 +812,37 @@ and (orientation: portrait) {
     Home
     ============== */
     .pageBG.homePage {
-        background: url('../img/bg/mobilePortrait.jpg');
+        background:
+        linear-gradient(
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.9)
+        ),
+        url("../img/arch/sem2/full/pavilion/pavilion02.jpg");
+        position: fixed;
+        width: 100%;
+        height: 100%;
         background-size: cover;
         background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center center;
+        bottom: 0;
+        z-index: 0;
+    }
+
+    #contentHome {
+        position: relative;
+        height: 100%;
+        width: 100%;
     }
 
     .homeTitle {
-        margin-top: 30%;
-        font-size: 7vw;
+        position: relative;
+        top: 30%;
+        text-shadow: 1.5px 2px 2px solid #000;
+        margin: 0%;
+        color: #FFF;
+        font-size: 12vw;
+        vertical-align: middle;
     }
 
     #contentHome img {
@@ -964,7 +991,6 @@ and (orientation: portrait) {
         color: #FFF;
         width: 100%;
         height: auto;
-        z-index: 0;
     }
 
     .footer {
@@ -972,6 +998,7 @@ and (orientation: portrait) {
         height: 5%;
         bottom: 0;
         background-color: #000;
+        z-index: 0;
     }
 
     .scaleButtons {
@@ -979,7 +1006,68 @@ and (orientation: portrait) {
     }
 
     #socialAndTranslateButtons {
-        display: none;
+        position: fixed; 
+        margin: 0;
+        padding: 0;
+        height: auto;
+        top: 95%;
+        height: 5%;
+        left: 0%;
+        width: 100%;
+    }
+
+    .translate {
+        position: relative;
+        left: 84%;
+        top: 20%;
+        font-size: 3vw;
+        width: 13%;
+        text-align: initial;
+    }
+
+    .translate li {
+        display: inline-block;
+        left: 0%;
+        width: 40%;
+        margin: 0%;
+
+    }
+    .translate li:nth-child(2) {
+        text-align: right;
+    }
+
+    .scaleSocial {
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        top: 22%;
+        left: 3%;
+        width: 22%;
+    }
+
+    .socialButton {
+        position: relative;
+        left: 0%;
+        width: 100%;
+    }
+    .socialButton li {
+        width: 40%;
+        top: 0%;
+        left: 0%;
+        padding: 0%;
+        margin: 0%;
+    }
+
+    .socialButton li:first-child img {
+        margin: 0%;
+        width: 6vw;
+    }
+    .socialButton li:nth-child(2) img {
+        margin: 0%;
+    }
+
+    .socialButton img {
+        width: 5vw;
     }
 
     .zoomedImage {
