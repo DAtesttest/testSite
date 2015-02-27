@@ -900,7 +900,7 @@ and (orientation: portrait) {
 
     .homeTitle {
         position: relative;
-        top: 30%;
+        top: 25%;
         text-shadow: 1.5px 2px 2px solid #000;
         margin: 0%;
         color: #FFF;
