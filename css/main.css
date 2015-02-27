@@ -696,6 +696,10 @@ and (orientation: portrait) {
     /* ===========
     Buttons 
     ============== */
+    .scrollButton {
+        opacity: 0;
+    }
+
     #mobileMenuContainer {
         display: block;
         position: fixed;
