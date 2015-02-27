@@ -732,7 +732,7 @@ and (orientation: portrait) {
 
     .mobileMenu2 {
         position: absolute;
-        bottom: -50%;
+        bottom: -65%;
         right: 100%;
         margin: 0;
         padding: 0;
@@ -895,6 +895,11 @@ and (orientation: portrait) {
     #home .mobileMenu2 {
         display: initial;
     }
+
+    #home .mobileMenu2 li a {
+        background-color: rgba(0,0,0,0);
+    }
+
     #home #socialAndTranslateButtons {
         top: 2%;
     }
