@@ -762,13 +762,13 @@ and (orientation: portrait) {
     .mobileMenu2 li:nth-child(2) {
         position: relative;
         margin-top: 10%;
-        left: -20%;
+        left: -30%;
     }
 
     .mobileMenu2 li:nth-child(3) {
         position: relative;
         margin-top: 5%;
-        left: 0%;
+        left: 5%;
         padding-left 5%;
     }
 
