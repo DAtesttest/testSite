@@ -9,12 +9,13 @@ Main Content - Home
 
 #contentHome {
     position: relative;
+    top: 10%;
     width: 100%;
-    height: 100%;
+    height: 75%;
 }
 
 .homeTitle {
-    margin-top: 12%;
+    margin-top: 7%;
     position: relative;
     width: 100%;
     text-align: center;
@@ -72,6 +73,7 @@ Main Content - Architecture
     top: 10%;
     width: 100%;
     height: 80%;
+    overflow: hidden;
 }
 
 ul.projects {
@@ -192,6 +194,7 @@ Main Content - Photography
     width: 100%;
     height: 80%;
     white-space: nowrap;
+    overflow: hidden;
 }
 
 .contentContainer.photogScroll {
@@ -691,7 +694,7 @@ MediaQueries
 and (max-width: 767px),
 and (orientation: portrait) {
     /* ===========
-    Mobile Menu 
+    Buttons 
     ============== */
     #mobileMenuContainer {
         display: block;
@@ -745,6 +748,71 @@ and (orientation: portrait) {
         padding: 6%;
         font-weight: 900;
         text-shadow: 1.5px 1.5px #000;
+    }
+
+    #socialAndTranslateButtons {
+        position: fixed; 
+        margin: 0;
+        padding: 0;
+        height: auto;
+        top: 95%;
+        height: 5%;
+        left: 0%;
+        width: 100%;
+    }
+
+    .translate {
+        position: relative;
+        left: 84%;
+        top: 20%;
+        font-size: 3vw;
+        width: 13%;
+        text-align: initial;
+    }
+
+    .translate li {
+        display: inline-block;
+        left: 0%;
+        width: 40%;
+        margin: 0%;
+
+    }
+    .translate li:nth-child(2) {
+        text-align: right;
+    }
+
+    .scaleSocial {
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        top: 10%;
+        left: 3%;
+        width: 22%;
+    }
+
+    .socialButton {
+        position: relative;
+        left: 0%;
+        width: 100%;
+    }
+    .socialButton li {
+        width: 40%;
+        top: 0%;
+        left: 0%;
+        padding: 0%;
+        margin: 0%;
+    }
+
+    .socialButton li:first-child img {
+        margin: 0%;
+        width: 6vw;
+    }
+    .socialButton li:nth-child(2) img {
+        margin: 0%;
+    }
+
+    .socialButton img {
+        width: 5vw;
     }
 
     /* ===========
@@ -819,7 +887,7 @@ and (orientation: portrait) {
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
-        background-position: center center;
+        background-position: center;
         bottom: 0;
         z-index: 0;
     }
@@ -1024,74 +1092,6 @@ and (orientation: portrait) {
         z-index: 0;
     }
 
-    .scaleButtons {
-        display: none;
-    }
-
-    #socialAndTranslateButtons {
-        position: fixed; 
-        margin: 0;
-        padding: 0;
-        height: auto;
-        top: 95%;
-        height: 5%;
-        left: 0%;
-        width: 100%;
-    }
-
-    .translate {
-        position: relative;
-        left: 84%;
-        top: 20%;
-        font-size: 3vw;
-        width: 13%;
-        text-align: initial;
-    }
-
-    .translate li {
-        display: inline-block;
-        left: 0%;
-        width: 40%;
-        margin: 0%;
-
-    }
-    .translate li:nth-child(2) {
-        text-align: right;
-    }
-
-    .scaleSocial {
-        position: absolute;
-        margin: 0;
-        padding: 0;
-        top: 22%;
-        left: 3%;
-        width: 22%;
-    }
-
-    .socialButton {
-        position: relative;
-        left: 0%;
-        width: 100%;
-    }
-    .socialButton li {
-        width: 40%;
-        top: 0%;
-        left: 0%;
-        padding: 0%;
-        margin: 0%;
-    }
-
-    .socialButton li:first-child img {
-        margin: 0%;
-        width: 6vw;
-    }
-    .socialButton li:nth-child(2) img {
-        margin: 0%;
-    }
-
-    .socialButton img {
-        width: 5vw;
-    }
 
     .zoomedImage {
         top: 0%;
