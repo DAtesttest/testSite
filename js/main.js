@@ -96,195 +96,178 @@ var x;
 var r;
 var target;
 
-//start of functions
-function assignBoxImagesProjects(whichOne) {
-    "use strict";
-    var targetFill = document.createElement("img");
-
-    targetFill.setAttribute("class", "box2");
-    targetFill.setAttribute("name", whichOne);
-    targetFill.setAttribute("src", whichOne);
-    attachTo.appendChild(targetFill);
-}
-function assignBoxImages(whichOne) {
-    "use strict";
-    var targetFill = document.createElement("img");
-
-    targetFill.setAttribute("class", "box");
-    targetFill.setAttribute("name", whichOne);
-    targetFill.setAttribute("src", whichOne);
-    targetFill.setAttribute("href", "1");
-    attachTo.appendChild(targetFill);
-}
-function assignDescription(whatId) {
-    "use strict";
-    var projectTitle = $("#" + whatId).find("span").html(),
-        projectDescription = window[whatId + "Description"].replace(/\n/g, '<br>');
-    $('.projects').animate({top: "8%"}, {duration: 500, queue: false});
-    $(".projectDescription").show();
-    $(".projectDescription h3").text(projectTitle);
-    $(".projectDescription p").text("");
-    $(".projectDescription p").html(projectDescription);
-}
-function chooseImages(whatId) {
-    "use strict";
-    if (whatId.indexOf("pr") > -1) {
-        $('.scrollButtonArch').hide();
-        $('.contentContainer').scrollLeft(0);
-        $('.contentContainer').removeClass("archGrid");
-        $('.contentContainer').addClass("archScroll");
-        $('.projectDescription').animate({opacity: "0.9"}, 1000);
-        $('.archScroll').animate({opacity: "0.95"}, 1000);
-        assignDescription(whatId);
-    }
-    for (i = 0; i < targetArray.length; i++) {
-        //uses id name to look through array of names
-        if (whatId === targetArray[i].name) {
-            //when it's found it uses that dir as images
-            target = targetArray[i];
-            if (target.length > 1) {
-                $('.scrollButtonArch').show();
-                $('.projects').animate({left: "2%"}, {duration: 500, queue: false});
-                $('.backButton').animate({left: "16.3%"}, {duration: 500, queue: false});
-                $('.contentContainer.archScroll').animate({left: "18%"}, {duration: 500, queue: false});
-            } else {
-                $('.contentContainer.archScroll').animate({left: "25%"}, {duration: 500, queue: false});
-                $('.backButton').animate({left: "23.3%"}, {duration: 500, queue: false});
-                $('.projects').animate({left: "6%"}, {duration: 500, queue: false});
-            }
-        }
-    }
-    for (i = 0; i < target.length; i++) {
-        //loops through image dir
-        whichOne = target[i];
-        if (whichOne.indexOf("full") > -1) {
-            $('.backButton').show();
-            $(".contentContainer").addClass("afterClick");
-            //for non preview images
-            assignBoxImagesProjects(whichOne);
-        } else {
-            //for preview images
-            assignBoxImages(whichOne);
-        }
-    }
-}
-function initialArch() {
-    "use strict";
-    for (i = 0; i < targetArray.length; i++) {
-        x = targetArray[i];
-        for (r = 0; r < x.length; r++) {
-            if (x[r].indexOf("sem") > -1 && x[r].indexOf("full") < 0) {
-                assignBoxImages(x[r]);
-            }
-        }
-    }
-}
-function initialPhotog() {
-    "use strict";
-    $('.scrollButton').show();
-    for (i = 0; i < targetArray.length; i++) {
-        x = targetArray[i];
-        for (r = 0; r < x.length; r++) {
-            if (x[r].indexOf("preview") > -1) {
-                assignBoxImages(x[r]);
-            }
-        }
-    }
-}
-//zoom image
-$('.fillTarget').on("click", "img", function () {
-    "use strict";
-    thisName = this.name;
-    if (thisName.indexOf("grid") < 0) {
-        newName = thisName.replace("preview/", "");
-        zoomBox = document.createElement("img");
-        zoomBox.setAttribute("class", "imageZoom");
-        zoomBox.setAttribute("src", newName);
-        zoomedImage.appendChild(zoomBox);
-        $(".hide").hide();
-        $(".box").hide();
-        $(".box2").hide();
-        $(".zoomedImage").show();
-        $(".zoomedImage").css("cursor", "pointer");
-        $(".zoomedImage").css("background-color", "rgba(0,0,0,0.9)");
-    }
-});
-//minimise zoomed image
-$('.zoomedImage').on("click", "img", function () {
-    "use strict";
-    $(".imageZoom").detach();
-    $(".zoomedImage").hide();
-    $(".hide").show();
-    $(".box").show();
-    $(".box2").show();
-    $(".zoomedImage").hide();
-    $(".zoomedImage").css("background-color", "");
-});
-//arch back button
-$('.backButton').on("click", function () {
-    "use strict";
-    location.reload();
-});
-//control scroll buttons
-$('.scrollRight').on("click", function () {
-    "use strict";
-    $('.contentContainer').animate({
-        scrollLeft: "+=950"
-    }, "fast");
-});
-$('.scrollLeft').on("click", function () {
-    "use strict";
-    $('.contentContainer').animate({
-        scrollLeft: "-=950"
-    }, "fast");
-});
-$('.scrollRightArch').on("click", function () {
-    "use strict";
-    $('.contentContainer').animate({
-        scrollLeft: "+=900"
-    }, "fast");
-});
-$('.scrollLeftArch').on("click", function () {
-    "use strict";
-    $('.contentContainer').animate({
-        scrollLeft: "-=900"
-    }, "fast");
-});
-//photography menu
-$('.selectionNav > li').click(function () {
-    "use strict";
-    checkForCollapse = this.className;
-    whatRegion = checkForCollapse.replace("outer ", "");
-    whatRegion = '.inner.' + whatRegion;
-    $(whatRegion).removeClass('hidden');
-    $('.inner li a').click(function () {
-        $('.inner').addClass('hidden');
-    });
-});
-//mobile menu
-$('.mobileButton').click(function () {
-    "use strict";
-    $(".mobileMenu2").toggleClass('hidden');
-});
-//check what is clicked
-$(optionTarget).on("click", function () {
-    "use strict";
-    whatId = this.id;
-    function checkClick(whatId, nameArray) {
-        return nameArray.indexOf(whatId) > -1;
-    }
-    if (checkClick) {
-        //clears already loaded images
-        attachTo.innerHTML = "";
-        //call images associated with click and creats scroll buttons
-        chooseImages(whatId);
-        $('.scrollButton').show();
-    }
-    return false;
-});
-//on load
 $(document).ready(function () {
     "use strict";
+    //start of functions
+    function assignBoxImagesProjects(whichOne) {
+        var targetFill = document.createElement("img");
+
+        targetFill.setAttribute("class", "box2");
+        targetFill.setAttribute("name", whichOne);
+        targetFill.setAttribute("src", whichOne);
+        attachTo.appendChild(targetFill);
+    }
+    function assignBoxImages(whichOne) {
+        var targetFill = document.createElement("img");
+
+        targetFill.setAttribute("class", "box");
+        targetFill.setAttribute("name", whichOne);
+        targetFill.setAttribute("src", whichOne);
+        targetFill.setAttribute("href", "1");
+        attachTo.appendChild(targetFill);
+    }
+    function assignDescription(whatId) {
+        var projectTitle = $("#" + whatId).find("span").html(),
+            projectDescription = window[whatId + "Description"].replace(/\n/g, '<br>');
+        $('.projects').animate({top: "8%"}, {duration: 500, queue: false});
+        $(".projectDescription").show();
+        $(".projectDescription h3").text(projectTitle);
+        $(".projectDescription p").text("");
+        $(".projectDescription p").html(projectDescription);
+    }
+    function chooseImages(whatId) {
+        if (whatId.indexOf("pr") > -1) {
+            $('.scrollButtonArch').hide();
+            $('.contentContainer').scrollLeft(0);
+            $('.contentContainer').removeClass("archGrid");
+            $('.contentContainer').addClass("archScroll");
+            $('.projectDescription').animate({opacity: "0.9"}, 1000);
+            $('.archScroll').animate({opacity: "0.95"}, 1000);
+            assignDescription(whatId);
+        }
+        for (i = 0; i < targetArray.length; i++) {
+            //uses id name to look through array of names
+            if (whatId === targetArray[i].name) {
+                //when it's found it uses that dir as images
+                target = targetArray[i];
+                if (target.length > 1) {
+                    $('.scrollButtonArch').show();
+                    $('.projects').animate({left: "2%"}, {duration: 500, queue: false});
+                    $('.backButton').animate({left: "16.3%"}, {duration: 500, queue: false});
+                    $('.contentContainer.archScroll').animate({left: "18%"}, {duration: 500, queue: false});
+                } else {
+                    $('.contentContainer.archScroll').animate({left: "25%"}, {duration: 500, queue: false});
+                    $('.backButton').animate({left: "23.3%"}, {duration: 500, queue: false});
+                    $('.projects').animate({left: "6%"}, {duration: 500, queue: false});
+                }
+            }
+        }
+        for (i = 0; i < target.length; i++) {
+            //loops through image dir
+            whichOne = target[i];
+            if (whichOne.indexOf("full") > -1) {
+                $('.backButton').show();
+                $(".contentContainer").addClass("afterClick");
+                //for non preview images
+                assignBoxImagesProjects(whichOne);
+            } else {
+                //for preview images
+                assignBoxImages(whichOne);
+            }
+        }
+    }
+    function initialArch() {
+        for (i = 0; i < targetArray.length; i++) {
+            x = targetArray[i];
+            for (r = 0; r < x.length; r++) {
+                if (x[r].indexOf("sem") > -1 && x[r].indexOf("full") < 0) {
+                    assignBoxImages(x[r]);
+                }
+            }
+        }
+    }
+    function initialPhotog() {
+        $('.scrollButton').show();
+        for (i = 0; i < targetArray.length; i++) {
+            x = targetArray[i];
+            for (r = 0; r < x.length; r++) {
+                if (x[r].indexOf("preview") > -1) {
+                    assignBoxImages(x[r]);
+                }
+            }
+        }
+    }
+    //zoom image
+    $('.fillTarget').on("click", "img", function () {
+        thisName = this.name;
+        if (thisName.indexOf("grid") < 0) {
+            newName = thisName.replace("preview/", "");
+            zoomBox = document.createElement("img");
+            zoomBox.setAttribute("class", "imageZoom");
+            zoomBox.setAttribute("src", newName);
+            zoomedImage.appendChild(zoomBox);
+            $(".hide").hide();
+            $(".box").hide();
+            $(".box2").hide();
+            $(".zoomedImage").show();
+            $(".zoomedImage").css("cursor", "pointer");
+            $(".zoomedImage").css("background-color", "rgba(0,0,0,0.9)");
+        }
+    });
+    //minimise zoomed image
+    $('.zoomedImage').on("click", "img", function () {
+        $(".imageZoom").detach();
+        $(".zoomedImage").hide();
+        $(".hide").show();
+        $(".box").show();
+        $(".box2").show();
+        $(".zoomedImage").hide();
+        $(".zoomedImage").css("background-color", "");
+    });
+    //arch back button
+    $('.backButton').on("click", function () {
+        location.reload();
+    });
+    //control scroll buttons
+    $('.scrollRight').on("click", function () {
+        $('.contentContainer').animate({
+            scrollLeft: "+=950"
+        }, "fast");
+    });
+    $('.scrollLeft').on("click", function () {
+        $('.contentContainer').animate({
+            scrollLeft: "-=950"
+        }, "fast");
+    });
+    $('.scrollRightArch').on("click", function () {
+        $('.contentContainer').animate({
+            scrollLeft: "+=900"
+        }, "fast");
+    });
+    $('.scrollLeftArch').on("click", function () {
+        $('.contentContainer').animate({
+            scrollLeft: "-=900"
+        }, "fast");
+    });
+    //photography menu
+    $('.selectionNav > li').click(function () {
+        checkForCollapse = this.className;
+        whatRegion = checkForCollapse.replace("outer ", "");
+        whatRegion = '.inner.' + whatRegion;
+        $(whatRegion).removeClass('hidden');
+        $('.inner li a').click(function () {
+            $('.inner').addClass('hidden');
+        });
+    });
+    //mobile menu
+    $('.mobileButton').click(function () {
+        $(".mobileMenu2").toggleClass('hidden');
+    });
+    //check what is clicked
+    $(optionTarget).on("click", function () {
+        whatId = this.id;
+        function checkClick(whatId, nameArray) {
+            return nameArray.indexOf(whatId) > -1;
+        }
+        if (checkClick) {
+            //clears already loaded images
+            attachTo.innerHTML = "";
+            //call images associated with click and creats scroll buttons
+            chooseImages(whatId);
+            $('.scrollButton').show();
+        }
+        return false;
+    });
     //Detect current page
     var pageSection = document.getElementsByTagName("body")[0];
     try {
