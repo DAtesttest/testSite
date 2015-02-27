@@ -705,7 +705,7 @@ and (orientation: portrait) {
         position: fixed;
         width: 15%;
         bottom: 10%;
-        right: 7.5%;
+        right: 10%;
         height: auto;
     }
 
@@ -762,13 +762,13 @@ and (orientation: portrait) {
     .mobileMenu2 li:nth-child(2) {
         position: relative;
         margin-top: 10%;
-        left: -30%;
+        left: -20%;
     }
 
     .mobileMenu2 li:nth-child(3) {
         position: relative;
-        margin-top: 0%;
-        left: 30%;
+        margin-top: 5%;
+        left: 0%;
         padding-left 5%;
     }
 
