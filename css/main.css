@@ -859,6 +859,10 @@ and (orientation: portrait) {
         margin-bottom: 15%;
     }
 
+    .mainMenu {
+        display: none;
+    }
+
     /* ===========
     Architecture
     ============== */
