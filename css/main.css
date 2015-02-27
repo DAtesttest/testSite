@@ -1022,7 +1022,7 @@ and (orientation: portrait) {
     .projects li {
         position: relative;
         text-align: center;
-        font-size: 3.5vw;
+        font-size: 3vw;
         line-height: 10vw;
     }
 

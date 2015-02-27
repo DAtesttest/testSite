@@ -119,7 +119,7 @@ $(document).ready(function () {
     function assignDescription(whatId) {
         var projectTitle = $("#" + whatId).find("span").html(),
             projectDescription = window[whatId + "Description"].replace(/\n/g, '<br>');
-        $('.projects').animate({top: "8%"}, {duration: 500, queue: false});
+        $('.projects').animate({top: "10%"}, {duration: 500, queue: false});
         $(".projectDescription").show();
         $(".projectDescription h3").text(projectTitle);
         $(".projectDescription p").text("");
@@ -277,6 +277,9 @@ $(document).ready(function () {
     } catch (ignore) {}
     try {
         if (pageSection.id === "archBody") {
+            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+jQuery.fx.off = true; 
+}
             initialArch();
         }
     } catch (ignore) {}
