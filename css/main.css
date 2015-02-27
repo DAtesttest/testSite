@@ -65,7 +65,7 @@ Main Content - Architecture
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center center;
+    background-position: center;
 }
 
 #contentArchitecture {
@@ -76,17 +76,18 @@ Main Content - Architecture
     overflow: hidden;
 }
 
-ul.projects {
-    position: absolute;
-    top: 17%;
+.projects {
+    position: relative;
+    top: 19.5%;
     left: 12%;
     color: #FFF;
     font-size: 0.9vw;
 }
 
-ul.projects a {
+.projects li a {
     line-height: 1.5vw;
     color: #FFF;
+    width: auto;
 }
 
 .projects a:hover {
@@ -119,6 +120,7 @@ ul.projects a {
     height: 105%;
     left: 18%;
     overflow: auto;
+    z-index: 99;
 }
 
 .contentContainer.archScroll .box2 {
@@ -185,7 +187,7 @@ Main Content - Photography
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center center;
+    background-position: center;
 }
 
 #contentPhotography {
@@ -237,7 +239,7 @@ Main Content - About
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center center;
+    background-position: center;
     overflow: hidden;
 }
 
@@ -316,6 +318,7 @@ Menu - SectionMenu
     position: relative;
     top: 70%;
     width: 100%;
+    z-index: 99;
 }
 
 .selectionNav {
@@ -404,7 +407,6 @@ Header/Footer
     top: 0;
     width: 100%;
     height: 10%;
-    z-index: 999;
     background-color: rgba(0,0,0,0);
 }
 
@@ -413,7 +415,6 @@ Header/Footer
     bottom: 0;
     width: 100%;
     height: 10%;
-    z-index: 999;
     background-color: rgba(0,0,0,0);
 }
 
@@ -459,7 +460,7 @@ Scroll Buttons
     left: 16.2%;
     border: none;
     font-size: 0;
-    z-index: 9999999999;
+    z-index: 999;
 }
 
 .scrollButtonArch {
@@ -470,6 +471,7 @@ Scroll Buttons
     background: transparent;
     border: none;
     font-size: 0;
+    z-index: 99;
 }
 
 .scrollRightArch {
@@ -483,7 +485,6 @@ Scroll Buttons
 .scrollLeftArch {left: 14.5%;}
 
 .scaleButtons img {width: 3vw;}
-
 
 @-webkit-keyframes pulse {
     0% {opacity: 0.35;}
@@ -507,7 +508,7 @@ ImageZoom
     white-space: nowrap;
     text-align: center;
     margin: 1em 0;
-    z-index: 99999999999999999999999999999999999999999999999;
+    z-index: 99;
 }
 
 .centerImage {
@@ -632,9 +633,9 @@ PageControl
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-    -webkit-user-select: none; /* Chrome/Safari */        
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* IE10+ */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 html, body {height: 100%;}
@@ -669,6 +670,8 @@ button:focus {outline:0;}
 
 #mobileMenuContainer {display: none;}
 
+.pageBG {z-index: -1;}
+
 /* ============================================================
 MediaQueries
 ============================================================= */
@@ -694,7 +697,7 @@ MediaQueries
 and (max-width: 767px)
 and (orientation: portrait) {
     /* ===========
-    Buttons 
+    Buttons
     ============== */
     .scrollButton {
         opacity: 0;
@@ -742,7 +745,7 @@ and (orientation: portrait) {
         padding: 0;
         font-size: 0;
         list-style: none;
-    } 
+    }
 
     .mobileMenu2 li a {
         padding: 10%;
@@ -773,7 +776,7 @@ and (orientation: portrait) {
     }
 
     #socialAndTranslateButtons {
-        position: fixed; 
+        position: fixed;
         margin: 0;
         padding: 0;
         height: auto;
@@ -781,6 +784,7 @@ and (orientation: portrait) {
         height: 5%;
         left: 0%;
         width: 100%;
+        z-index: 99;
     }
 
     .translate {
@@ -838,7 +842,7 @@ and (orientation: portrait) {
     }
 
     /* ===========
-    SectionMenu 
+    SectionMenu
     ============== */
     .sectionMenu {
         position: relative;
@@ -967,27 +971,63 @@ and (orientation: portrait) {
     /* ===========
     Architecture
     ============== */
-    #contentArchitecture {
-        top: 0%;
-        height: 100%;
-    }
     .pageBG.arch {
         display: none;
     }
-    .archGrid { 
+
+    .archGrid {
         display: none;
     }
 
-    ul.projects {
-        padding: 0;
-        margin: 0;
-        position: relative;
-        text-align: center;
+    #contentArchitecture {
         top: 0%;
-        left: 0%;
-        font-size: 5vw;
+        background-color: #000;
+        width: 100%;
+        height: 90%;
+        overflow: auto;
     }
 
+    .contentContainer.archScroll {
+        position: relative;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: auto;
+    }
+
+    .contentContainer.archScroll .box2 {
+        margin-right: 0%;
+        width: 60%;
+        height: auto;
+    }
+
+    .projects {
+        top: 70%;
+        left: 0%;
+        width: 100%;
+        height: 29%;
+        padding: 0;
+        margin: 0;
+        overflow: auto;
+        border-top: 1px solid grey;
+    }
+
+    .projects ul {
+        position: relative;
+        margin: 0;
+        padding: 0;
+    }
+
+    .projects li {
+        position: relative;
+        text-align: center;
+        font-size: 4vw;
+        line-height: 10vw;
+    }
+
+    .projects li:first-child {
+        display: none;
+    }
     /* ===========
     Photography
     ============== */
@@ -1025,22 +1065,6 @@ and (orientation: portrait) {
     ============== */
     .pageBG.about {
         display: none;
-        /*
-        background:
-        linear-gradient(
-        rgba(0,0,0,0.7),
-        rgba(0,0,0,0.9)
-        ),
-        url("../img//bg/aboutMeBG.jpg");
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center;
-        bottom: 0;
-        */
     }
 
     #contentAbout {
@@ -1049,7 +1073,6 @@ and (orientation: portrait) {
         width: 100%;
         height: 90%;
         overflow: auto;
-
     }
 
     .contentContainer.aboutContent {
@@ -1122,7 +1145,6 @@ and (orientation: portrait) {
         height: 5%;
         bottom: 0;
         background-color: #000;
-        z-index: 0;
     }
 
 
@@ -1132,5 +1154,9 @@ and (orientation: portrait) {
 
     .bottomNav {
         display:none;
+    }
+
+    .credits {
+        display : none;
     }
 }
