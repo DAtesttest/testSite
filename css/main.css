@@ -677,11 +677,6 @@ MediaQueries
         font-size: 3vw;
     }
 
-    #contentHome img {
-        display: none;
-    }
-
-
     .footer.home {
         display: none;
     }
