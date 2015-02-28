@@ -83,6 +83,7 @@ var prALLDescription = "Full architecture portfolio.";
 var attachTo = document.getElementsByClassName("fillTarget")[0];
 var optionTarget = document.getElementsByClassName("optionTarget");
 var zoomedImage = document.getElementsByClassName("zoomedImage")[0];
+var detectMobile = (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
 var $;
 var whatId;
 var whichOne;
@@ -95,7 +96,6 @@ var i;
 var x;
 var r;
 var target;
-
 $(document).ready(function () {
     "use strict";
     //start of functions
@@ -277,9 +277,9 @@ $(document).ready(function () {
     } catch (ignore) {}
     try {
         if (pageSection.id === "archBody") {
-            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-jQuery.fx.off = true; 
-}
+            if (detectMobile) {
+                jQuery.fx.off = true; 
+            }
             initialArch();
         }
     } catch (ignore) {}
