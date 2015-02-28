@@ -150,6 +150,10 @@ $(document).ready(function () {
                     $('.backButton').animate({left: "23.3%"}, {duration: 500, queue: false});
                     $('.projects').animate({left: "6%"}, {duration: 500, queue: false});
                 }
+
+                if (detectMobile) {
+                    $('.projects').animate({height: "20%"}, {duration: 500});
+                }
             }
         }
         for (i = 0; i < target.length; i++) {
@@ -277,9 +281,6 @@ $(document).ready(function () {
     } catch (ignore) {}
     try {
         if (pageSection.id === "archBody") {
-            if (detectMobile) {
-                jQuery.fx.off = true; 
-            }
             initialArch();
         }
     } catch (ignore) {}
